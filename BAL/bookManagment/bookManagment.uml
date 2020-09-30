@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_mPQh0P2HEeqvWeWK4tftSw" name="bookManagment">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_mPQh0P2HEeqvWeWK4tftSw" name="bookManagment">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_mPytUP2HEeqvWeWK4tftSw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Class" xmi:id="_xwAoMP2HEeqvWeWK4tftSw" name="Application"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_JS2AYP2IEeqvWeWK4tftSw" name="InterfaceBDD"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xwAoMP2HEeqvWeWK4tftSw" name="Application">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_55VSwgL4EeuT8vN1BGkS4g" name="library" type="_OSCeQP2IEeqvWeWK4tftSw" association="_55UrsAL4EeuT8vN1BGkS4g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_55VSwwL4EeuT8vN1BGkS4g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_55VSxAL4EeuT8vN1BGkS4g" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_OSCeQP2IEeqvWeWK4tftSw" name="Library">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ScV7gP2IEeqvWeWK4tftSw" name="books">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vS6GogL4EeuT8vN1BGkS4g" name="book" type="_dPzeEP2IEeqvWeWK4tftSw" aggregation="composite" association="_vS5fkAL4EeuT8vN1BGkS4g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vS6GowL4EeuT8vN1BGkS4g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vS6GpAL4EeuT8vN1BGkS4g" value="1"/>
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_dPzeEP2IEeqvWeWK4tftSw" name="Book">
@@ -24,5 +32,32 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_onjZcP2IEeqvWeWK4tftSw" name="getTitle"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_qkCUQP2IEeqvWeWK4tftSw" name="getAuthor"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_trdYMP2IEeqvWeWK4tftSw" name="getClassLevel"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MjL_QAL4EeuT8vN1BGkS4g" name="setTitle" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TgxccAL4EeuT8vN1BGkS4g" name="title" effect="update">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UzjS8AL4EeuT8vN1BGkS4g" name="setAuthor">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eUxKgAL4EeuT8vN1BGkS4g" name="author" effect="update">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_YKh10AL4EeuT8vN1BGkS4g" name="setClassLevel" visibility="public">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_jtT8gAL4EeuT8vN1BGkS4g" name="classLevel" effect="update">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vS5fkAL4EeuT8vN1BGkS4g" memberEnd="_vS6GogL4EeuT8vN1BGkS4g _vS6GpQL4EeuT8vN1BGkS4g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vS6GoAL4EeuT8vN1BGkS4g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vS6GoQL4EeuT8vN1BGkS4g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_vS6GpQL4EeuT8vN1BGkS4g" name="library" type="_OSCeQP2IEeqvWeWK4tftSw" association="_vS5fkAL4EeuT8vN1BGkS4g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_55UrsAL4EeuT8vN1BGkS4g" memberEnd="_55VSwgL4EeuT8vN1BGkS4g _55VSxQL4EeuT8vN1BGkS4g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_55VSwAL4EeuT8vN1BGkS4g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_55VSwQL4EeuT8vN1BGkS4g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_55VSxQL4EeuT8vN1BGkS4g" name="application" type="_xwAoMP2HEeqvWeWK4tftSw" association="_55UrsAL4EeuT8vN1BGkS4g"/>
   </packagedElement>
 </uml:Model>
