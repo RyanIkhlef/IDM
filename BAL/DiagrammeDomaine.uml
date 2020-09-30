@@ -203,6 +203,31 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_pPmlwAMLEeugxPQ7FrnACA" name="getClassLevel">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_tS2YwAMLEeugxPQ7FrnACA" name="classLevel" direction="return" effect="read">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6aYPsAMLEeugxPQ7FrnACA" name="getOptions">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-0tF8AMLEeugxPQ7FrnACA" name="options" direction="return" effect="read">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__TLKoAMLEeugxPQ7FrnACA" name="getMemberStatus">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_DuWVcAMMEeugxPQ7FrnACA" name="isMember" direction="return" effect="read">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_FUga8AMMEeugxPQ7FrnACA" name="setClassLevel">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_IRFg0AMMEeugxPQ7FrnACA" name="classLevel" effect="update">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_JmAsYAMMEeugxPQ7FrnACA" name="addOption">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_PLKXAAMMEeugxPQ7FrnACA" name="option" effect="update">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_CmJNsAMAEeuju45VmK9gJA" name="Staff">
     <generalization xmi:type="uml:Generalization" xmi:id="_LlwNAAMAEeuju45VmK9gJA" general="_B8S_cAMAEeuju45VmK9gJA"/>
@@ -213,11 +238,11 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_HKzEpQMAEeuju45VmK9gJA" name="application" type="_IxGJgAL_Eeuju45VmK9gJA" association="_HKydkAMAEeuju45VmK9gJA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_zc0MMAMBEeuju45VmK9gJA" name="Livres empruntés" memberEnd="_zc0zQgMBEeuju45VmK9gJA _zc0zRQMBEeuju45VmK9gJA">
+  <packagedElement xmi:type="uml:Association" xmi:id="_zc0MMAMBEeuju45VmK9gJA" name="Livres empruntés" visibility="public" memberEnd="_zc0zQgMBEeuju45VmK9gJA _zc0zRQMBEeuju45VmK9gJA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zc0zQAMBEeuju45VmK9gJA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zc0zQQMBEeuju45VmK9gJA" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_zc0zRQMBEeuju45VmK9gJA" name="student" type="_CSbAcAMAEeuju45VmK9gJA" association="_zc0MMAMBEeuju45VmK9gJA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zc0zRQMBEeuju45VmK9gJA" name="ownedBooks" type="_CSbAcAMAEeuju45VmK9gJA" association="_zc0MMAMBEeuju45VmK9gJA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_1KI0MAMCEeu_P4Mqz4aBkg" name="Treasury">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_5LGIMAMCEeu_P4Mqz4aBkg" name="Account">

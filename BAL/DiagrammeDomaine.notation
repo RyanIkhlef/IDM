@@ -252,6 +252,26 @@
         <element href="DiagrammeDomaine.uml#_FhqYEAMKEeugxPQ7FrnACA"/>
         <layoutConstraint xsi:type="notation:Location" xmi:id="_Fh8E4QMKEeugxPQ7FrnACA"/>
       </children>
+      <children xsi:type="notation:Shape" xmi:id="_pP2dYAMLEeugxPQ7FrnACA" type="Operation_ClassOperationLabel">
+        <element href="DiagrammeDomaine.uml#_pPmlwAMLEeugxPQ7FrnACA"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_pP2dYQMLEeugxPQ7FrnACA"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_6a0UkAMLEeugxPQ7FrnACA" type="Operation_ClassOperationLabel">
+        <element href="DiagrammeDomaine.uml#_6aYPsAMLEeugxPQ7FrnACA"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_6a0UkQMLEeugxPQ7FrnACA"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="__TZNEAMLEeugxPQ7FrnACA" type="Operation_ClassOperationLabel">
+        <element href="DiagrammeDomaine.uml#__TLKoAMLEeugxPQ7FrnACA"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="__TZNEQMLEeugxPQ7FrnACA"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_FUvEcAMMEeugxPQ7FrnACA" type="Operation_ClassOperationLabel">
+        <element href="DiagrammeDomaine.uml#_FUga8AMMEeugxPQ7FrnACA"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_FUvEcQMMEeugxPQ7FrnACA"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_JmP88AMMEeugxPQ7FrnACA" type="Operation_ClassOperationLabel">
+        <element href="DiagrammeDomaine.uml#_JmAsYAMMEeugxPQ7FrnACA"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_JmP88QMMEeugxPQ7FrnACA"/>
+      </children>
       <styles xsi:type="notation:TitleStyle" xmi:id="_CSc1qwMAEeuju45VmK9gJA"/>
       <styles xsi:type="notation:SortingStyle" xmi:id="_CSc1rAMAEeuju45VmK9gJA"/>
       <styles xsi:type="notation:FilteringStyle" xmi:id="_CSc1rQMAEeuju45VmK9gJA"/>
@@ -264,7 +284,7 @@
       <layoutConstraint xsi:type="notation:Bounds" xmi:id="_CSc1swMAEeuju45VmK9gJA"/>
     </children>
     <element href="DiagrammeDomaine.uml#_CSbAcAMAEeuju45VmK9gJA"/>
-    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_CSc1oQMAEeuju45VmK9gJA" x="780" y="380" width="201" height="161"/>
+    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_CSc1oQMAEeuju45VmK9gJA" x="780" y="380" width="241" height="201"/>
   </children>
   <children xsi:type="notation:Shape" xmi:id="_CmJ0wAMAEeuju45VmK9gJA" type="Class_Shape">
     <children xsi:type="notation:DecorationNode" xmi:id="_CmJ0wgMAEeuju45VmK9gJA" type="Class_NameLabel"/>
@@ -498,7 +518,7 @@
     <styles xsi:type="notation:FontStyle" xmi:id="_K2_CgQMAEeuju45VmK9gJA"/>
     <element href="DiagrammeDomaine.uml#_K2474AMAEeuju45VmK9gJA"/>
     <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_K2_CggMAEeuju45VmK9gJA" points="[880, 380, -643984, -643984]$[960, 201, -643984, -643984]"/>
-    <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_K3yTwAMAEeuju45VmK9gJA" id="(0.4975124378109453,0.0)"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_K3yTwAMAEeuju45VmK9gJA" id="(0.4149377593360996,0.0)"/>
     <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_K3yTwQMAEeuju45VmK9gJA" id="(0.4975124378109453,1.0)"/>
   </edges>
   <edges xsi:type="notation:Connector" xmi:id="_Ll26sAMAEeuju45VmK9gJA" type="Generalization_Edge" source="_CmJ0wAMAEeuju45VmK9gJA" target="_B8UNkAMAEeuju45VmK9gJA" lineColor="0">
@@ -540,7 +560,7 @@
     <styles xsi:type="notation:FontStyle" xmi:id="_zc8IAQMBEeuju45VmK9gJA"/>
     <element href="DiagrammeDomaine.uml#_zc0MMAMBEeuju45VmK9gJA"/>
     <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_zc8IAgMBEeuju45VmK9gJA" points="[860, 521, -643984, -643984]$[681, 620, -643984, -643984]"/>
-    <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_zdSGQAMBEeuju45VmK9gJA" id="(0.39800995024875624,1.0)"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_zdSGQAMBEeuju45VmK9gJA" id="(0.33195020746887965,1.0)"/>
     <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_zdStUAMBEeuju45VmK9gJA" id="(1.0,0.14285714285714285)"/>
   </edges>
   <edges xsi:type="notation:Connector" xmi:id="_-rxigAMCEeu_P4Mqz4aBkg" type="Association_Edge" source="_IxLCAAL_Eeuju45VmK9gJA" target="_1KPh4AMCEeu_P4Mqz4aBkg" lineColor="0">
