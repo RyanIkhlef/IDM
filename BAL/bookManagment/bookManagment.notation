@@ -130,9 +130,9 @@
         <element xmi:type="uml:Property" href="bookManagment.uml#_mF00kAWAEeuclOhc_9BYyQ"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_mMe2MQWAEeuclOhc_9BYyQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_pLa3cgXLEeu6f8RJu-Rkig" type="Property_ClassAttributeLabel">
-        <element xmi:type="uml:Property" href="bookManagment.uml#_pLUw0AXLEeu6f8RJu-Rkig"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_pLa3cwXLEeu6f8RJu-Rkig"/>
+      <children xmi:type="notation:Shape" xmi:id="_bOuf0AXbEeuGbZmaHKLiUQ" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="bookManagment.uml#_bOsqoAXbEeuGbZmaHKLiUQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bOuf0QXbEeuGbZmaHKLiUQ"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_dW5v4wL_Eeuju45VmK9gJA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_dW5v5AL_Eeuju45VmK9gJA"/>
@@ -168,13 +168,13 @@
         <element xmi:type="uml:Operation" href="bookManagment.uml#_JGROoAMHEeugxPQ7FrnACA"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_JGiUYQMHEeugxPQ7FrnACA"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_pLa3cAXLEeu6f8RJu-Rkig" type="Operation_ClassOperationLabel">
-        <element xmi:type="uml:Operation" href="bookManagment.uml#_pLX0IAXLEeu6f8RJu-Rkig"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_pLa3cQXLEeu6f8RJu-Rkig"/>
+      <children xmi:type="notation:Shape" xmi:id="_gtZvAAXbEeuGbZmaHKLiUQ" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="bookManagment.uml#_gtXSwAXbEeuGbZmaHKLiUQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gtZvAQXbEeuGbZmaHKLiUQ"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_pLbegAXLEeu6f8RJu-Rkig" type="Operation_ClassOperationLabel">
-        <element xmi:type="uml:Operation" href="bookManagment.uml#_pLWmAAXLEeu6f8RJu-Rkig"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_pLbegQXLEeu6f8RJu-Rkig"/>
+      <children xmi:type="notation:Shape" xmi:id="_hn_vAAXbEeuGbZmaHKLiUQ" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="bookManagment.uml#_hn9SwAXbEeuGbZmaHKLiUQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_hn_vAQXbEeuGbZmaHKLiUQ"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_dW5v6AL_Eeuju45VmK9gJA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_dW5v6QL_Eeuju45VmK9gJA"/>
@@ -279,9 +279,9 @@
         <element xmi:type="uml:Operation" href="bookManagment.uml#_UJn1cAXHEeuvv4t1Z61cUg"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_UQf5gQXHEeuvv4t1Z61cUg"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_-ff5EAXLEeu6f8RJu-Rkig" type="Operation_ClassOperationLabel">
-        <element xmi:type="uml:Operation" href="bookManagment.uml#_-feD4AXLEeu6f8RJu-Rkig"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_-ff5EQXLEeu6f8RJu-Rkig"/>
+      <children xmi:type="notation:Shape" xmi:id="_oKjdEAXbEeuGbZmaHKLiUQ" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="bookManagment.uml#_oKhn4AXbEeuGbZmaHKLiUQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oKjdEQXbEeuGbZmaHKLiUQ"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_dIctGwWEEeuq2pvFafaO7A"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_dIctHAWEEeuq2pvFafaO7A"/>

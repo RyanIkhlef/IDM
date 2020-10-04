@@ -66,9 +66,7 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_QERCQAXKEeu6f8RJu-Rkig" name="book" type="_dW36sAL_Eeuju45VmK9gJA"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_tsu78AXKEeu6f8RJu-Rkig" name="scanBook">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_tsu78QXKEeu6f8RJu-Rkig" direction="return">
-        <type xmi:type="uml:Class" href="../BAL/DiagrammeDomaine.uml#_dW36sAL_Eeuju45VmK9gJA"/>
-      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_tsu78QXKEeu6f8RJu-Rkig" type="_dW36sAL_Eeuju45VmK9gJA" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_Ty6RIAL_Eeuju45VmK9gJA" name="Liste de livre" memberEnd="_Ty7fQgL_Eeuju45VmK9gJA _Ty8GUgL_Eeuju45VmK9gJA">
@@ -84,14 +82,15 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_VvBGkAMBEeuju45VmK9gJA" name="author">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_Z3eJsAMBEeuju45VmK9gJA" name="classLevel">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Z3eJsAMBEeuju45VmK9gJA" name="classLevel" type="_kw_LwAWEEeuq2pvFafaO7A"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_h0osMAWAEeuclOhc_9BYyQ" name="isbn">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_mF00kAWAEeuclOhc_9BYyQ" name="coverImage">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bOsqoAXbEeuGbZmaHKLiUQ" name="subjects">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_leVs4AMGEeugxPQ7FrnACA" name="book" visibility="public">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_qGp70AMGEeugxPQ7FrnACA" name="title">
@@ -121,7 +120,7 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_65XEAAMGEeugxPQ7FrnACA" name="getClassLevel" visibility="public">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_92UkYAMGEeugxPQ7FrnACA" name="classLevel" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_92UkYAMGEeugxPQ7FrnACA" name="classLevel" type="_kw_LwAWEEeuq2pvFafaO7A" direction="return"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_--mbEAMGEeugxPQ7FrnACA" name="setTitle" visibility="public">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_BFfPEAMHEeugxPQ7FrnACA" name="title" effect="update">
@@ -136,6 +135,16 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_JGROoAMHEeugxPQ7FrnACA" name="addClassLevel">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_MLD1UAMHEeugxPQ7FrnACA" name="classLevel" effect="update">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gtXSwAXbEeuGbZmaHKLiUQ" name="addSubject">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gtXSwQXbEeuGbZmaHKLiUQ" name="subject">
+        <type xmi:type="uml:Class" href="../BAL/retraitLivre/retraitLivre.uml#_dIa34AWEEeuq2pvFafaO7A"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_hn9SwAXbEeuGbZmaHKLiUQ" name="getSubjects">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hn9SwQXbEeuGbZmaHKLiUQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
@@ -224,6 +233,11 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Vxcu4AXHEeuvv4t1Z61cUg" name="addBook">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_cIRHAAXHEeuvv4t1Z61cUg" name="book" type="_dW36sAL_Eeuju45VmK9gJA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_oKhn4AXbEeuGbZmaHKLiUQ" name="addBook">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_oKhn4QXbEeuGbZmaHKLiUQ" name="book">
+        <type xmi:type="uml:Class" href="../BAL/BAL/diagrammeDomaine.uml#_dW36sAL_Eeuju45VmK9gJA"/>
+      </ownedParameter>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_kw_LwAWEEeuq2pvFafaO7A" name="ClassLevel">
