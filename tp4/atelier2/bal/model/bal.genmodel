@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/bal/src-gen" creationIcons="false" editDirectory="/bal.edit/src-gen"
+    editorDirectory="/bal.editor/src-gen" modelPluginID="bal" modelName="Bal" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>bal.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Bal" disposableProviderFactory="true" ecorePackage="bal.ecore#/">
+    <genClasses ecoreClass="bal.ecore#//BAL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//BAL/library"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//BAL/members"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//BAL/users"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//BAL/levels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//BAL/command"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//BAL/articles"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Library">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//Library/books"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//Library/borrowedBooks"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Book">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//Book/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//Book/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Level">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//Level/classlevels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//Level/name"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//ClassLevel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//ClassLevel/subjects"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//ClassLevel/name"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Subject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//Subject/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bal.ecore#//Subject/books"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//User/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//User/surname"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Parent"/>
+    <genClasses ecoreClass="bal.ecore#//Student">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bal.ecore#//Student/command"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//Student/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bal.ecore#//Student/payments"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Members">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bal.ecore#//Members/students"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bal.ecore#//Members/commands"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Command">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bal.ecore#//Command/commandlines"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//Command/isDelivred"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//CommandLine">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bal.ecore#//CommandLine/article"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//CommandLine/quantity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bal.ecore#//CommandLine/book"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Article">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//Article/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bal.ecore#//Article/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="bal.ecore#//Payment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bal.ecore#//Payment/command"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
