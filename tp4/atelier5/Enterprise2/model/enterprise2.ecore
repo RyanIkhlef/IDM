@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="enterprise2" nsURI="http://www.example.org/enterprise2" nsPrefix="enterprise2">
+  <eClassifiers xsi:type="ecore:EClass" name="Enterprise">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" upperBound="-1"
+        eType="#//Room" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employes" upperBound="-1"
+        eType="#//Employe" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computers" upperBound="-1"
+        eType="#//Computer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Room" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stageNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DesktopRoom" eSuperTypes="#//Room">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="occupiers" upperBound="-1"
+        eType="#//Employe" eOpposite="#//Employe/desktops"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computersAvailable" upperBound="-1"
+        eType="#//Computer" eOpposite="#//Computer/room"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeetingRoom" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Employe">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="desktops" upperBound="-1"
+        eType="#//DesktopRoom" eOpposite="#//DesktopRoom/occupiers"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="surname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AccessibleComputers" upperBound="-1"
+        eType="#//Computer" eOpposite="#//Computer/users"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TechnicalRoom" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Computer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="users" upperBound="-1"
+        eType="#//Employe" eOpposite="#//Employe/AccessibleComputers"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="room" eType="#//DesktopRoom"
+        eOpposite="#//DesktopRoom/computersAvailable"/>
+  </eClassifiers>
+</ecore:EPackage>

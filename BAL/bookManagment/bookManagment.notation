@@ -474,9 +474,9 @@
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_QGonIQWFEeuq2pvFafaO7A"/>
     <element xmi:type="uml:Association" href="bookManagment.uml#_QAj0UAWFEeuq2pvFafaO7A"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QGonIgWFEeuq2pvFafaO7A" points="[1040, 231, -643984, -643984]$[1040, 320, -643984, -643984]$[1040, 420, -643984, -643984]$[1060, 460, -643984, -643984]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QTHj8AWFEeuq2pvFafaO7A" id="(0.418848167539267,1.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QTHj8QWFEeuq2pvFafaO7A" id="(0.22408963585434175,0.0)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QGonIgWFEeuq2pvFafaO7A" points="[1051, 231, -643984, -643984]$[1040, 320, -643984, -643984]$[1060, 460, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QTHj8AWFEeuq2pvFafaO7A" id="(0.4155251141552511,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QTHj8QWFEeuq2pvFafaO7A" id="(0.24509803921568626,0.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_S2L9oAWFEeuq2pvFafaO7A" type="Association_Edge" source="_JqDQIAWDEeuclOhc_9BYyQ" target="_dIctEAWEEeuq2pvFafaO7A">
     <children xmi:type="notation:DecorationNode" xmi:id="_S2L9owWFEeuq2pvFafaO7A" type="Association_StereotypeLabel">

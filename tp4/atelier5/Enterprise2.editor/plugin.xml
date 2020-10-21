@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated enterprise2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="enterprise2.presentation.Enterprise2ModelWizardID"
+            name="%_UI_Enterprise2ModelWizard_label"
+            class="enterprise2.presentation.Enterprise2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Enterprise2ModelFile.gif">
+         <description>%_UI_Enterprise2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated enterprise2 -->
+      <editor
+            id="enterprise2.presentation.Enterprise2EditorID"
+            name="%_UI_Enterprise2Editor_label"
+            icon="icons/full/obj16/Enterprise2ModelFile.gif"
+            extensions="enterprise2"
+            class="enterprise2.presentation.Enterprise2Editor"
+            contributorClass="enterprise2.presentation.Enterprise2ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

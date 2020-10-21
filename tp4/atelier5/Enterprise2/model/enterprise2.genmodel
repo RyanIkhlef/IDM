@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Enterprise2/src-gen" creationIcons="false" editDirectory="/Enterprise2.edit/src-gen"
+    editorDirectory="/Enterprise2.editor/src-gen" modelPluginID="Enterprise2" modelName="Enterprise2"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>enterprise2.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Enterprise2" disposableProviderFactory="true" ecorePackage="enterprise2.ecore#/">
+    <genClasses ecoreClass="enterprise2.ecore#//Enterprise">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise2.ecore#//Enterprise/rooms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise2.ecore#//Enterprise/employes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise2.ecore#//Enterprise/computers"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise2.ecore#//Room">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise2.ecore#//Room/roomNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise2.ecore#//Room/stageNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise2.ecore#//DesktopRoom">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise2.ecore#//DesktopRoom/occupiers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise2.ecore#//DesktopRoom/computersAvailable"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise2.ecore#//MeetingRoom"/>
+    <genClasses ecoreClass="enterprise2.ecore#//Employe">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise2.ecore#//Employe/desktops"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise2.ecore#//Employe/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise2.ecore#//Employe/surname"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise2.ecore#//Employe/AccessibleComputers"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise2.ecore#//TechnicalRoom"/>
+    <genClasses ecoreClass="enterprise2.ecore#//Computer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise2.ecore#//Computer/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise2.ecore#//Computer/users"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise2.ecore#//Computer/room"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
