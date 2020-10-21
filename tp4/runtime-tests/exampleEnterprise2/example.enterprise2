@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise2:Enterprise xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:enterprise2="http://www.example.org/enterprise2">
+  <rooms xsi:type="enterprise2:DesktopRoom" occupiers="//@employes.0 //@employes.1" computersAvailable="//@computers.0 //@computers.2"/>
+  <rooms xsi:type="enterprise2:DesktopRoom" roomNumber="1" occupiers="//@employes.0 //@employes.1 //@employes.5" computersAvailable="//@computers.1 //@computers.3 //@computers.6"/>
+  <rooms xsi:type="enterprise2:DesktopRoom" roomNumber="2" occupiers="//@employes.4" computersAvailable="//@computers.9"/>
+  <rooms xsi:type="enterprise2:DesktopRoom" roomNumber="10" stageNumber="1" occupiers="//@employes.2" computersAvailable="//@computers.4"/>
+  <rooms xsi:type="enterprise2:DesktopRoom" roomNumber="11" stageNumber="1" occupiers="//@employes.0 //@employes.3" computersAvailable="//@computers.5 //@computers.8 //@computers.7"/>
+  <rooms xsi:type="enterprise2:MeetingRoom" roomNumber="3"/>
+  <rooms xsi:type="enterprise2:MeetingRoom" roomNumber="12" stageNumber="1"/>
+  <rooms xsi:type="enterprise2:TechnicalRoom" stageNumber="-1"/>
+  <employes desktops="//@rooms.0 //@rooms.1 //@rooms.4" name="Homer" surname="Simpson" AccessibleComputers="//@computers.0 //@computers.9 //@computers.1 //@computers.2 //@computers.3 //@computers.4 //@computers.5 //@computers.6 //@computers.7 //@computers.8"/>
+  <employes desktops="//@rooms.0 //@rooms.1" name="Marjorie" surname="Simpson" AccessibleComputers="//@computers.0"/>
+  <employes desktops="//@rooms.3" name="Bart" surname="Simpson" AccessibleComputers="//@computers.4"/>
+  <employes desktops="//@rooms.4" name="Lisa" surname="Simpson"/>
+  <employes desktops="//@rooms.2" name="Maggie" surname="Simpson" AccessibleComputers="//@computers.7 //@computers.4 //@computers.9"/>
+  <employes desktops="//@rooms.1" name="Abraham" surname="Simpson" AccessibleComputers="//@computers.7"/>
+  <computers name="PC-0" users="//@employes.0 //@employes.1" room="//@rooms.0"/>
+  <computers name="PC-2" users="//@employes.0" room="//@rooms.1"/>
+  <computers name="PC-3" users="//@employes.0" room="//@rooms.0"/>
+  <computers name="PC-4" users="//@employes.0" room="//@rooms.1"/>
+  <computers name="PC-5" users="//@employes.0 //@employes.2 //@employes.4" room="//@rooms.3"/>
+  <computers name="PC-6" users="//@employes.0" room="//@rooms.4"/>
+  <computers name="PC-7" users="//@employes.0" room="//@rooms.1"/>
+  <computers name="PC-8" users="//@employes.0 //@employes.5 //@employes.4" room="//@rooms.4"/>
+  <computers name="PC-9" users="//@employes.0" room="//@rooms.4"/>
+  <computers name="PC-10" users="//@employes.0 //@employes.4" room="//@rooms.2"/>
+</enterprise2:Enterprise>

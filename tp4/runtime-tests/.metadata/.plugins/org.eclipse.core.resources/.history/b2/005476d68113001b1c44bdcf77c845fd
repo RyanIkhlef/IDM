@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise2:Enterprise xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:enterprise2="http://www.example.org/enterprise2">
+  <rooms xsi:type="enterprise2:DesktopRoom"/>
+  <rooms xsi:type="enterprise2:DesktopRoom"/>
+  <rooms xsi:type="enterprise2:DesktopRoom"/>
+  <rooms xsi:type="enterprise2:DesktopRoom"/>
+  <rooms xsi:type="enterprise2:DesktopRoom"/>
+  <rooms xsi:type="enterprise2:MeetingRoom"/>
+  <rooms xsi:type="enterprise2:MeetingRoom"/>
+  <rooms xsi:type="enterprise2:TechnicalRoom"/>
+</enterprise2:Enterprise>

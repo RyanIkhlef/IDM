@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise:Enterprise xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:enterprise="http://www.example.org/enterprise">
+  <rooms xsi:type="enterprise:DesktopRoom" occupier="//@employes.0 //@employes.1"/>
+  <rooms xsi:type="enterprise:DesktopRoom" roomNumber="1" occupier="//@employes.2 //@employes.5"/>
+  <rooms xsi:type="enterprise:MeetingRoom" roomNumber="10"/>
+  <rooms xsi:type="enterprise:DesktopRoom" roomNumber="2" occupier="//@employes.3 //@employes.4"/>
+  <rooms xsi:type="enterprise:MeetingRoom" roomNumber="11"/>
+  <employes name="Homer" surname="Simpson" desktop="//@rooms.0"/>
+  <employes name="Marge" surname="Simpson" desktop="//@rooms.0"/>
+  <employes name="Bart" surname="Simpson" desktop="//@rooms.1"/>
+  <employes name="Lisa" surname="Simpson" desktop="//@rooms.3"/>
+  <employes name="Maggie" surname="Simpson" desktop="//@rooms.3"/>
+  <employes name="Abraham" surname="Simpson" desktop="//@rooms.1"/>
+</enterprise:Enterprise>
