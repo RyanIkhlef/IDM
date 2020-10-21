@@ -82,11 +82,6 @@ public class WebsiteAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseImage(Image object) {
-			return createImageAdapter();
-		}
-
-		@Override
 		public Adapter caseSection(Section object) {
 			return createSectionAdapter();
 		}
@@ -97,13 +92,8 @@ public class WebsiteAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseExternalLink(ExternalLink object) {
-			return createExternalLinkAdapter();
-		}
-
-		@Override
-		public Adapter caseInternalLink(InternalLink object) {
-			return createInternalLinkAdapter();
+		public Adapter caseImage(Image object) {
+			return createImageAdapter();
 		}
 
 		@Override
@@ -173,20 +163,6 @@ public class WebsiteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link website.Image <em>Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see website.Image
-	 * @generated
-	 */
-	public Adapter createImageAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link website.Section <em>Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -215,30 +191,16 @@ public class WebsiteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link website.ExternalLink <em>External Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link website.Image <em>Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see website.ExternalLink
+	 * @see website.Image
 	 * @generated
 	 */
-	public Adapter createExternalLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link website.InternalLink <em>Internal Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see website.InternalLink
-	 * @generated
-	 */
-	public Adapter createInternalLinkAdapter() {
+	public Adapter createImageAdapter() {
 		return null;
 	}
 

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see website.WebsitePackage#getLink()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface Link extends EObject {

@@ -11,29 +11,30 @@
   <genPackages prefix="Website" disposableProviderFactory="true" ecorePackage="website.ecore#/">
     <genClasses ecoreClass="website.ecore#//Site">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Site/body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute website.ecore#//Site/name"/>
     </genClasses>
     <genClasses ecoreClass="website.ecore#//Body">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Body/section"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Body/image"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Body/paragraph"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Body/button"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Body/paragraphs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Body/sections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Body/images"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Body/buttons"/>
     </genClasses>
     <genClasses ecoreClass="website.ecore#//Paragraph">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute website.ecore#//Paragraph/content"/>
     </genClasses>
-    <genClasses ecoreClass="website.ecore#//Image">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute website.ecore#//Image/url"/>
-    </genClasses>
     <genClasses ecoreClass="website.ecore#//Section">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Section/paragraph"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Section/image"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Section/button"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Section/paragraphs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Section/images"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Section/buttons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Section/sections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Section/links"/>
     </genClasses>
     <genClasses ecoreClass="website.ecore#//Button">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference website.ecore#//Button/link"/>
     </genClasses>
-    <genClasses ecoreClass="website.ecore#//ExternalLink"/>
-    <genClasses ecoreClass="website.ecore#//InternalLink"/>
+    <genClasses ecoreClass="website.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute website.ecore#//Image/url"/>
+    </genClasses>
     <genClasses ecoreClass="website.ecore#//Link">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute website.ecore#//Link/url"/>
     </genClasses>

@@ -49,15 +49,6 @@ public interface WebsiteFactory extends EFactory {
 	Paragraph createParagraph();
 
 	/**
-	 * Returns a new object of class '<em>Image</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Image</em>'.
-	 * @generated
-	 */
-	Image createImage();
-
-	/**
 	 * Returns a new object of class '<em>Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,22 +67,22 @@ public interface WebsiteFactory extends EFactory {
 	Button createButton();
 
 	/**
-	 * Returns a new object of class '<em>External Link</em>'.
+	 * Returns a new object of class '<em>Image</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>External Link</em>'.
+	 * @return a new object of class '<em>Image</em>'.
 	 * @generated
 	 */
-	ExternalLink createExternalLink();
+	Image createImage();
 
 	/**
-	 * Returns a new object of class '<em>Internal Link</em>'.
+	 * Returns a new object of class '<em>Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Internal Link</em>'.
+	 * @return a new object of class '<em>Link</em>'.
 	 * @generated
 	 */
-	InternalLink createInternalLink();
+	Link createLink();
 
 	/**
 	 * Returns the package supported by this factory.

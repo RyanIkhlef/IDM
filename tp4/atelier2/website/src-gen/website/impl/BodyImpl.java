@@ -31,54 +31,54 @@ import website.WebsitePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link website.impl.BodyImpl#getSection <em>Section</em>}</li>
- *   <li>{@link website.impl.BodyImpl#getImage <em>Image</em>}</li>
- *   <li>{@link website.impl.BodyImpl#getParagraph <em>Paragraph</em>}</li>
- *   <li>{@link website.impl.BodyImpl#getButton <em>Button</em>}</li>
+ *   <li>{@link website.impl.BodyImpl#getParagraphs <em>Paragraphs</em>}</li>
+ *   <li>{@link website.impl.BodyImpl#getSections <em>Sections</em>}</li>
+ *   <li>{@link website.impl.BodyImpl#getImages <em>Images</em>}</li>
+ *   <li>{@link website.impl.BodyImpl#getButtons <em>Buttons</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	/**
-	 * The cached value of the '{@link #getSection() <em>Section</em>}' containment reference list.
+	 * The cached value of the '{@link #getParagraphs() <em>Paragraphs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSection()
+	 * @see #getParagraphs()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Section> section;
+	protected EList<Paragraph> paragraphs;
 
 	/**
-	 * The cached value of the '{@link #getImage() <em>Image</em>}' containment reference list.
+	 * The cached value of the '{@link #getSections() <em>Sections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImage()
+	 * @see #getSections()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Image> image;
+	protected EList<Section> sections;
 
 	/**
-	 * The cached value of the '{@link #getParagraph() <em>Paragraph</em>}' containment reference list.
+	 * The cached value of the '{@link #getImages() <em>Images</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParagraph()
+	 * @see #getImages()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Paragraph> paragraph;
+	protected EList<Image> images;
 
 	/**
-	 * The cached value of the '{@link #getButton() <em>Button</em>}' containment reference list.
+	 * The cached value of the '{@link #getButtons() <em>Buttons</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getButton()
+	 * @see #getButtons()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Button> button;
+	protected EList<Button> buttons;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,11 +104,11 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Section> getSection() {
-		if (section == null) {
-			section = new EObjectContainmentEList<Section>(Section.class, this, WebsitePackage.BODY__SECTION);
+	public EList<Paragraph> getParagraphs() {
+		if (paragraphs == null) {
+			paragraphs = new EObjectContainmentEList<Paragraph>(Paragraph.class, this, WebsitePackage.BODY__PARAGRAPHS);
 		}
-		return section;
+		return paragraphs;
 	}
 
 	/**
@@ -116,11 +116,11 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Image> getImage() {
-		if (image == null) {
-			image = new EObjectContainmentEList<Image>(Image.class, this, WebsitePackage.BODY__IMAGE);
+	public EList<Section> getSections() {
+		if (sections == null) {
+			sections = new EObjectContainmentEList<Section>(Section.class, this, WebsitePackage.BODY__SECTIONS);
 		}
-		return image;
+		return sections;
 	}
 
 	/**
@@ -128,11 +128,11 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Paragraph> getParagraph() {
-		if (paragraph == null) {
-			paragraph = new EObjectContainmentEList<Paragraph>(Paragraph.class, this, WebsitePackage.BODY__PARAGRAPH);
+	public EList<Image> getImages() {
+		if (images == null) {
+			images = new EObjectContainmentEList<Image>(Image.class, this, WebsitePackage.BODY__IMAGES);
 		}
-		return paragraph;
+		return images;
 	}
 
 	/**
@@ -140,11 +140,11 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Button> getButton() {
-		if (button == null) {
-			button = new EObjectContainmentEList<Button>(Button.class, this, WebsitePackage.BODY__BUTTON);
+	public EList<Button> getButtons() {
+		if (buttons == null) {
+			buttons = new EObjectContainmentEList<Button>(Button.class, this, WebsitePackage.BODY__BUTTONS);
 		}
-		return button;
+		return buttons;
 	}
 
 	/**
@@ -155,14 +155,14 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case WebsitePackage.BODY__SECTION:
-			return ((InternalEList<?>) getSection()).basicRemove(otherEnd, msgs);
-		case WebsitePackage.BODY__IMAGE:
-			return ((InternalEList<?>) getImage()).basicRemove(otherEnd, msgs);
-		case WebsitePackage.BODY__PARAGRAPH:
-			return ((InternalEList<?>) getParagraph()).basicRemove(otherEnd, msgs);
-		case WebsitePackage.BODY__BUTTON:
-			return ((InternalEList<?>) getButton()).basicRemove(otherEnd, msgs);
+		case WebsitePackage.BODY__PARAGRAPHS:
+			return ((InternalEList<?>) getParagraphs()).basicRemove(otherEnd, msgs);
+		case WebsitePackage.BODY__SECTIONS:
+			return ((InternalEList<?>) getSections()).basicRemove(otherEnd, msgs);
+		case WebsitePackage.BODY__IMAGES:
+			return ((InternalEList<?>) getImages()).basicRemove(otherEnd, msgs);
+		case WebsitePackage.BODY__BUTTONS:
+			return ((InternalEList<?>) getButtons()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -175,14 +175,14 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WebsitePackage.BODY__SECTION:
-			return getSection();
-		case WebsitePackage.BODY__IMAGE:
-			return getImage();
-		case WebsitePackage.BODY__PARAGRAPH:
-			return getParagraph();
-		case WebsitePackage.BODY__BUTTON:
-			return getButton();
+		case WebsitePackage.BODY__PARAGRAPHS:
+			return getParagraphs();
+		case WebsitePackage.BODY__SECTIONS:
+			return getSections();
+		case WebsitePackage.BODY__IMAGES:
+			return getImages();
+		case WebsitePackage.BODY__BUTTONS:
+			return getButtons();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,21 +196,21 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WebsitePackage.BODY__SECTION:
-			getSection().clear();
-			getSection().addAll((Collection<? extends Section>) newValue);
+		case WebsitePackage.BODY__PARAGRAPHS:
+			getParagraphs().clear();
+			getParagraphs().addAll((Collection<? extends Paragraph>) newValue);
 			return;
-		case WebsitePackage.BODY__IMAGE:
-			getImage().clear();
-			getImage().addAll((Collection<? extends Image>) newValue);
+		case WebsitePackage.BODY__SECTIONS:
+			getSections().clear();
+			getSections().addAll((Collection<? extends Section>) newValue);
 			return;
-		case WebsitePackage.BODY__PARAGRAPH:
-			getParagraph().clear();
-			getParagraph().addAll((Collection<? extends Paragraph>) newValue);
+		case WebsitePackage.BODY__IMAGES:
+			getImages().clear();
+			getImages().addAll((Collection<? extends Image>) newValue);
 			return;
-		case WebsitePackage.BODY__BUTTON:
-			getButton().clear();
-			getButton().addAll((Collection<? extends Button>) newValue);
+		case WebsitePackage.BODY__BUTTONS:
+			getButtons().clear();
+			getButtons().addAll((Collection<? extends Button>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -224,17 +224,17 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WebsitePackage.BODY__SECTION:
-			getSection().clear();
+		case WebsitePackage.BODY__PARAGRAPHS:
+			getParagraphs().clear();
 			return;
-		case WebsitePackage.BODY__IMAGE:
-			getImage().clear();
+		case WebsitePackage.BODY__SECTIONS:
+			getSections().clear();
 			return;
-		case WebsitePackage.BODY__PARAGRAPH:
-			getParagraph().clear();
+		case WebsitePackage.BODY__IMAGES:
+			getImages().clear();
 			return;
-		case WebsitePackage.BODY__BUTTON:
-			getButton().clear();
+		case WebsitePackage.BODY__BUTTONS:
+			getButtons().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -248,14 +248,14 @@ public class BodyImpl extends MinimalEObjectImpl.Container implements Body {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WebsitePackage.BODY__SECTION:
-			return section != null && !section.isEmpty();
-		case WebsitePackage.BODY__IMAGE:
-			return image != null && !image.isEmpty();
-		case WebsitePackage.BODY__PARAGRAPH:
-			return paragraph != null && !paragraph.isEmpty();
-		case WebsitePackage.BODY__BUTTON:
-			return button != null && !button.isEmpty();
+		case WebsitePackage.BODY__PARAGRAPHS:
+			return paragraphs != null && !paragraphs.isEmpty();
+		case WebsitePackage.BODY__SECTIONS:
+			return sections != null && !sections.isEmpty();
+		case WebsitePackage.BODY__IMAGES:
+			return images != null && !images.isEmpty();
+		case WebsitePackage.BODY__BUTTONS:
+			return buttons != null && !buttons.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

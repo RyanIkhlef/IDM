@@ -2,8 +2,6 @@
  */
 package website;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,15 +22,25 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Button extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Link</b></em>' containment reference list.
-	 * The list contents are of type {@link website.Link}.
+	 * Returns the value of the '<em><b>Link</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Link</em>' containment reference list.
+	 * @return the value of the '<em>Link</em>' containment reference.
+	 * @see #setLink(Link)
 	 * @see website.WebsitePackage#getButton_Link()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Link> getLink();
+	Link getLink();
+
+	/**
+	 * Sets the value of the '{@link website.Button#getLink <em>Link</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Link</em>' containment reference.
+	 * @see #getLink()
+	 * @generated
+	 */
+	void setLink(Link value);
 
 } // Button

@@ -2,19 +2,14 @@
  */
 package website.impl;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import website.Button;
 import website.Link;
@@ -35,14 +30,14 @@ import website.WebsitePackage;
  */
 public class ButtonImpl extends MinimalEObjectImpl.Container implements Button {
 	/**
-	 * The cached value of the '{@link #getLink() <em>Link</em>}' containment reference list.
+	 * The cached value of the '{@link #getLink() <em>Link</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Link> link;
+	protected Link link;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,11 +63,48 @@ public class ButtonImpl extends MinimalEObjectImpl.Container implements Button {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Link> getLink() {
-		if (link == null) {
-			link = new EObjectContainmentEList<Link>(Link.class, this, WebsitePackage.BUTTON__LINK);
-		}
+	public Link getLink() {
 		return link;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLink(Link newLink, NotificationChain msgs) {
+		Link oldLink = link;
+		link = newLink;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebsitePackage.BUTTON__LINK,
+					oldLink, newLink);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLink(Link newLink) {
+		if (newLink != link) {
+			NotificationChain msgs = null;
+			if (link != null)
+				msgs = ((InternalEObject) link).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - WebsitePackage.BUTTON__LINK, null, msgs);
+			if (newLink != null)
+				msgs = ((InternalEObject) newLink).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - WebsitePackage.BUTTON__LINK, null, msgs);
+			msgs = basicSetLink(newLink, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.BUTTON__LINK, newLink, newLink));
 	}
 
 	/**
@@ -84,7 +116,7 @@ public class ButtonImpl extends MinimalEObjectImpl.Container implements Button {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case WebsitePackage.BUTTON__LINK:
-			return ((InternalEList<?>) getLink()).basicRemove(otherEnd, msgs);
+			return basicSetLink(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -108,13 +140,11 @@ public class ButtonImpl extends MinimalEObjectImpl.Container implements Button {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WebsitePackage.BUTTON__LINK:
-			getLink().clear();
-			getLink().addAll((Collection<? extends Link>) newValue);
+			setLink((Link) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,7 +159,7 @@ public class ButtonImpl extends MinimalEObjectImpl.Container implements Button {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case WebsitePackage.BUTTON__LINK:
-			getLink().clear();
+			setLink((Link) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -144,7 +174,7 @@ public class ButtonImpl extends MinimalEObjectImpl.Container implements Button {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WebsitePackage.BUTTON__LINK:
-			return link != null && !link.isEmpty();
+			return link != null;
 		}
 		return super.eIsSet(featureID);
 	}

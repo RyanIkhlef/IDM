@@ -11,9 +11,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import website.Body;
 import website.Button;
-import website.ExternalLink;
 import website.Image;
-import website.InternalLink;
 import website.Link;
 import website.Paragraph;
 import website.Section;
@@ -54,13 +52,6 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass imageEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass sectionEClass = null;
 
 	/**
@@ -75,14 +66,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass externalLinkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass internalLinkEClass = null;
+	private EClass imageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,6 +162,15 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSite_Name() {
+		return (EAttribute) siteEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBody() {
 		return bodyEClass;
 	}
@@ -187,7 +180,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBody_Section() {
+	public EReference getBody_Paragraphs() {
 		return (EReference) bodyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -196,7 +189,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBody_Image() {
+	public EReference getBody_Sections() {
 		return (EReference) bodyEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -205,7 +198,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBody_Paragraph() {
+	public EReference getBody_Images() {
 		return (EReference) bodyEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -214,7 +207,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBody_Button() {
+	public EReference getBody_Buttons() {
 		return (EReference) bodyEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -241,24 +234,6 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getImage() {
-		return imageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getImage_Url() {
-		return (EAttribute) imageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSection() {
 		return sectionEClass;
 	}
@@ -268,7 +243,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSection_Paragraph() {
+	public EReference getSection_Paragraphs() {
 		return (EReference) sectionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -277,7 +252,7 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSection_Image() {
+	public EReference getSection_Images() {
 		return (EReference) sectionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -286,8 +261,26 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSection_Button() {
+	public EReference getSection_Buttons() {
 		return (EReference) sectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSection_Sections() {
+		return (EReference) sectionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSection_Links() {
+		return (EReference) sectionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -313,8 +306,8 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExternalLink() {
-		return externalLinkEClass;
+	public EClass getImage() {
+		return imageEClass;
 	}
 
 	/**
@@ -322,8 +315,8 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInternalLink() {
-		return internalLinkEClass;
+	public EAttribute getImage_Url() {
+		return (EAttribute) imageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -375,30 +368,29 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 		// Create classes and their features
 		siteEClass = createEClass(SITE);
 		createEReference(siteEClass, SITE__BODY);
+		createEAttribute(siteEClass, SITE__NAME);
 
 		bodyEClass = createEClass(BODY);
-		createEReference(bodyEClass, BODY__SECTION);
-		createEReference(bodyEClass, BODY__IMAGE);
-		createEReference(bodyEClass, BODY__PARAGRAPH);
-		createEReference(bodyEClass, BODY__BUTTON);
+		createEReference(bodyEClass, BODY__PARAGRAPHS);
+		createEReference(bodyEClass, BODY__SECTIONS);
+		createEReference(bodyEClass, BODY__IMAGES);
+		createEReference(bodyEClass, BODY__BUTTONS);
 
 		paragraphEClass = createEClass(PARAGRAPH);
 		createEAttribute(paragraphEClass, PARAGRAPH__CONTENT);
 
-		imageEClass = createEClass(IMAGE);
-		createEAttribute(imageEClass, IMAGE__URL);
-
 		sectionEClass = createEClass(SECTION);
-		createEReference(sectionEClass, SECTION__PARAGRAPH);
-		createEReference(sectionEClass, SECTION__IMAGE);
-		createEReference(sectionEClass, SECTION__BUTTON);
+		createEReference(sectionEClass, SECTION__PARAGRAPHS);
+		createEReference(sectionEClass, SECTION__IMAGES);
+		createEReference(sectionEClass, SECTION__BUTTONS);
+		createEReference(sectionEClass, SECTION__SECTIONS);
+		createEReference(sectionEClass, SECTION__LINKS);
 
 		buttonEClass = createEClass(BUTTON);
 		createEReference(buttonEClass, BUTTON__LINK);
 
-		externalLinkEClass = createEClass(EXTERNAL_LINK);
-
-		internalLinkEClass = createEClass(INTERNAL_LINK);
+		imageEClass = createEClass(IMAGE);
+		createEAttribute(imageEClass, IMAGE__URL);
 
 		linkEClass = createEClass(LINK);
 		createEAttribute(linkEClass, LINK__URL);
@@ -433,26 +425,26 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		externalLinkEClass.getESuperTypes().add(this.getLink());
-		internalLinkEClass.getESuperTypes().add(this.getLink());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(siteEClass, Site.class, "Site", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSite_Body(), this.getBody(), null, "body", null, 0, -1, Site.class, !IS_TRANSIENT,
+		initEReference(getSite_Body(), this.getBody(), null, "body", null, 1, 1, Site.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getSite_Name(), ecorePackage.getEString(), "name", null, 0, 1, Site.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBody_Section(), this.getSection(), null, "section", null, 0, -1, Body.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getBody_Image(), this.getImage(), null, "image", null, 0, -1, Body.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getBody_Paragraph(), this.getParagraph(), null, "paragraph", null, 0, -1, Body.class,
+		initEReference(getBody_Paragraphs(), this.getParagraph(), null, "paragraphs", null, 0, -1, Body.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBody_Button(), this.getButton(), null, "button", null, 0, -1, Body.class, !IS_TRANSIENT,
+		initEReference(getBody_Sections(), this.getSection(), null, "sections", null, 0, -1, Body.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getBody_Images(), this.getImage(), null, "images", null, 0, -1, Body.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getBody_Buttons(), this.getButton(), null, "buttons", null, 0, -1, Body.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -461,33 +453,33 @@ public class WebsitePackageImpl extends EPackageImpl implements WebsitePackage {
 		initEAttribute(getParagraph_Content(), ecorePackage.getEString(), "content", null, 0, 1, Paragraph.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImage_Url(), ecorePackage.getEString(), "url", null, 0, 1, Image.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(sectionEClass, Section.class, "Section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSection_Paragraph(), this.getParagraph(), null, "paragraph", null, 0, -1, Section.class,
+		initEReference(getSection_Paragraphs(), this.getParagraph(), null, "paragraphs", null, 0, -1, Section.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSection_Image(), this.getImage(), null, "image", null, 0, -1, Section.class, !IS_TRANSIENT,
+		initEReference(getSection_Images(), this.getImage(), null, "images", null, 0, -1, Section.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getSection_Button(), this.getButton(), null, "button", null, 0, -1, Section.class, !IS_TRANSIENT,
+		initEReference(getSection_Buttons(), this.getButton(), null, "buttons", null, 0, -1, Section.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSection_Sections(), this.getSection(), null, "sections", null, 0, -1, Section.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSection_Links(), this.getLink(), null, "links", null, 0, -1, Section.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getButton_Link(), this.getLink(), null, "link", null, 0, -1, Button.class, !IS_TRANSIENT,
+		initEReference(getButton_Link(), this.getLink(), null, "link", null, 0, 1, Button.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
-		initEClass(externalLinkEClass, ExternalLink.class, "ExternalLink", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
+		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImage_Url(), ecorePackage.getEString(), "url", null, 0, 1, Image.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(internalLinkEClass, InternalLink.class, "InternalLink", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(linkEClass, Link.class, "Link", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLink_Url(), ecorePackage.getEString(), "url", null, 0, 1, Link.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

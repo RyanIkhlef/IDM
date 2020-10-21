@@ -62,16 +62,14 @@ public class WebsiteFactoryImpl extends EFactoryImpl implements WebsiteFactory {
 			return createBody();
 		case WebsitePackage.PARAGRAPH:
 			return createParagraph();
-		case WebsitePackage.IMAGE:
-			return createImage();
 		case WebsitePackage.SECTION:
 			return createSection();
 		case WebsitePackage.BUTTON:
 			return createButton();
-		case WebsitePackage.EXTERNAL_LINK:
-			return createExternalLink();
-		case WebsitePackage.INTERNAL_LINK:
-			return createInternalLink();
+		case WebsitePackage.IMAGE:
+			return createImage();
+		case WebsitePackage.LINK:
+			return createLink();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -112,16 +110,6 @@ public class WebsiteFactoryImpl extends EFactoryImpl implements WebsiteFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Image createImage() {
-		ImageImpl image = new ImageImpl();
-		return image;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Section createSection() {
 		SectionImpl section = new SectionImpl();
 		return section;
@@ -142,9 +130,9 @@ public class WebsiteFactoryImpl extends EFactoryImpl implements WebsiteFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExternalLink createExternalLink() {
-		ExternalLinkImpl externalLink = new ExternalLinkImpl();
-		return externalLink;
+	public Image createImage() {
+		ImageImpl image = new ImageImpl();
+		return image;
 	}
 
 	/**
@@ -152,9 +140,9 @@ public class WebsiteFactoryImpl extends EFactoryImpl implements WebsiteFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InternalLink createInternalLink() {
-		InternalLinkImpl internalLink = new InternalLinkImpl();
-		return internalLink;
+	public Link createLink() {
+		LinkImpl link = new LinkImpl();
+		return link;
 	}
 
 	/**

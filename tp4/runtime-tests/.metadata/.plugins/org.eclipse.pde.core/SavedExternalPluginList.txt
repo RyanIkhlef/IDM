@@ -1,4 +1,4 @@
-# List of external plug-in models previously loaded. Timestamp: 1603274180709
+# List of external plug-in models previously loaded. Timestamp: 1603277259038
 file:/home/m1eserv/ikhlef/Desktop/Master1/IDM/idm/tp4/atelier4/Enterprise/
 file:/home/m1eserv/ikhlef/Desktop/Master1/IDM/idm/tp4/atelier4/Enterprise.edit/
 file:/home/m1eserv/ikhlef/Desktop/Master1/IDM/idm/tp4/atelier4/Enterprise.editor/
@@ -1551,6 +1551,9 @@ file:/opt/eclipse-papyrus-2020-06/plugins/org.w3c.css.sac_1.3.1.v200903091627.ja
 file:/opt/eclipse-papyrus-2020-06/plugins/org.w3c.dom.events_3.0.0.draft20060413_v201105210656.jar
 file:/opt/eclipse-papyrus-2020-06/plugins/org.w3c.dom.smil_1.0.1.v200903091627.jar
 file:/opt/eclipse-papyrus-2020-06/plugins/org.w3c.dom.svg_1.1.0.v201011041433.jar
+file:/home/m1eserv/ikhlef/Desktop/Master1/IDM/idm/tp4/atelier2/website/
+file:/home/m1eserv/ikhlef/Desktop/Master1/IDM/idm/tp4/atelier2/website.edit/
+file:/home/m1eserv/ikhlef/Desktop/Master1/IDM/idm/tp4/atelier2/website.editor/
 file:/opt/eclipse-papyrus-2020-06/plugins/com.ibm.icu.source_64.2.0.v20190507-1337.jar
 file:/opt/eclipse-papyrus-2020-06/plugins/com.jcraft.jsch.source_0.1.55.v20190404-1902.jar
 file:/opt/eclipse-papyrus-2020-06/plugins/com.sun.el.source_2.2.0.v201303151357.jar

@@ -87,13 +87,6 @@ public class WebsiteSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WebsitePackage.IMAGE: {
-			Image image = (Image) theEObject;
-			T result = caseImage(image);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case WebsitePackage.SECTION: {
 			Section section = (Section) theEObject;
 			T result = caseSection(section);
@@ -108,20 +101,9 @@ public class WebsiteSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WebsitePackage.EXTERNAL_LINK: {
-			ExternalLink externalLink = (ExternalLink) theEObject;
-			T result = caseExternalLink(externalLink);
-			if (result == null)
-				result = caseLink(externalLink);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case WebsitePackage.INTERNAL_LINK: {
-			InternalLink internalLink = (InternalLink) theEObject;
-			T result = caseInternalLink(internalLink);
-			if (result == null)
-				result = caseLink(internalLink);
+		case WebsitePackage.IMAGE: {
+			Image image = (Image) theEObject;
+			T result = caseImage(image);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -184,21 +166,6 @@ public class WebsiteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Image</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Image</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseImage(Image object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -229,32 +196,17 @@ public class WebsiteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>External Link</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Image</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>External Link</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Image</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseExternalLink(ExternalLink object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Internal Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Internal Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInternalLink(InternalLink object) {
+	public T caseImage(Image object) {
 		return null;
 	}
 

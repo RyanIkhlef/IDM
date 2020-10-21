@@ -2,19 +2,14 @@
  */
 package website.impl;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import website.Body;
 import website.Site;
@@ -29,20 +24,40 @@ import website.WebsitePackage;
  * </p>
  * <ul>
  *   <li>{@link website.impl.SiteImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link website.impl.SiteImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SiteImpl extends MinimalEObjectImpl.Container implements Site {
 	/**
-	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference list.
+	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBody()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Body> body;
+	protected Body body;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,11 +83,69 @@ public class SiteImpl extends MinimalEObjectImpl.Container implements Site {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Body> getBody() {
-		if (body == null) {
-			body = new EObjectContainmentEList<Body>(Body.class, this, WebsitePackage.SITE__BODY);
-		}
+	public Body getBody() {
 		return body;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBody(Body newBody, NotificationChain msgs) {
+		Body oldBody = body;
+		body = newBody;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebsitePackage.SITE__BODY,
+					oldBody, newBody);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBody(Body newBody) {
+		if (newBody != body) {
+			NotificationChain msgs = null;
+			if (body != null)
+				msgs = ((InternalEObject) body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebsitePackage.SITE__BODY,
+						null, msgs);
+			if (newBody != null)
+				msgs = ((InternalEObject) newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebsitePackage.SITE__BODY,
+						null, msgs);
+			msgs = basicSetBody(newBody, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.SITE__BODY, newBody, newBody));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.SITE__NAME, oldName, name));
 	}
 
 	/**
@@ -84,7 +157,7 @@ public class SiteImpl extends MinimalEObjectImpl.Container implements Site {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case WebsitePackage.SITE__BODY:
-			return ((InternalEList<?>) getBody()).basicRemove(otherEnd, msgs);
+			return basicSetBody(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -99,6 +172,8 @@ public class SiteImpl extends MinimalEObjectImpl.Container implements Site {
 		switch (featureID) {
 		case WebsitePackage.SITE__BODY:
 			return getBody();
+		case WebsitePackage.SITE__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,13 +183,14 @@ public class SiteImpl extends MinimalEObjectImpl.Container implements Site {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WebsitePackage.SITE__BODY:
-			getBody().clear();
-			getBody().addAll((Collection<? extends Body>) newValue);
+			setBody((Body) newValue);
+			return;
+		case WebsitePackage.SITE__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,7 +205,10 @@ public class SiteImpl extends MinimalEObjectImpl.Container implements Site {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case WebsitePackage.SITE__BODY:
-			getBody().clear();
+			setBody((Body) null);
+			return;
+		case WebsitePackage.SITE__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -144,9 +223,28 @@ public class SiteImpl extends MinimalEObjectImpl.Container implements Site {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WebsitePackage.SITE__BODY:
-			return body != null && !body.isEmpty();
+			return body != null;
+		case WebsitePackage.SITE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SiteImpl

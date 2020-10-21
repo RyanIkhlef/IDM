@@ -25,7 +25,7 @@ import website.WebsitePackage;
  *
  * @generated
  */
-public abstract class LinkImpl extends MinimalEObjectImpl.Container implements Link {
+public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
