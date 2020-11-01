@@ -1,0 +1,14 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module buttonGenerator.
+ */]
+[module buttonGenerator('http://www.example.org/website')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aButton
+ */]
+[template public generateElement(button : Button)]
+	<a id='[button.targetLink.id/]' class='[button.targetLink.class/]' href='[button.targetLink.url/]'><button id='[button.id/]' class='[button.class/]' type='button'> [button.value/] </button> </a>
+[/template]

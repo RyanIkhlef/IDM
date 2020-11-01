@@ -1,0 +1,14 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module image.
+ */]
+[module imageGenerator('http://www.example.org/website')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anImage
+ */]
+[template public generateElement(image : Image)]
+	<img id='[image.id/]' class='[image.class/]' src='[image.imageLink.url/]'>
+[/template]

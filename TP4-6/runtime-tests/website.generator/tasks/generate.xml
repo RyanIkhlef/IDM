@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="generate" name="website.generator">
+    <property name="ECLIPSE_HOME" value="../../../../../../../../../../../modeling-2020-06/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+
+    <!-- The classpath with only the dependencies used by the project -->
+    <path id="website.generator.libraryclasspath">
+        <pathelement location="${ECLIPSE_WORKSPACE}/website.generator/bin"/>
+    </path>
+
+    <path id="website.generator.classpath">
+        <path refid="website.generator.libraryclasspath"/>
+    </path>
+
+    <!-- The classpath with only the jars available in the plugin folder of Eclipse -->
+    <path id="website.generator.libraryclasspath.alljars">
+        <pathelement location="../website.generator/bin"/>
+        <fileset dir="${ECLIPSE_HOME}/plugins/" includes="*.jar"/>
+    </path>
+
+    <path id="website.generator.classpath.alljars">
+        <path refid="website.generator.libraryclasspath.alljars"/>
+    </path>
+
+    <!-- The default task with the jars used by this project -->
+    <target name="generate">
+        <java classname="website.generator.main.Generate" classpathref="website.generator.classpath">
+            <arg value="${model}"/>
+            <arg value="${target}"/>
+        </java>
+    </target>
+
+    <!--
+        In case of problem you can also try with all the jar available in your Eclipse
+        Keep in mind that having two versions of the same jar can create problems
+    -->
+    <target name="generate.alljars">
+        <java classname="website.generator.main.Generate" classpathref="website.generator.classpath">
+            <arg value="${model}"/>
+            <arg value="${target}"/>
+        </java>
+    </target>
+</project>

@@ -1,0 +1,22 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module sectionGenerator.
+ */]
+[module sectionGenerator('http://www.example.org/website')]
+[import paragraphGenerator/]
+[import siteGenerator/]
+[import imageGenerator/]
+[import buttonGenerator/]
+[import linkGenerator/]
+
+[**
+ * The documentation of the template generateElement.
+ * @param aParagraph
+ */]
+[template public generateElement(section : Section)]
+	<section id='[section.id/]' class='[section.class/]'>
+		[for (element : HTMLElement | self.htmlElements) separator('\n')]
+			[generateElement(element)/]
+		[/for]
+	</section>
+[/template]

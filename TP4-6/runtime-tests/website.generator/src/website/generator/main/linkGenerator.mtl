@@ -1,0 +1,14 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module linkGenerator.
+ */]
+[module linkGenerator('http://www.example.org/website')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aLink
+ */]
+[template public generateElement(link : Link)]
+	<a id='[link.id/]' class='[link.class/]' href='[link.url/]'> [link.url/] </a>
+[/template]
