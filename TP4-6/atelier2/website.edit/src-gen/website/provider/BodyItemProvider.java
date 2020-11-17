@@ -70,10 +70,7 @@ public class BodyItemProvider extends ItemProviderAdapter implements IEditingDom
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebsitePackage.Literals.BODY__PARAGRAPHS);
-			childrenFeatures.add(WebsitePackage.Literals.BODY__SECTIONS);
-			childrenFeatures.add(WebsitePackage.Literals.BODY__IMAGES);
-			childrenFeatures.add(WebsitePackage.Literals.BODY__BUTTONS);
+			childrenFeatures.add(WebsitePackage.Literals.BODY__HTML_ELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -135,10 +132,7 @@ public class BodyItemProvider extends ItemProviderAdapter implements IEditingDom
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Body.class)) {
-		case WebsitePackage.BODY__PARAGRAPHS:
-		case WebsitePackage.BODY__SECTIONS:
-		case WebsitePackage.BODY__IMAGES:
-		case WebsitePackage.BODY__BUTTONS:
+		case WebsitePackage.BODY__HTML_ELEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -156,17 +150,20 @@ public class BodyItemProvider extends ItemProviderAdapter implements IEditingDom
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.BODY__PARAGRAPHS,
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.BODY__HTML_ELEMENTS,
 				WebsiteFactory.eINSTANCE.createParagraph()));
 
-		newChildDescriptors.add(
-				createChildParameter(WebsitePackage.Literals.BODY__SECTIONS, WebsiteFactory.eINSTANCE.createSection()));
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.BODY__HTML_ELEMENTS,
+				WebsiteFactory.eINSTANCE.createSection()));
 
-		newChildDescriptors.add(
-				createChildParameter(WebsitePackage.Literals.BODY__IMAGES, WebsiteFactory.eINSTANCE.createImage()));
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.BODY__HTML_ELEMENTS,
+				WebsiteFactory.eINSTANCE.createButton()));
 
-		newChildDescriptors.add(
-				createChildParameter(WebsitePackage.Literals.BODY__BUTTONS, WebsiteFactory.eINSTANCE.createButton()));
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.BODY__HTML_ELEMENTS,
+				WebsiteFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.BODY__HTML_ELEMENTS,
+				WebsiteFactory.eINSTANCE.createLink()));
 	}
 
 	/**

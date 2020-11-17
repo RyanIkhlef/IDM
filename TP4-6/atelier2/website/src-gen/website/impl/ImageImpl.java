@@ -3,13 +3,15 @@
 package website.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import website.Image;
+import website.Link;
 import website.WebsitePackage;
 
 /**
@@ -20,31 +22,21 @@ import website.WebsitePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link website.impl.ImageImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link website.impl.ImageImpl#getImageLink <em>Image Link</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
+public class ImageImpl extends HTMLElementImpl implements Image {
 	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The cached value of the '{@link #getImageLink() <em>Image Link</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getImageLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
+	protected Link imageLink;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +62,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl() {
-		return url;
+	public Link getImageLink() {
+		return imageLink;
 	}
 
 	/**
@@ -79,11 +71,54 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.IMAGE__URL, oldUrl, url));
+	public NotificationChain basicSetImageLink(Link newImageLink, NotificationChain msgs) {
+		Link oldImageLink = imageLink;
+		imageLink = newImageLink;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					WebsitePackage.IMAGE__IMAGE_LINK, oldImageLink, newImageLink);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImageLink(Link newImageLink) {
+		if (newImageLink != imageLink) {
+			NotificationChain msgs = null;
+			if (imageLink != null)
+				msgs = ((InternalEObject) imageLink).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - WebsitePackage.IMAGE__IMAGE_LINK, null, msgs);
+			if (newImageLink != null)
+				msgs = ((InternalEObject) newImageLink).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - WebsitePackage.IMAGE__IMAGE_LINK, null, msgs);
+			msgs = basicSetImageLink(newImageLink, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebsitePackage.IMAGE__IMAGE_LINK, newImageLink,
+					newImageLink));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WebsitePackage.IMAGE__IMAGE_LINK:
+			return basicSetImageLink(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -94,8 +129,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WebsitePackage.IMAGE__URL:
-			return getUrl();
+		case WebsitePackage.IMAGE__IMAGE_LINK:
+			return getImageLink();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +143,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WebsitePackage.IMAGE__URL:
-			setUrl((String) newValue);
+		case WebsitePackage.IMAGE__IMAGE_LINK:
+			setImageLink((Link) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +158,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WebsitePackage.IMAGE__URL:
-			setUrl(URL_EDEFAULT);
+		case WebsitePackage.IMAGE__IMAGE_LINK:
+			setImageLink((Link) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -138,27 +173,10 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WebsitePackage.IMAGE__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+		case WebsitePackage.IMAGE__IMAGE_LINK:
+			return imageLink != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (url: ");
-		result.append(url);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ImageImpl

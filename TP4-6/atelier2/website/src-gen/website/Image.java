@@ -2,8 +2,6 @@
  */
 package website;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Image</b></em>'.
@@ -13,34 +11,34 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link website.Image#getUrl <em>Url</em>}</li>
+ *   <li>{@link website.Image#getImageLink <em>Image Link</em>}</li>
  * </ul>
  *
  * @see website.WebsitePackage#getImage()
  * @model
  * @generated
  */
-public interface Image extends EObject {
+public interface Image extends HTMLElement {
 	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * Returns the value of the '<em><b>Image Link</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see website.WebsitePackage#getImage_Url()
-	 * @model
+	 * @return the value of the '<em>Image Link</em>' containment reference.
+	 * @see #setImageLink(Link)
+	 * @see website.WebsitePackage#getImage_ImageLink()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getUrl();
+	Link getImageLink();
 
 	/**
-	 * Sets the value of the '{@link website.Image#getUrl <em>Url</em>}' attribute.
+	 * Sets the value of the '{@link website.Image#getImageLink <em>Image Link</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
+	 * @param value the new value of the '<em>Image Link</em>' containment reference.
+	 * @see #getImageLink()
 	 * @generated
 	 */
-	void setUrl(String value);
+	void setImageLink(Link value);
 
 } // Image

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see website.WebsiteFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface WebsitePackage extends EPackage {
@@ -113,40 +114,13 @@ public interface WebsitePackage extends EPackage {
 	int BODY = 1;
 
 	/**
-	 * The feature id for the '<em><b>Paragraphs</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Html Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BODY__PARAGRAPHS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Sections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BODY__SECTIONS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Images</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BODY__IMAGES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Buttons</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BODY__BUTTONS = 3;
+	int BODY__HTML_ELEMENTS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Body</em>' class.
@@ -155,7 +129,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BODY_FEATURE_COUNT = 4;
+	int BODY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Body</em>' class.
@@ -165,6 +139,52 @@ public interface WebsitePackage extends EPackage {
 	 * @ordered
 	 */
 	int BODY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link website.impl.HTMLElementImpl <em>HTML Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see website.impl.HTMLElementImpl
+	 * @see website.impl.WebsitePackageImpl#getHTMLElement()
+	 * @generated
+	 */
+	int HTML_ELEMENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT__CLASS = 1;
+
+	/**
+	 * The number of structural features of the '<em>HTML Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>HTML Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link website.impl.ParagraphImpl <em>Paragraph</em>}' class.
@@ -177,13 +197,31 @@ public interface WebsitePackage extends EPackage {
 	int PARAGRAPH = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAGRAPH__ID = HTML_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAGRAPH__CLASS = HTML_ELEMENT__CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAGRAPH__CONTENT = 0;
+	int PARAGRAPH__CONTENT = HTML_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Paragraph</em>' class.
@@ -192,7 +230,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAGRAPH_FEATURE_COUNT = 1;
+	int PARAGRAPH_FEATURE_COUNT = HTML_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Paragraph</em>' class.
@@ -201,7 +239,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAGRAPH_OPERATION_COUNT = 0;
+	int PARAGRAPH_OPERATION_COUNT = HTML_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link website.impl.SectionImpl <em>Section</em>}' class.
@@ -214,49 +252,31 @@ public interface WebsitePackage extends EPackage {
 	int SECTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Paragraphs</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__PARAGRAPHS = 0;
+	int SECTION__ID = HTML_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Images</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Class</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__IMAGES = 1;
+	int SECTION__CLASS = HTML_ELEMENT__CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Buttons</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Html Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__BUTTONS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Sections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECTION__SECTIONS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECTION__LINKS = 4;
+	int SECTION__HTML_ELEMENTS = HTML_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Section</em>' class.
@@ -265,7 +285,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION_FEATURE_COUNT = 5;
+	int SECTION_FEATURE_COUNT = HTML_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Section</em>' class.
@@ -274,7 +294,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION_OPERATION_COUNT = 0;
+	int SECTION_OPERATION_COUNT = HTML_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link website.impl.ButtonImpl <em>Button</em>}' class.
@@ -287,13 +307,40 @@ public interface WebsitePackage extends EPackage {
 	int BUTTON = 4;
 
 	/**
-	 * The feature id for the '<em><b>Link</b></em>' containment reference.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__LINK = 0;
+	int BUTTON__ID = HTML_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__CLASS = HTML_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Target Link</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__TARGET_LINK = HTML_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__VALUE = HTML_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Button</em>' class.
@@ -302,7 +349,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_FEATURE_COUNT = 1;
+	int BUTTON_FEATURE_COUNT = HTML_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Button</em>' class.
@@ -311,7 +358,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_OPERATION_COUNT = 0;
+	int BUTTON_OPERATION_COUNT = HTML_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link website.impl.ImageImpl <em>Image</em>}' class.
@@ -324,13 +371,31 @@ public interface WebsitePackage extends EPackage {
 	int IMAGE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE__URL = 0;
+	int IMAGE__ID = HTML_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__CLASS = HTML_ELEMENT__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Image Link</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__IMAGE_LINK = HTML_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Image</em>' class.
@@ -339,7 +404,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FEATURE_COUNT = 1;
+	int IMAGE_FEATURE_COUNT = HTML_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Image</em>' class.
@@ -348,7 +413,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_OPERATION_COUNT = 0;
+	int IMAGE_OPERATION_COUNT = HTML_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link website.impl.LinkImpl <em>Link</em>}' class.
@@ -361,13 +426,31 @@ public interface WebsitePackage extends EPackage {
 	int LINK = 6;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__ID = HTML_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__CLASS = HTML_ELEMENT__CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__URL = 0;
+	int LINK__URL = HTML_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -376,7 +459,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = 1;
+	int LINK_FEATURE_COUNT = HTML_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -385,7 +468,7 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_OPERATION_COUNT = 0;
+	int LINK_OPERATION_COUNT = HTML_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link website.Site <em>Site</em>}'.
@@ -430,48 +513,15 @@ public interface WebsitePackage extends EPackage {
 	EClass getBody();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link website.Body#getParagraphs <em>Paragraphs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link website.Body#getHtmlElements <em>Html Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Paragraphs</em>'.
-	 * @see website.Body#getParagraphs()
+	 * @return the meta object for the containment reference list '<em>Html Elements</em>'.
+	 * @see website.Body#getHtmlElements()
 	 * @see #getBody()
 	 * @generated
 	 */
-	EReference getBody_Paragraphs();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link website.Body#getSections <em>Sections</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sections</em>'.
-	 * @see website.Body#getSections()
-	 * @see #getBody()
-	 * @generated
-	 */
-	EReference getBody_Sections();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link website.Body#getImages <em>Images</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Images</em>'.
-	 * @see website.Body#getImages()
-	 * @see #getBody()
-	 * @generated
-	 */
-	EReference getBody_Images();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link website.Body#getButtons <em>Buttons</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Buttons</em>'.
-	 * @see website.Body#getButtons()
-	 * @see #getBody()
-	 * @generated
-	 */
-	EReference getBody_Buttons();
+	EReference getBody_HtmlElements();
 
 	/**
 	 * Returns the meta object for class '{@link website.Paragraph <em>Paragraph</em>}'.
@@ -505,59 +555,15 @@ public interface WebsitePackage extends EPackage {
 	EClass getSection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link website.Section#getParagraphs <em>Paragraphs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link website.Section#getHtmlElements <em>Html Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Paragraphs</em>'.
-	 * @see website.Section#getParagraphs()
+	 * @return the meta object for the containment reference list '<em>Html Elements</em>'.
+	 * @see website.Section#getHtmlElements()
 	 * @see #getSection()
 	 * @generated
 	 */
-	EReference getSection_Paragraphs();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link website.Section#getImages <em>Images</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Images</em>'.
-	 * @see website.Section#getImages()
-	 * @see #getSection()
-	 * @generated
-	 */
-	EReference getSection_Images();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link website.Section#getButtons <em>Buttons</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Buttons</em>'.
-	 * @see website.Section#getButtons()
-	 * @see #getSection()
-	 * @generated
-	 */
-	EReference getSection_Buttons();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link website.Section#getSections <em>Sections</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sections</em>'.
-	 * @see website.Section#getSections()
-	 * @see #getSection()
-	 * @generated
-	 */
-	EReference getSection_Sections();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link website.Section#getLinks <em>Links</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Links</em>'.
-	 * @see website.Section#getLinks()
-	 * @see #getSection()
-	 * @generated
-	 */
-	EReference getSection_Links();
+	EReference getSection_HtmlElements();
 
 	/**
 	 * Returns the meta object for class '{@link website.Button <em>Button</em>}'.
@@ -570,15 +576,26 @@ public interface WebsitePackage extends EPackage {
 	EClass getButton();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link website.Button#getLink <em>Link</em>}'.
+	 * Returns the meta object for the containment reference '{@link website.Button#getTargetLink <em>Target Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Link</em>'.
-	 * @see website.Button#getLink()
+	 * @return the meta object for the containment reference '<em>Target Link</em>'.
+	 * @see website.Button#getTargetLink()
 	 * @see #getButton()
 	 * @generated
 	 */
-	EReference getButton_Link();
+	EReference getButton_TargetLink();
+
+	/**
+	 * Returns the meta object for the attribute '{@link website.Button#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see website.Button#getValue()
+	 * @see #getButton()
+	 * @generated
+	 */
+	EAttribute getButton_Value();
 
 	/**
 	 * Returns the meta object for class '{@link website.Image <em>Image</em>}'.
@@ -591,15 +608,15 @@ public interface WebsitePackage extends EPackage {
 	EClass getImage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link website.Image#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the containment reference '{@link website.Image#getImageLink <em>Image Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see website.Image#getUrl()
+	 * @return the meta object for the containment reference '<em>Image Link</em>'.
+	 * @see website.Image#getImageLink()
 	 * @see #getImage()
 	 * @generated
 	 */
-	EAttribute getImage_Url();
+	EReference getImage_ImageLink();
 
 	/**
 	 * Returns the meta object for class '{@link website.Link <em>Link</em>}'.
@@ -621,6 +638,38 @@ public interface WebsitePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLink_Url();
+
+	/**
+	 * Returns the meta object for class '{@link website.HTMLElement <em>HTML Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>HTML Element</em>'.
+	 * @see website.HTMLElement
+	 * @generated
+	 */
+	EClass getHTMLElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link website.HTMLElement#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see website.HTMLElement#getId()
+	 * @see #getHTMLElement()
+	 * @generated
+	 */
+	EAttribute getHTMLElement_Id();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link website.HTMLElement#getClass_ <em>Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Class</em>'.
+	 * @see website.HTMLElement#getClass_()
+	 * @see #getHTMLElement()
+	 * @generated
+	 */
+	EAttribute getHTMLElement_Class();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -682,36 +731,12 @@ public interface WebsitePackage extends EPackage {
 		EClass BODY = eINSTANCE.getBody();
 
 		/**
-		 * The meta object literal for the '<em><b>Paragraphs</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Html Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BODY__PARAGRAPHS = eINSTANCE.getBody_Paragraphs();
-
-		/**
-		 * The meta object literal for the '<em><b>Sections</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BODY__SECTIONS = eINSTANCE.getBody_Sections();
-
-		/**
-		 * The meta object literal for the '<em><b>Images</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BODY__IMAGES = eINSTANCE.getBody_Images();
-
-		/**
-		 * The meta object literal for the '<em><b>Buttons</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BODY__BUTTONS = eINSTANCE.getBody_Buttons();
+		EReference BODY__HTML_ELEMENTS = eINSTANCE.getBody_HtmlElements();
 
 		/**
 		 * The meta object literal for the '{@link website.impl.ParagraphImpl <em>Paragraph</em>}' class.
@@ -742,44 +767,12 @@ public interface WebsitePackage extends EPackage {
 		EClass SECTION = eINSTANCE.getSection();
 
 		/**
-		 * The meta object literal for the '<em><b>Paragraphs</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Html Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SECTION__PARAGRAPHS = eINSTANCE.getSection_Paragraphs();
-
-		/**
-		 * The meta object literal for the '<em><b>Images</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SECTION__IMAGES = eINSTANCE.getSection_Images();
-
-		/**
-		 * The meta object literal for the '<em><b>Buttons</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SECTION__BUTTONS = eINSTANCE.getSection_Buttons();
-
-		/**
-		 * The meta object literal for the '<em><b>Sections</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SECTION__SECTIONS = eINSTANCE.getSection_Sections();
-
-		/**
-		 * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SECTION__LINKS = eINSTANCE.getSection_Links();
+		EReference SECTION__HTML_ELEMENTS = eINSTANCE.getSection_HtmlElements();
 
 		/**
 		 * The meta object literal for the '{@link website.impl.ButtonImpl <em>Button</em>}' class.
@@ -792,12 +785,20 @@ public interface WebsitePackage extends EPackage {
 		EClass BUTTON = eINSTANCE.getButton();
 
 		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Target Link</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BUTTON__LINK = eINSTANCE.getButton_Link();
+		EReference BUTTON__TARGET_LINK = eINSTANCE.getButton_TargetLink();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUTTON__VALUE = eINSTANCE.getButton_Value();
 
 		/**
 		 * The meta object literal for the '{@link website.impl.ImageImpl <em>Image</em>}' class.
@@ -810,12 +811,12 @@ public interface WebsitePackage extends EPackage {
 		EClass IMAGE = eINSTANCE.getImage();
 
 		/**
-		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Image Link</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMAGE__URL = eINSTANCE.getImage_Url();
+		EReference IMAGE__IMAGE_LINK = eINSTANCE.getImage_ImageLink();
 
 		/**
 		 * The meta object literal for the '{@link website.impl.LinkImpl <em>Link</em>}' class.
@@ -834,6 +835,32 @@ public interface WebsitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LINK__URL = eINSTANCE.getLink_Url();
+
+		/**
+		 * The meta object literal for the '{@link website.impl.HTMLElementImpl <em>HTML Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see website.impl.HTMLElementImpl
+		 * @see website.impl.WebsitePackageImpl#getHTMLElement()
+		 * @generated
+		 */
+		EClass HTML_ELEMENT = eINSTANCE.getHTMLElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HTML_ELEMENT__ID = eINSTANCE.getHTMLElement_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Class</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HTML_ELEMENT__CLASS = eINSTANCE.getHTMLElement_Class();
 
 	}
 

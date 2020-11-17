@@ -5,7 +5,7 @@
     <semanticResources>website.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_PPkgsBOFEeurt6M7uOb20w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_PP1mcROFEeurt6M7uOb20w" name="website" repPath="#_PPzKMBOFEeurt6M7uOb20w" changeId="b84776b5-0fc6-49c0-8531-ad7ab21dbd41">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_PP1mcROFEeurt6M7uOb20w" name="website" repPath="#_PPzKMBOFEeurt6M7uOb20w" changeId="22dbae27-851a-4904-8e9f-10516391591f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="website.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -435,7 +435,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_zVRKHxq4Eeu7-rcM8WnCFA" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_m6FXTh6TEeuyxviihMDiMw" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
         <labelFormat>italic</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
@@ -443,7 +443,7 @@
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_xy3jMBq4Eeu7-rcM8WnCFA" name="id : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="website.ecore#//HTMLElement/id"/>
         <semanticElements xmi:type="ecore:EAttribute" href="website.ecore#//HTMLElement/id"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_yf1W4xq4Eeu7-rcM8WnCFA" labelAlignment="LEFT">
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_lzb_oh6QEeuyxviihMDiMw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

@@ -7,7 +7,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import website.Paragraph;
 import website.WebsitePackage;
@@ -25,7 +24,7 @@ import website.WebsitePackage;
  *
  * @generated
  */
-public class ParagraphImpl extends MinimalEObjectImpl.Container implements Paragraph {
+public class ParagraphImpl extends HTMLElementImpl implements Paragraph {
 	/**
 	 * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
 	 * <!-- begin-user-doc -->

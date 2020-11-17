@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website:Site xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:website="http://www.example.org/website" name="siteweb">
+  <body>
+    <htmlElements xsi:type="website:Paragraph" id="test"/>
+    <htmlElements xsi:type="website:Paragraph" id="test2"/>
+  </body>
+</website:Site>

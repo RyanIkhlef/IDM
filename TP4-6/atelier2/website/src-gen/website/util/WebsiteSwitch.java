@@ -84,12 +84,16 @@ public class WebsiteSwitch<T> extends Switch<T> {
 			Paragraph paragraph = (Paragraph) theEObject;
 			T result = caseParagraph(paragraph);
 			if (result == null)
+				result = caseHTMLElement(paragraph);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WebsitePackage.SECTION: {
 			Section section = (Section) theEObject;
 			T result = caseSection(section);
+			if (result == null)
+				result = caseHTMLElement(section);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -98,6 +102,8 @@ public class WebsiteSwitch<T> extends Switch<T> {
 			Button button = (Button) theEObject;
 			T result = caseButton(button);
 			if (result == null)
+				result = caseHTMLElement(button);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -105,12 +111,23 @@ public class WebsiteSwitch<T> extends Switch<T> {
 			Image image = (Image) theEObject;
 			T result = caseImage(image);
 			if (result == null)
+				result = caseHTMLElement(image);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case WebsitePackage.LINK: {
 			Link link = (Link) theEObject;
 			T result = caseLink(link);
+			if (result == null)
+				result = caseHTMLElement(link);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WebsitePackage.HTML_ELEMENT: {
+			HTMLElement htmlElement = (HTMLElement) theEObject;
+			T result = caseHTMLElement(htmlElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -222,6 +239,21 @@ public class WebsiteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLink(Link object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>HTML Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>HTML Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHTMLElement(HTMLElement object) {
 		return null;
 	}
 

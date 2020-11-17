@@ -3,11 +3,11 @@
  * The documentation of the module sectionGenerator.
  */]
 [module sectionGenerator('http://www.example.org/website')]
-[import paragraphGenerator/]
-[import siteGenerator/]
-[import imageGenerator/]
-[import buttonGenerator/]
-[import linkGenerator/]
+[import website::generator::main::paragraphGenerator/]
+[import website::generator::main::siteGenerator/]
+[import website::generator::main::imageGenerator/]
+[import website::generator::main::buttonGenerator/]
+[import website::generator::main::linkGenerator/]
 
 [**
  * The documentation of the template generateElement.

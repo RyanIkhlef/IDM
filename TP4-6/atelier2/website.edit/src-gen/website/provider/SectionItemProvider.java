@@ -8,17 +8,9 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import website.Section;
@@ -31,8 +23,7 @@ import website.WebsitePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SectionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SectionItemProvider extends HTMLElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -70,11 +61,7 @@ public class SectionItemProvider extends ItemProviderAdapter implements IEditing
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WebsitePackage.Literals.SECTION__PARAGRAPHS);
-			childrenFeatures.add(WebsitePackage.Literals.SECTION__IMAGES);
-			childrenFeatures.add(WebsitePackage.Literals.SECTION__BUTTONS);
-			childrenFeatures.add(WebsitePackage.Literals.SECTION__SECTIONS);
-			childrenFeatures.add(WebsitePackage.Literals.SECTION__LINKS);
+			childrenFeatures.add(WebsitePackage.Literals.SECTION__HTML_ELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +108,9 @@ public class SectionItemProvider extends ItemProviderAdapter implements IEditing
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Section_type");
+		String label = ((Section) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_Section_type")
+				: getString("_UI_Section_type") + " " + label;
 	}
 
 	/**
@@ -136,11 +125,7 @@ public class SectionItemProvider extends ItemProviderAdapter implements IEditing
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Section.class)) {
-		case WebsitePackage.SECTION__PARAGRAPHS:
-		case WebsitePackage.SECTION__IMAGES:
-		case WebsitePackage.SECTION__BUTTONS:
-		case WebsitePackage.SECTION__SECTIONS:
-		case WebsitePackage.SECTION__LINKS:
+		case WebsitePackage.SECTION__HTML_ELEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -158,31 +143,20 @@ public class SectionItemProvider extends ItemProviderAdapter implements IEditing
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.SECTION__PARAGRAPHS,
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.SECTION__HTML_ELEMENTS,
 				WebsiteFactory.eINSTANCE.createParagraph()));
 
-		newChildDescriptors.add(
-				createChildParameter(WebsitePackage.Literals.SECTION__IMAGES, WebsiteFactory.eINSTANCE.createImage()));
-
-		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.SECTION__BUTTONS,
-				WebsiteFactory.eINSTANCE.createButton()));
-
-		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.SECTION__SECTIONS,
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.SECTION__HTML_ELEMENTS,
 				WebsiteFactory.eINSTANCE.createSection()));
 
-		newChildDescriptors.add(
-				createChildParameter(WebsitePackage.Literals.SECTION__LINKS, WebsiteFactory.eINSTANCE.createLink()));
-	}
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.SECTION__HTML_ELEMENTS,
+				WebsiteFactory.eINSTANCE.createButton()));
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return WebsiteEditPlugin.INSTANCE;
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.SECTION__HTML_ELEMENTS,
+				WebsiteFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors.add(createChildParameter(WebsitePackage.Literals.SECTION__HTML_ELEMENTS,
+				WebsiteFactory.eINSTANCE.createLink()));
 	}
 
 }
