@@ -1,0 +1,35 @@
+modeltype villeMM "strict" uses "http://www.example.org/ville";
+modeltype libraryMM "strict" uses "http://www.example.org/annuaire";
+
+transformation ville2buildingLib(in ville : villeMM, out lib : libraryMM);
+
+main() {
+	
+	var buildingLibrary : BuildingLibrary := object BuildingLibrary {
+		buildings += ville.rootObjects().allSubobjectsOfType(Rue)[Rue] -> map construction2Building();
+	}
+}
+
+mapping villeMM::Rue::construction2Building() : libraryMM::Building {
+	name := self.name;
+	addresses += self.construction -> map construction2Address();
+	
+}
+
+mapping villeMM::Construction::construction2Address() : libraryMM::Address {
+	town := self.name;
+	street := self.container().oclAsType(Rue).name;
+	type := 'unknown';
+}
+
+mapping villeMM::Maison::construction2Address() : libraryMM::Address {
+	town := self.name;
+	street := self.container().oclAsType(Rue).name;
+	type := 'maison';
+}
+
+mapping villeMM::Immeuble::construction2Address() : libraryMM::Address {
+	town := self.name;
+	street := self.container().oclAsType(Rue).name;
+	type := 'immeuble';
+}

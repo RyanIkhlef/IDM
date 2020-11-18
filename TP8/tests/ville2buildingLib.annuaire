@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annuaire:BuildingLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:annuaire="http://www.example.org/annuaire">
+  <buildings name="Rue de la paix">
+    <addresses town="maison1" street="Rue de la paix" type="maison"/>
+    <addresses town="immeuble 1" street="Rue de la paix" type="immeuble"/>
+  </buildings>
+  <buildings name="Rue de Paris">
+    <addresses town="immeuble 1" street="Rue de Paris" type="immeuble"/>
+    <addresses town="immeuble 2" street="Rue de Paris" type="immeuble"/>
+  </buildings>
+</annuaire:BuildingLibrary>
