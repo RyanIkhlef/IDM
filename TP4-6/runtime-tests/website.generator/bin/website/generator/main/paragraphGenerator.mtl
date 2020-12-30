@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module paragraphGenerator.
+ */]
+[module paragraphGenerator('http://www.example.org/website')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aBody
+ */]
+[template public generateElement(p : Paragraph)]
+	<p id='[p.id/]' class='[p.class/]'>
+		[p.content/]
+	</p>
+[/template]

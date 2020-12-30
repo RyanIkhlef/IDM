@@ -1,0 +1,310 @@
+/**
+ */
+package usd.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import usd.Image;
+import usd.Link;
+import usd.UsdPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Image</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link usd.impl.ImageImpl#getLink <em>Link</em>}</li>
+ *   <li>{@link usd.impl.ImageImpl#getImgSrc <em>Img Src</em>}</li>
+ *   <li>{@link usd.impl.ImageImpl#getAlt <em>Alt</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ImageImpl extends ElementImpl implements Image {
+	/**
+	 * The cached value of the '{@link #getLink() <em>Link</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLink()
+	 * @generated
+	 * @ordered
+	 */
+	protected Link link;
+
+	/**
+	 * The default value of the '{@link #getImgSrc() <em>Img Src</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImgSrc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IMG_SRC_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getImgSrc() <em>Img Src</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImgSrc()
+	 * @generated
+	 * @ordered
+	 */
+	protected String imgSrc = IMG_SRC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlt() <em>Alt</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlt()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAlt() <em>Alt</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlt()
+	 * @generated
+	 * @ordered
+	 */
+	protected String alt = ALT_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ImageImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return UsdPackage.Literals.IMAGE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Link getLink() {
+		return link;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLink(Link newLink, NotificationChain msgs) {
+		Link oldLink = link;
+		link = newLink;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UsdPackage.IMAGE__LINK,
+					oldLink, newLink);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLink(Link newLink) {
+		if (newLink != link) {
+			NotificationChain msgs = null;
+			if (link != null)
+				msgs = ((InternalEObject) link).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UsdPackage.IMAGE__LINK,
+						null, msgs);
+			if (newLink != null)
+				msgs = ((InternalEObject) newLink).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UsdPackage.IMAGE__LINK,
+						null, msgs);
+			msgs = basicSetLink(newLink, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.IMAGE__LINK, newLink, newLink));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getImgSrc() {
+		return imgSrc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setImgSrc(String newImgSrc) {
+		String oldImgSrc = imgSrc;
+		imgSrc = newImgSrc;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.IMAGE__IMG_SRC, oldImgSrc, imgSrc));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getAlt() {
+		return alt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAlt(String newAlt) {
+		String oldAlt = alt;
+		alt = newAlt;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.IMAGE__ALT, oldAlt, alt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case UsdPackage.IMAGE__LINK:
+			return basicSetLink(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case UsdPackage.IMAGE__LINK:
+			return getLink();
+		case UsdPackage.IMAGE__IMG_SRC:
+			return getImgSrc();
+		case UsdPackage.IMAGE__ALT:
+			return getAlt();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case UsdPackage.IMAGE__LINK:
+			setLink((Link) newValue);
+			return;
+		case UsdPackage.IMAGE__IMG_SRC:
+			setImgSrc((String) newValue);
+			return;
+		case UsdPackage.IMAGE__ALT:
+			setAlt((String) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case UsdPackage.IMAGE__LINK:
+			setLink((Link) null);
+			return;
+		case UsdPackage.IMAGE__IMG_SRC:
+			setImgSrc(IMG_SRC_EDEFAULT);
+			return;
+		case UsdPackage.IMAGE__ALT:
+			setAlt(ALT_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case UsdPackage.IMAGE__LINK:
+			return link != null;
+		case UsdPackage.IMAGE__IMG_SRC:
+			return IMG_SRC_EDEFAULT == null ? imgSrc != null : !IMG_SRC_EDEFAULT.equals(imgSrc);
+		case UsdPackage.IMAGE__ALT:
+			return ALT_EDEFAULT == null ? alt != null : !ALT_EDEFAULT.equals(alt);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (imgSrc: ");
+		result.append(imgSrc);
+		result.append(", alt: ");
+		result.append(alt);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ImageImpl

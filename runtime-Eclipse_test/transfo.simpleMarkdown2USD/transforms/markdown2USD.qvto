@@ -1,0 +1,64 @@
+modeltype markdownMM "strict" uses "http://www.example.org/simplemarkdown";
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+	
+transformation markdown2USD(in markdown : markdownMM, out usd : usdMM ) {
+
+main() {
+	if(markdown.rootObjects() -> selectByType(Folder) -> notEmpty()) {
+		markdown.rootObjects()[Folder] -> map folder2site();
+	} else if(markdown.rootObjects() -> selectByType(Document) -> notEmpty()) {
+		markdown.rootObjects()[Document] -> map document2page();
+	} else { 
+		log("not a website structure.");
+	}
+}
+
+mapping markdownMM::Folder::folder2site() : usdMM::SiteRoot {
+	name := self.name;
+	pages += self.documents -> selectByType(Document) -> map document2page();
+}
+
+mapping markdownMM::Document::document2page() : usdMM::Page {
+	name := self.name;
+	elements += self.contents -> selectByType(Paragraph) -> map mdParagraph2usdParagraph();
+	elements += self.contents -> selectByType(Title) -> map mdTitle2usdTitle();
+}
+
+mapping markdownMM::Paragraph::mdParagraph2usdParagraph() : usdMM::Paragraph {
+	contents += self.elements -> selectByType(Text) -> map mdText2usdText();
+	contents += self.elements -> selectByType(Emphasis) -> map mdEmphasis2usdEmphasis();
+	contents += self.elements -> selectByType(Link) -> map mdLink2usdLink();
+	contents += self.elements -> selectByType(Image) -> map mdImage2usdImage();
+}
+
+
+mapping markdownMM::Title::mdTitle2usdTitle() : usdMM::Title {
+	id := 'title_level_' + self.level.toString(); // remplacer par class. (Remplacer l'attribut class par autre chose car conflit avec QVTo)
+	level := self.level;
+	contents += self.elements -> selectByType(Text) -> map mdText2usdText();
+	contents += self.elements -> selectByType(Emphasis) -> map mdEmphasis2usdEmphasis();
+	contents += self.elements -> selectByType(Link) -> map mdLink2usdLink();
+	contents += self.elements -> selectByType(Image) -> map mdImage2usdImage();
+}
+
+mapping markdownMM::Text::mdText2usdText() : usdMM::Text {
+	textContent := self.text;
+}
+
+mapping markdownMM::Emphasis::mdEmphasis2usdEmphasis() : usdMM::Emphasis {
+	textContent := self.text;
+}
+
+mapping markdownMM::Link::mdLink2usdLink() : usdMM::Link {
+	src := self.url;
+	textContent := self.title;
+}
+
+mapping markdownMM::Image::mdImage2usdImage() : usdMM::Image {
+	imgSrc := self.url;
+	alt := self.title;
+	//textContent := self.text; Legende ?
+}
+
+
+}

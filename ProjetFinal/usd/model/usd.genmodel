@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/usd/src-gen" creationIcons="false" editDirectory="/usd.edit/src-gen"
+    editorDirectory="/usd.editor/src-gen" modelPluginID="usd" modelName="Usd" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>usd.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Usd" disposableProviderFactory="true" ecorePackage="usd.ecore#/">
+    <genClasses ecoreClass="usd.ecore#//SiteRoot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//SiteRoot/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//SiteRoot/pages"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Page/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Page/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//TextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//TextElement/textContent"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Paragraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Paragraph/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Title">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Title/level"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Title/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//ImportantText"/>
+    <genClasses ecoreClass="usd.ecore#//Div">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Div/divContents"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Span">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Span/spanContent"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//List">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//List/listElement"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//UnorderedList"/>
+    <genClasses ecoreClass="usd.ecore#//OrderedList"/>
+    <genClasses ecoreClass="usd.ecore#//Section">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Section/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Link/src"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Button">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Button/link"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Emphasis"/>
+    <genClasses image="false" ecoreClass="usd.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Element/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Element/class"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Text"/>
+    <genClasses ecoreClass="usd.ecore#//Image">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Image/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Image/imgSrc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Image/alt"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="tests\tests.simplemarkdown">
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="This is a normal paragraph:"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="A paragraphe with "/>
+    <contents xsi:type="usd:Text" textContent=" and an end."/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="This is a paragraphe."/>
+    <contents xsi:type="usd:Text" textContent="It continue on this line"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="This is a 2nd paragraphe."/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="Hello the world."/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="A line with "/>
+    <contents xsi:type="usd:Text" textContent=" and an "/>
+    <contents xsi:type="usd:Text" textContent="italic"/>
+    <contents xsi:type="usd:Text" textContent="."/>
+    <contents xsi:type="usd:Text" textContent="Et aussi un "/>
+    <contents xsi:type="usd:Text" textContent="mix"/>
+    <contents xsi:type="usd:Text" textContent="."/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="A line with double space at the end"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="A normal line."/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="A paragraph with a  "/>
+    <contents xsi:type="usd:Text" textContent=" not at the end."/>
+    <contents xsi:type="usd:Link" textContent="" src="#"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="at beginning of text."/>
+    <contents xsi:type="usd:Link" textContent="" src="#"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="Try "/>
+    <contents xsi:type="usd:Text" textContent="."/>
+    <contents xsi:type="usd:Link" textContent="" src="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="Now, try "/>
+    <contents xsi:type="usd:Text" textContent="."/>
+    <contents xsi:type="usd:Link" textContent="" src="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="And now an image : "/>
+    <contents xsi:type="usd:Image" imgSrc="https://www.eclipse.org/images/egg-incubation.png" alt=""/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="And finally a "/>
+    <contents xsi:type="usd:Link" textContent="title" src="#"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="List :"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="un paragraphe"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="Citation :"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="Un dernier paragraphe."/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+    <contents xsi:type="usd:Text" textContent="File for tests markdown parser"/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+    <contents xsi:type="usd:Text" textContent="Code"/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_2" level="2">
+    <contents xsi:type="usd:Text" textContent="Title level 2"/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_2" level="2">
+    <contents xsi:type="usd:Text" textContent="2 Title level 2"/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+    <contents xsi:type="usd:Text" textContent="Links"/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+    <contents xsi:type="usd:Text" textContent="Title level 1"/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+    <contents xsi:type="usd:Text" textContent="Try Citation"/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+    <contents xsi:type="usd:Text" textContent="Titre avec un "/>
+    <contents xsi:type="usd:Text" textContent=" et un "/>
+    <contents xsi:type="usd:Text" textContent="italic"/>
+    <contents xsi:type="usd:Text" textContent="*"/>
+    <contents xsi:type="usd:Link" textContent="" src="#"/>
+  </elements>
+  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+    <contents xsi:type="usd:Text" textContent="Lines"/>
+  </elements>
+</usd:Page>

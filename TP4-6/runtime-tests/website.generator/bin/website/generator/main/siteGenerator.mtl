@@ -1,0 +1,39 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module siteGenerator('http://www.example.org/website')]
+[import website::generator::main::paragraphGenerator/]
+[import website::generator::main::sectionGenerator/]
+[import website::generator::main::imageGenerator/]
+[import website::generator::main::buttonGenerator/]
+[import website::generator::main::linkGenerator/]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aSite
+ */]
+[template public generateHTMLPage(aSite : Site)]
+[comment @main/]
+[file (aSite.name + '.html', false, 'UTF-8')]
+<!DOCTYPE html>
+<html>
+	<header>
+	</header>
+	<body>
+	[for (element : HTMLElement | _body.htmlElements) separator('\n')]
+		[generateElement(element)/]	
+	[/for]
+	</body>
+</html>
+[/file]
+
+[/template]
+
+[**
+ * Template generateElement par defaut.
+*/]
+[template public generateElement(elem : HTMLElement)]
+	<h1 id='errorElementNotFound' color='red'> Element non reconnu ! </h1>
+[/template]

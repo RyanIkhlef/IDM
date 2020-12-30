@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated usd -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="usd.presentation.UsdModelWizardID"
+            name="%_UI_UsdModelWizard_label"
+            class="usd.presentation.UsdModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UsdModelFile.gif">
+         <description>%_UI_UsdModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated usd -->
+      <editor
+            id="usd.presentation.UsdEditorID"
+            name="%_UI_UsdEditor_label"
+            icon="icons/full/obj16/UsdModelFile.gif"
+            extensions="usd"
+            class="usd.presentation.UsdEditor"
+            contributorClass="usd.presentation.UsdActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
