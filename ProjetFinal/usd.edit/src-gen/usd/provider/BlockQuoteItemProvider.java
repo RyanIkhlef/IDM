@@ -8,38 +8,29 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import usd.Body;
+import usd.BlockQuote;
 import usd.UsdFactory;
 import usd.UsdPackage;
 
 /**
- * This is the item provider adapter for a {@link usd.Body} object.
+ * This is the item provider adapter for a {@link usd.BlockQuote} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class BodyItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class BlockQuoteItemProvider extends ElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BodyItemProvider(AdapterFactory adapterFactory) {
+	public BlockQuoteItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -70,7 +61,7 @@ public class BodyItemProvider extends ItemProviderAdapter implements IEditingDom
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UsdPackage.Literals.BODY__ELEMENTS);
+			childrenFeatures.add(UsdPackage.Literals.BLOCK_QUOTE__QUOTES);
 		}
 		return childrenFeatures;
 	}
@@ -89,14 +80,14 @@ public class BodyItemProvider extends ItemProviderAdapter implements IEditingDom
 	}
 
 	/**
-	 * This returns Body.gif.
+	 * This returns BlockQuote.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Body"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/BlockQuote"));
 	}
 
 	/**
@@ -117,7 +108,9 @@ public class BodyItemProvider extends ItemProviderAdapter implements IEditingDom
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Body_type");
+		String label = ((BlockQuote) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_BlockQuote_type")
+				: getString("_UI_BlockQuote_type") + " " + label;
 	}
 
 	/**
@@ -131,8 +124,8 @@ public class BodyItemProvider extends ItemProviderAdapter implements IEditingDom
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Body.class)) {
-		case UsdPackage.BODY__ELEMENTS:
+		switch (notification.getFeatureID(BlockQuote.class)) {
+		case UsdPackage.BLOCK_QUOTE__QUOTES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -150,55 +143,59 @@ public class BodyItemProvider extends ItemProviderAdapter implements IEditingDom
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createParagraph()));
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createParagraph()));
 
 		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createTitle()));
+				.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createTitle()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES,
+				UsdFactory.eINSTANCE.createImportantText()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createDiv()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createSpan()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES,
+				UsdFactory.eINSTANCE.createUnorderedList()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES,
+				UsdFactory.eINSTANCE.createOrderedList()));
 
 		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createImportantText()));
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createSection()));
 
 		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createDiv()));
-
-		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createSpan()));
+				.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createUnorderedList()));
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createButton()));
 
 		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createOrderedList()));
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createEmphasis()));
 
 		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createSection()));
+				.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createText()));
 
 		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createLink()));
+				.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createImage()));
 
 		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createButton()));
+				.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createCodeLine()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createBlockQuote()));
 
 		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createEmphasis()));
-
-		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createText()));
-
-		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.BODY__ELEMENTS, UsdFactory.eINSTANCE.createImage()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return UsdEditPlugin.INSTANCE;
+				.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__QUOTES, UsdFactory.eINSTANCE.createLine()));
 	}
 
 }

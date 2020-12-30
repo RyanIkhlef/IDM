@@ -23,7 +23,7 @@ import usd.UsdPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SpanItemProvider extends TextElementItemProvider {
+public class SpanItemProvider extends ElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -181,6 +181,21 @@ public class SpanItemProvider extends TextElementItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.SPAN__SPAN_CONTENT, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.SPAN__SPAN_CONTENT, UsdFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.SPAN__SPAN_CONTENT, UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.SPAN__SPAN_CONTENT, UsdFactory.eINSTANCE.createCodeLine()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.SPAN__SPAN_CONTENT, UsdFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.SPAN__SPAN_CONTENT, UsdFactory.eINSTANCE.createLine()));
 	}
 
 }

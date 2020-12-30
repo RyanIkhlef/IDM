@@ -18,7 +18,7 @@ package usd;
  * @model
  * @generated
  */
-public interface Span extends TextElement {
+public interface Span extends Element {
 	/**
 	 * Returns the value of the '<em><b>Span Content</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

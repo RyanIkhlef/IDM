@@ -20,28 +20,52 @@ mapping markdownMM::Folder::folder2site() : usdMM::SiteRoot {
 
 mapping markdownMM::Document::document2page() : usdMM::Page {
 	name := self.name;
+	
+	-- textContainer mapping :
 	elements += self.contents -> selectByType(Paragraph) -> map mdParagraph2usdParagraph();
 	elements += self.contents -> selectByType(Title) -> map mdTitle2usdTitle();
+	elements += self.contents -> selectByType(Text) -> map mdText2usdText();
+	elements += self.contents -> selectByType(StrongEmphasis) -> map strongEmphasis2importantText();
+	elements += self.contents -> selectByType(Emphasis) -> map mdEmphasis2usdEmphasis();
+	elements += self.contents -> selectByType(Link) -> map mdLink2usdLink();
+	elements += self.contents -> selectByType(Image) -> map mdImage2usdImage();
+	elements += self.contents -> selectByType(Code) -> map mdCode2usdCode();
+	
+	-- other block items mapping :
+	elements += self.contents -> selectByType(CodeBlock) -> map mdCodeBlock2usdCodeBlock();
+	elements += self.contents -> selectByType(BlockQuote) -> map mdBlockQuote2usdBlockQuote();
+	elements += self.contents -> selectByType(HorizontalLine) -> map mdHorizontalLine2usdLine();
+	elements += self.contents -> selectByType(BulletList) -> map mdBulletList2usdUnordoredList();
+	elements += self.contents -> selectByType(OrderedList) -> map mdOrderedList2usdOrdoredList();
 }
 
 mapping markdownMM::Paragraph::mdParagraph2usdParagraph() : usdMM::Paragraph {
 	contents += self.elements -> selectByType(Text) -> map mdText2usdText();
+	contents += self.elements -> selectByType(StrongEmphasis) -> map strongEmphasis2importantText();
 	contents += self.elements -> selectByType(Emphasis) -> map mdEmphasis2usdEmphasis();
 	contents += self.elements -> selectByType(Link) -> map mdLink2usdLink();
 	contents += self.elements -> selectByType(Image) -> map mdImage2usdImage();
+	contents += self.elements -> selectByType(Code) -> map mdCode2usdCode();
 }
 
 
 mapping markdownMM::Title::mdTitle2usdTitle() : usdMM::Title {
-	id := 'title_level_' + self.level.toString(); // remplacer par class. (Remplacer l'attribut class par autre chose car conflit avec QVTo)
+	classes := 'title_level_' + self.level.toString();
 	level := self.level;
 	contents += self.elements -> selectByType(Text) -> map mdText2usdText();
+	contents += self.elements -> selectByType(StrongEmphasis) -> map strongEmphasis2importantText();
 	contents += self.elements -> selectByType(Emphasis) -> map mdEmphasis2usdEmphasis();
 	contents += self.elements -> selectByType(Link) -> map mdLink2usdLink();
 	contents += self.elements -> selectByType(Image) -> map mdImage2usdImage();
+	contents += self.elements -> selectByType(Code) -> map mdCode2usdCode();
+	
 }
 
 mapping markdownMM::Text::mdText2usdText() : usdMM::Text {
+	textContent := self.text;
+}
+
+mapping markdownMM::StrongEmphasis::strongEmphasis2importantText() : usdMM::ImportantText {
 	textContent := self.text;
 }
 
@@ -56,9 +80,55 @@ mapping markdownMM::Link::mdLink2usdLink() : usdMM::Link {
 
 mapping markdownMM::Image::mdImage2usdImage() : usdMM::Image {
 	imgSrc := self.url;
-	alt := self.title;
-	//textContent := self.text; Legende ?
+	alt := self.text;
 }
 
 
+mapping markdownMM::Code::mdCode2usdCode() : usdMM::Code {
+	textContent := self.text;
+}
+
+mapping markdownMM::CodeBlock::mdCodeBlock2usdCodeBlock() : usdMM::CodeBlock {
+	codelines += self.codelines -> selectByType(CodeLine) -> map mdCodeLine2usdCodeLine();
+}
+
+mapping markdownMM::CodeLine::mdCodeLine2usdCodeLine() : usdMM::CodeLine {
+	textContent := self.text;
+}
+
+mapping markdownMM::BlockQuote::mdBlockQuote2usdBlockQuote() : usdMM::BlockQuote {
+	quotes += self.contents -> selectByType(Paragraph) -> map mdParagraph2usdParagraph();
+	quotes += self.contents -> selectByType(Title) -> map mdTitle2usdTitle();
+	quotes += self.contents -> selectByType(Text) -> map mdText2usdText();
+	quotes += self.contents -> selectByType(StrongEmphasis) -> map strongEmphasis2importantText();
+	quotes += self.contents -> selectByType(Emphasis) -> map mdEmphasis2usdEmphasis();
+	quotes += self.contents -> selectByType(Link) -> map mdLink2usdLink();
+	quotes += self.contents -> selectByType(Image) -> map mdImage2usdImage();
+	quotes += self.contents -> selectByType(Code) -> map mdCode2usdCode();
+	
+	quotes += self.contents -> selectByType(CodeBlock) -> map mdCodeBlock2usdCodeBlock();
+	quotes += self.contents -> selectByType(BlockQuote) -> map mdBlockQuote2usdBlockQuote();
+	quotes += self.contents -> selectByType(HorizontalLine) -> map mdHorizontalLine2usdLine();
+	quotes += self.contents -> selectByType(BulletList) -> map mdBulletList2usdUnordoredList();
+	quotes += self.contents -> selectByType(OrderedList) -> map mdOrderedList2usdOrdoredList();
+}
+
+mapping markdownMM::HorizontalLine::mdHorizontalLine2usdLine() : usdMM::Line {}
+
+mapping markdownMM::BulletList::mdBulletList2usdUnordoredList() : usdMM::UnorderedList {
+	listElement += self.items.elements -> selectByType(Paragraph) -> map mdParagraph2usdParagraph();
+	listElement += self.items.elements -> selectByType(CodeBlock) -> map mdCodeBlock2usdCodeBlock();
+	listElement += self.items.elements -> selectByType(BlockQuote) -> map mdBlockQuote2usdBlockQuote();
+	listElement += self.items.elements -> selectByType(BulletList) -> map mdBulletList2usdUnordoredList();
+	listElement += self.items.elements -> selectByType(OrderedList) -> map mdOrderedList2usdOrdoredList();
+}
+
+mapping markdownMM::OrderedList::mdOrderedList2usdOrdoredList() : usdMM::OrderedList {
+	listElement += self.items.elements -> selectByType(Paragraph) -> map mdParagraph2usdParagraph();
+	listElement += self.items.elements -> selectByType(CodeBlock) -> map mdCodeBlock2usdCodeBlock();
+	listElement += self.items.elements -> selectByType(BlockQuote) -> map mdBlockQuote2usdBlockQuote();
+	listElement += self.items.elements -> selectByType(BulletList) -> map mdBulletList2usdUnordoredList();
+	listElement += self.items.elements -> selectByType(OrderedList) -> map mdOrderedList2usdOrdoredList();
+
+}
 }

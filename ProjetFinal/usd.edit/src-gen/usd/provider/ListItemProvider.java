@@ -180,6 +180,21 @@ public class ListItemProvider extends ElementItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.LIST__LIST_ELEMENT, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.LIST__LIST_ELEMENT, UsdFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.LIST__LIST_ELEMENT, UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.LIST__LIST_ELEMENT, UsdFactory.eINSTANCE.createCodeLine()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.LIST__LIST_ELEMENT, UsdFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.LIST__LIST_ELEMENT, UsdFactory.eINSTANCE.createLine()));
 	}
 
 }

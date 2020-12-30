@@ -23,7 +23,7 @@ import usd.UsdPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SectionItemProvider extends TextElementItemProvider {
+public class SectionItemProvider extends ElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -181,6 +181,21 @@ public class SectionItemProvider extends TextElementItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createCodeLine()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createLine()));
 	}
 
 }

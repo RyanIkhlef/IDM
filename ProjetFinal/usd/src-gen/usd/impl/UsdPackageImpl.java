@@ -8,12 +8,18 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import usd.BlockQuote;
 import usd.Button;
+import usd.Code;
+import usd.CodeBlock;
+import usd.CodeLine;
 import usd.Div;
 import usd.Element;
 import usd.Emphasis;
 import usd.Image;
 import usd.ImportantText;
+import usd.Line;
 import usd.Link;
 import usd.List;
 import usd.OrderedList;
@@ -56,27 +62,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass textElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass elementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass textEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass imageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,6 +146,62 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass emphasisEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass imageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeBlockEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass blockQuoteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lineEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -304,86 +345,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	@Override
 	public EAttribute getTextElement_TextContent() {
 		return (EAttribute) textElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getElement() {
-		return elementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getElement_Id() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getElement_Class() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getText() {
-		return textEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getImage() {
-		return imageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getImage_Link() {
-		return (EReference) imageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getImage_ImgSrc() {
-		return (EAttribute) imageEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getImage_Alt() {
-		return (EAttribute) imageEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -602,6 +563,166 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getElement() {
+		return elementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getElement_Id() {
+		return (EAttribute) elementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getElement_Classes() {
+		return (EAttribute) elementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getText() {
+		return textEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getImage() {
+		return imageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImage_Link() {
+		return (EReference) imageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getImage_ImgSrc() {
+		return (EAttribute) imageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getImage_Alt() {
+		return (EAttribute) imageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCode() {
+		return codeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCodeBlock() {
+		return codeBlockEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCodeBlock_Codelines() {
+		return (EReference) codeBlockEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCodeLine() {
+		return codeLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCodeLine_TextContent() {
+		return (EAttribute) codeLineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBlockQuote() {
+		return blockQuoteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getBlockQuote_Quotes() {
+		return (EReference) blockQuoteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getLine() {
+		return lineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public UsdFactory getUsdFactory() {
 		return (UsdFactory) getEFactoryInstance();
 	}
@@ -672,7 +793,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__ID);
-		createEAttribute(elementEClass, ELEMENT__CLASS);
+		createEAttribute(elementEClass, ELEMENT__CLASSES);
 
 		textEClass = createEClass(TEXT);
 
@@ -680,6 +801,19 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		createEReference(imageEClass, IMAGE__LINK);
 		createEAttribute(imageEClass, IMAGE__IMG_SRC);
 		createEAttribute(imageEClass, IMAGE__ALT);
+
+		codeEClass = createEClass(CODE);
+
+		codeBlockEClass = createEClass(CODE_BLOCK);
+		createEReference(codeBlockEClass, CODE_BLOCK__CODELINES);
+
+		codeLineEClass = createEClass(CODE_LINE);
+		createEAttribute(codeLineEClass, CODE_LINE__TEXT_CONTENT);
+
+		blockQuoteEClass = createEClass(BLOCK_QUOTE);
+		createEReference(blockQuoteEClass, BLOCK_QUOTE__QUOTES);
+
+		lineEClass = createEClass(LINE);
 	}
 
 	/**
@@ -716,16 +850,21 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		titleEClass.getESuperTypes().add(this.getElement());
 		importantTextEClass.getESuperTypes().add(this.getTextElement());
 		divEClass.getESuperTypes().add(this.getElement());
-		spanEClass.getESuperTypes().add(this.getTextElement());
+		spanEClass.getESuperTypes().add(this.getElement());
 		listEClass.getESuperTypes().add(this.getElement());
 		unorderedListEClass.getESuperTypes().add(this.getList());
 		orderedListEClass.getESuperTypes().add(this.getList());
-		sectionEClass.getESuperTypes().add(this.getTextElement());
+		sectionEClass.getESuperTypes().add(this.getElement());
 		linkEClass.getESuperTypes().add(this.getTextElement());
 		buttonEClass.getESuperTypes().add(this.getTextElement());
 		emphasisEClass.getESuperTypes().add(this.getTextElement());
 		textEClass.getESuperTypes().add(this.getTextElement());
 		imageEClass.getESuperTypes().add(this.getElement());
+		codeEClass.getESuperTypes().add(this.getTextElement());
+		codeBlockEClass.getESuperTypes().add(this.getElement());
+		codeLineEClass.getESuperTypes().add(this.getElement());
+		blockQuoteEClass.getESuperTypes().add(this.getElement());
+		lineEClass.getESuperTypes().add(this.getElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(siteRootEClass, SiteRoot.class, "SiteRoot", !IS_ABSTRACT, !IS_INTERFACE,
@@ -806,8 +945,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Id(), ecorePackage.getEString(), "id", null, 0, 1, Element.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_Class(), ecorePackage.getEString(), "class", null, 0, 1, Element.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElement_Classes(), ecorePackage.getEString(), "classes", null, 0, 1, Element.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -819,6 +958,27 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_Alt(), ecorePackage.getEString(), "alt", null, 0, 1, Image.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(codeEClass, Code.class, "Code", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(codeBlockEClass, CodeBlock.class, "CodeBlock", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCodeBlock_Codelines(), this.getCodeLine(), null, "codelines", null, 0, -1, CodeBlock.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(codeLineEClass, CodeLine.class, "CodeLine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCodeLine_TextContent(), ecorePackage.getEString(), "textContent", null, 0, 1, CodeLine.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(blockQuoteEClass, BlockQuote.class, "BlockQuote", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBlockQuote_Quotes(), this.getElement(), null, "quotes", null, 0, -1, BlockQuote.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(lineEClass, Line.class, "Line", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -211,6 +211,21 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.PAGE__ELEMENTS, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__ELEMENTS, UsdFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__ELEMENTS, UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__ELEMENTS, UsdFactory.eINSTANCE.createCodeLine()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__ELEMENTS, UsdFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__ELEMENTS, UsdFactory.eINSTANCE.createLine()));
 	}
 
 	/**

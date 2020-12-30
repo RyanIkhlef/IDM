@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Section extends TextElement {
+public interface Section extends Element {
 	/**
 	 * Returns the value of the '<em><b>Contents</b></em>' containment reference list.
 	 * The list contents are of type {@link usd.Element}.

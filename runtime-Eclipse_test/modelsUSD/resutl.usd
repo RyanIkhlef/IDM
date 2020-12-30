@@ -9,6 +9,7 @@
   <elements xsi:type="usd:Paragraph">
     <contents xsi:type="usd:Text" textContent="A paragraphe with "/>
     <contents xsi:type="usd:Text" textContent=" and an end."/>
+    <contents xsi:type="usd:Code" textContent="inline code [link in code](#)"/>
   </elements>
   <elements xsi:type="usd:Paragraph">
     <contents xsi:type="usd:Text" textContent="This is a paragraphe."/>
@@ -28,6 +29,7 @@
     <contents xsi:type="usd:Text" textContent="Et aussi un "/>
     <contents xsi:type="usd:Text" textContent="mix"/>
     <contents xsi:type="usd:Text" textContent="."/>
+    <contents xsi:type="usd:ImportantText" textContent="**strong**"/>
   </elements>
   <elements xsi:type="usd:Paragraph">
     <contents xsi:type="usd:Text" textContent="A line with double space at the end"/>
@@ -56,7 +58,7 @@
   </elements>
   <elements xsi:type="usd:Paragraph">
     <contents xsi:type="usd:Text" textContent="And now an image : "/>
-    <contents xsi:type="usd:Image" imgSrc="https://www.eclipse.org/images/egg-incubation.png" alt=""/>
+    <contents xsi:type="usd:Image" imgSrc="https://www.eclipse.org/images/egg-incubation.png" alt="https://www.eclipse.org/images/egg-incubation.png"/>
   </elements>
   <elements xsi:type="usd:Paragraph">
     <contents xsi:type="usd:Text" textContent="And finally a "/>
@@ -74,35 +76,127 @@
   <elements xsi:type="usd:Paragraph">
     <contents xsi:type="usd:Text" textContent="Un dernier paragraphe."/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
     <contents xsi:type="usd:Text" textContent="File for tests markdown parser"/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
     <contents xsi:type="usd:Text" textContent="Code"/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_2" level="2">
+  <elements xsi:type="usd:Title" classes="title_level_2" level="2">
     <contents xsi:type="usd:Text" textContent="Title level 2"/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_2" level="2">
+  <elements xsi:type="usd:Title" classes="title_level_2" level="2">
     <contents xsi:type="usd:Text" textContent="2 Title level 2"/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
     <contents xsi:type="usd:Text" textContent="Links"/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
     <contents xsi:type="usd:Text" textContent="Title level 1"/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
     <contents xsi:type="usd:Text" textContent="Try Citation"/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
     <contents xsi:type="usd:Text" textContent="Titre avec un "/>
     <contents xsi:type="usd:Text" textContent=" et un "/>
     <contents xsi:type="usd:Text" textContent="italic"/>
     <contents xsi:type="usd:Text" textContent="*"/>
     <contents xsi:type="usd:Link" textContent="" src="#"/>
   </elements>
-  <elements xsi:type="usd:Title" id="title_level_1" level="1">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
     <contents xsi:type="usd:Text" textContent="Lines"/>
+  </elements>
+  <elements xsi:type="usd:CodeBlock">
+    <codelines textContent="This is a code block.&#xA;"/>
+    <codelines textContent="On several line&#xA;"/>
+    <codelines textContent="&#xA;"/>
+    <codelines textContent="And even with a blank line&#xA;"/>
+    <codelines textContent="&#xA;"/>
+    <codelines textContent="[link in code](#)&#xA;"/>
+  </elements>
+  <elements xsi:type="usd:CodeBlock">
+    <codelines textContent="Code en debut de ligne&#xD;&#xA;"/>
+    <codelines textContent="&#xD;&#xA;"/>
+    <codelines textContent="Avec ````&#xD;&#xA;"/>
+    <codelines textContent="Comme separateur&#xD;&#xA;"/>
+    <codelines textContent="  [link in code](#)&#xD;&#xA;"/>
+    <codelines textContent="&#xD;&#xA;"/>
+  </elements>
+  <elements xsi:type="usd:BlockQuote">
+    <quotes xsi:type="usd:Paragraph">
+      <contents xsi:type="usd:Text" textContent="Start citation"/>
+    </quotes>
+    <quotes xsi:type="usd:BlockQuote">
+      <quotes xsi:type="usd:Paragraph">
+        <contents xsi:type="usd:Text" textContent="double citation"/>
+      </quotes>
+      <quotes xsi:type="usd:UnorderedList">
+        <listElement xsi:type="usd:Paragraph">
+          <contents xsi:type="usd:Text" textContent="list in citation"/>
+        </listElement>
+        <listElement xsi:type="usd:Paragraph">
+          <contents xsi:type="usd:Text" textContent="item 2"/>
+        </listElement>
+        <listElement xsi:type="usd:Paragraph">
+          <contents xsi:type="usd:Text" textContent="item 3"/>
+          <contents xsi:type="usd:Text" textContent="fin de list"/>
+        </listElement>
+      </quotes>
+    </quotes>
+  </elements>
+  <elements xsi:type="usd:Line"/>
+  <elements xsi:type="usd:Line"/>
+  <elements xsi:type="usd:Line"/>
+  <elements xsi:type="usd:Line"/>
+  <elements xsi:type="usd:UnorderedList">
+    <listElement xsi:type="usd:Paragraph">
+      <contents xsi:type="usd:Text" textContent="start list. This is a paragraph"/>
+      <contents xsi:type="usd:Text" textContent="on multiple lines."/>
+    </listElement>
+    <listElement xsi:type="usd:Paragraph">
+      <contents xsi:type="usd:Text" textContent="And another paragraph"/>
+    </listElement>
+    <listElement xsi:type="usd:Paragraph">
+      <contents xsi:type="usd:Text" textContent="item 2."/>
+    </listElement>
+    <listElement xsi:type="usd:UnorderedList">
+      <listElement xsi:type="usd:Paragraph">
+        <contents xsi:type="usd:Text" textContent="level 2 item 1"/>
+      </listElement>
+      <listElement xsi:type="usd:Paragraph">
+        <contents xsi:type="usd:Text" textContent="level 2 item 2"/>
+      </listElement>
+    </listElement>
+    <listElement xsi:type="usd:UnorderedList">
+      <listElement xsi:type="usd:Paragraph">
+        <contents xsi:type="usd:Text" textContent="level 2 item 3"/>
+      </listElement>
+      <listElement xsi:type="usd:Paragraph">
+        <contents xsi:type="usd:Text" textContent="level 2 item 4"/>
+      </listElement>
+      <listElement xsi:type="usd:Paragraph">
+        <contents xsi:type="usd:Text" textContent="level 2 item 5"/>
+      </listElement>
+      <listElement xsi:type="usd:UnorderedList">
+        <listElement xsi:type="usd:Paragraph">
+          <contents xsi:type="usd:Text" textContent="level 3 item 1"/>
+        </listElement>
+        <listElement xsi:type="usd:Paragraph">
+          <contents xsi:type="usd:Text" textContent="level 3 item 2"/>
+        </listElement>
+        <listElement xsi:type="usd:Paragraph">
+          <contents xsi:type="usd:Text" textContent="level 3 item 3"/>
+        </listElement>
+        <listElement xsi:type="usd:Paragraph">
+          <contents xsi:type="usd:Text" textContent="level 4 item 1"/>
+        </listElement>
+        <listElement xsi:type="usd:UnorderedList">
+          <listElement xsi:type="usd:Paragraph">
+            <contents xsi:type="usd:Text" textContent="next level ??"/>
+          </listElement>
+        </listElement>
+      </listElement>
+    </listElement>
   </elements>
 </usd:Page>

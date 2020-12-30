@@ -8,37 +8,28 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import usd.Element;
+import usd.CodeLine;
 import usd.UsdPackage;
 
 /**
- * This is the item provider adapter for a {@link usd.Element} object.
+ * This is the item provider adapter for a {@link usd.CodeLine} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ElementItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class CodeLineItemProvider extends ElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ElementItemProvider(AdapterFactory adapterFactory) {
+	public CodeLineItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,41 +44,36 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdPropertyDescriptor(object);
-			addClassesPropertyDescriptor(object);
+			addTextContentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Id feature.
+	 * This adds a property descriptor for the Text Content feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIdPropertyDescriptor(Object object) {
+	protected void addTextContentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Element_id_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Element_id_feature", "_UI_Element_type"),
-						UsdPackage.Literals.ELEMENT__ID, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
+						getResourceLocator(), getString("_UI_CodeLine_textContent_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_CodeLine_textContent_feature",
+								"_UI_CodeLine_type"),
+						UsdPackage.Literals.CODE_LINE__TEXT_CONTENT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Classes feature.
+	 * This returns CodeLine.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Element_classes_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Element_classes_feature",
-								"_UI_Element_type"),
-						UsdPackage.Literals.ELEMENT__CLASSES, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CodeLine"));
 	}
 
 	/**
@@ -108,9 +94,9 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Element) object).getId();
-		return label == null || label.length() == 0 ? getString("_UI_Element_type")
-				: getString("_UI_Element_type") + " " + label;
+		String label = ((CodeLine) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_CodeLine_type")
+				: getString("_UI_CodeLine_type") + " " + label;
 	}
 
 	/**
@@ -124,9 +110,8 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Element.class)) {
-		case UsdPackage.ELEMENT__ID:
-		case UsdPackage.ELEMENT__CLASSES:
+		switch (notification.getFeatureID(CodeLine.class)) {
+		case UsdPackage.CODE_LINE__TEXT_CONTENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
@@ -143,17 +128,6 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return UsdEditPlugin.INSTANCE;
 	}
 
 }

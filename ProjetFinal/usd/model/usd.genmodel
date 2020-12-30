@@ -50,7 +50,7 @@
     <genClasses ecoreClass="usd.ecore#//Emphasis"/>
     <genClasses image="false" ecoreClass="usd.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Element/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Element/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Element/classes"/>
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//Text"/>
     <genClasses ecoreClass="usd.ecore#//Image">
@@ -58,5 +58,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Image/imgSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Image/alt"/>
     </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Code"/>
+    <genClasses ecoreClass="usd.ecore#//CodeBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//CodeBlock/codelines"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//CodeLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//CodeLine/textContent"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//BlockQuote">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//BlockQuote/quotes"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Line"/>
   </genPackages>
 </genmodel:GenModel>

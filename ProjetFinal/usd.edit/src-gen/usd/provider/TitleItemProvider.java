@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -201,6 +202,21 @@ public class TitleItemProvider extends ElementItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.TITLE__CONTENTS, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.TITLE__CONTENTS, UsdFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.TITLE__CONTENTS, UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.TITLE__CONTENTS, UsdFactory.eINSTANCE.createCodeLine()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.TITLE__CONTENTS, UsdFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.TITLE__CONTENTS, UsdFactory.eINSTANCE.createLine()));
 	}
 
 }

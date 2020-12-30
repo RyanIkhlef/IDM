@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link usd.Element#getId <em>Id</em>}</li>
- *   <li>{@link usd.Element#getClass_ <em>Class</em>}</li>
+ *   <li>{@link usd.Element#getClasses <em>Classes</em>}</li>
  * </ul>
  *
  * @see usd.UsdPackage#getElement()
@@ -45,25 +45,25 @@ public interface Element extends EObject {
 	void setId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Class</em>' attribute.
-	 * @see #setClass(String)
-	 * @see usd.UsdPackage#getElement_Class()
+	 * @return the value of the '<em>Classes</em>' attribute.
+	 * @see #setClasses(String)
+	 * @see usd.UsdPackage#getElement_Classes()
 	 * @model
 	 * @generated
 	 */
-	String getClass_();
+	String getClasses();
 
 	/**
-	 * Sets the value of the '{@link usd.Element#getClass_ <em>Class</em>}' attribute.
+	 * Sets the value of the '{@link usd.Element#getClasses <em>Classes</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Class</em>' attribute.
-	 * @see #getClass_()
+	 * @param value the new value of the '<em>Classes</em>' attribute.
+	 * @see #getClasses()
 	 * @generated
 	 */
-	void setClass(String value);
+	void setClasses(String value);
 
 } // Element

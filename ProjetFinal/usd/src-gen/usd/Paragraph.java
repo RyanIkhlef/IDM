@@ -21,7 +21,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Paragraph extends Element {
-
 	/**
 	 * Returns the value of the '<em><b>Contents</b></em>' containment reference list.
 	 * The list contents are of type {@link usd.Element}.
@@ -33,4 +32,5 @@ public interface Paragraph extends Element {
 	 * @generated
 	 */
 	EList<Element> getContents();
+
 } // Paragraph

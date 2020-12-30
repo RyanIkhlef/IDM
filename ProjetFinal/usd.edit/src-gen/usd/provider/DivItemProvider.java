@@ -181,6 +181,21 @@ public class DivItemProvider extends ElementItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.DIV__DIV_CONTENTS, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.DIV__DIV_CONTENTS, UsdFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.DIV__DIV_CONTENTS, UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.DIV__DIV_CONTENTS, UsdFactory.eINSTANCE.createCodeLine()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.DIV__DIV_CONTENTS, UsdFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.DIV__DIV_CONTENTS, UsdFactory.eINSTANCE.createLine()));
 	}
 
 }

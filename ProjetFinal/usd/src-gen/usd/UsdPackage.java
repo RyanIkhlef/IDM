@@ -168,13 +168,13 @@ public interface UsdPackage extends EPackage {
 	int ELEMENT__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__CLASS = 1;
+	int ELEMENT__CLASSES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Element</em>' class.
@@ -214,13 +214,13 @@ public interface UsdPackage extends EPackage {
 	int TEXT_ELEMENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_ELEMENT__CLASS = ELEMENT__CLASS;
+	int TEXT_ELEMENT__CLASSES = ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
@@ -269,13 +269,13 @@ public interface UsdPackage extends EPackage {
 	int PARAGRAPH__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAGRAPH__CLASS = ELEMENT__CLASS;
+	int PARAGRAPH__CLASSES = ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
@@ -324,13 +324,13 @@ public interface UsdPackage extends EPackage {
 	int TITLE__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TITLE__CLASS = ELEMENT__CLASS;
+	int TITLE__CLASSES = ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -388,13 +388,13 @@ public interface UsdPackage extends EPackage {
 	int IMPORTANT_TEXT__ID = TEXT_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPORTANT_TEXT__CLASS = TEXT_ELEMENT__CLASS;
+	int IMPORTANT_TEXT__CLASSES = TEXT_ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
@@ -443,13 +443,13 @@ public interface UsdPackage extends EPackage {
 	int DIV__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIV__CLASS = ELEMENT__CLASS;
+	int DIV__CLASSES = ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Div Contents</b></em>' containment reference list.
@@ -495,25 +495,16 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPAN__ID = TEXT_ELEMENT__ID;
+	int SPAN__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPAN__CLASS = TEXT_ELEMENT__CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPAN__TEXT_CONTENT = TEXT_ELEMENT__TEXT_CONTENT;
+	int SPAN__CLASSES = ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Span Content</b></em>' containment reference.
@@ -522,7 +513,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPAN__SPAN_CONTENT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int SPAN__SPAN_CONTENT = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Span</em>' class.
@@ -531,7 +522,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPAN_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int SPAN_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Span</em>' class.
@@ -540,7 +531,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPAN_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int SPAN_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link usd.impl.ListImpl <em>List</em>}' class.
@@ -562,13 +553,13 @@ public interface UsdPackage extends EPackage {
 	int LIST__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIST__CLASS = ELEMENT__CLASS;
+	int LIST__CLASSES = ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>List Element</b></em>' containment reference list.
@@ -617,13 +608,13 @@ public interface UsdPackage extends EPackage {
 	int UNORDERED_LIST__ID = LIST__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNORDERED_LIST__CLASS = LIST__CLASS;
+	int UNORDERED_LIST__CLASSES = LIST__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>List Element</b></em>' containment reference list.
@@ -672,13 +663,13 @@ public interface UsdPackage extends EPackage {
 	int ORDERED_LIST__ID = LIST__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDERED_LIST__CLASS = LIST__CLASS;
+	int ORDERED_LIST__CLASSES = LIST__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>List Element</b></em>' containment reference list.
@@ -724,25 +715,16 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__ID = TEXT_ELEMENT__ID;
+	int SECTION__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__CLASS = TEXT_ELEMENT__CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECTION__TEXT_CONTENT = TEXT_ELEMENT__TEXT_CONTENT;
+	int SECTION__CLASSES = ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
@@ -751,7 +733,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION__CONTENTS = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int SECTION__CONTENTS = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Section</em>' class.
@@ -760,7 +742,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int SECTION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Section</em>' class.
@@ -769,7 +751,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECTION_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int SECTION_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link usd.impl.LinkImpl <em>Link</em>}' class.
@@ -791,13 +773,13 @@ public interface UsdPackage extends EPackage {
 	int LINK__ID = TEXT_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__CLASS = TEXT_ELEMENT__CLASS;
+	int LINK__CLASSES = TEXT_ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
@@ -855,13 +837,13 @@ public interface UsdPackage extends EPackage {
 	int BUTTON__ID = TEXT_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__CLASS = TEXT_ELEMENT__CLASS;
+	int BUTTON__CLASSES = TEXT_ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
@@ -919,13 +901,13 @@ public interface UsdPackage extends EPackage {
 	int EMPHASIS__ID = TEXT_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPHASIS__CLASS = TEXT_ELEMENT__CLASS;
+	int EMPHASIS__CLASSES = TEXT_ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
@@ -974,13 +956,13 @@ public interface UsdPackage extends EPackage {
 	int TEXT__ID = TEXT_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT__CLASS = TEXT_ELEMENT__CLASS;
+	int TEXT__CLASSES = TEXT_ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
@@ -1029,13 +1011,13 @@ public interface UsdPackage extends EPackage {
 	int IMAGE__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE__CLASS = ELEMENT__CLASS;
+	int IMAGE__CLASSES = ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Link</b></em>' containment reference.
@@ -1081,6 +1063,272 @@ public interface UsdPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link usd.impl.CodeImpl <em>Code</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see usd.impl.CodeImpl
+	 * @see usd.impl.UsdPackageImpl#getCode()
+	 * @generated
+	 */
+	int CODE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE__ID = TEXT_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE__CLASSES = TEXT_ELEMENT__CLASSES;
+
+	/**
+	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE__TEXT_CONTENT = TEXT_ELEMENT__TEXT_CONTENT;
+
+	/**
+	 * The number of structural features of the '<em>Code</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Code</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link usd.impl.CodeBlockImpl <em>Code Block</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see usd.impl.CodeBlockImpl
+	 * @see usd.impl.UsdPackageImpl#getCodeBlock()
+	 * @generated
+	 */
+	int CODE_BLOCK = 19;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK__CLASSES = ELEMENT__CLASSES;
+
+	/**
+	 * The feature id for the '<em><b>Codelines</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK__CODELINES = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Code Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Code Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link usd.impl.CodeLineImpl <em>Code Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see usd.impl.CodeLineImpl
+	 * @see usd.impl.UsdPackageImpl#getCodeLine()
+	 * @generated
+	 */
+	int CODE_LINE = 20;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE__CLASSES = ELEMENT__CLASSES;
+
+	/**
+	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE__TEXT_CONTENT = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Code Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Code Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link usd.impl.BlockQuoteImpl <em>Block Quote</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see usd.impl.BlockQuoteImpl
+	 * @see usd.impl.UsdPackageImpl#getBlockQuote()
+	 * @generated
+	 */
+	int BLOCK_QUOTE = 21;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE__CLASSES = ELEMENT__CLASSES;
+
+	/**
+	 * The feature id for the '<em><b>Quotes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE__QUOTES = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Block Quote</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Block Quote</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link usd.impl.LineImpl <em>Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see usd.impl.LineImpl
+	 * @see usd.impl.UsdPackageImpl#getLine()
+	 * @generated
+	 */
+	int LINE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Classes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE__CLASSES = ELEMENT__CLASSES;
+
+	/**
+	 * The number of structural features of the '<em>Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link usd.SiteRoot <em>Site Root</em>}'.
@@ -1166,91 +1414,6 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTextElement_TextContent();
-
-	/**
-	 * Returns the meta object for class '{@link usd.Element <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element</em>'.
-	 * @see usd.Element
-	 * @generated
-	 */
-	EClass getElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link usd.Element#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see usd.Element#getId()
-	 * @see #getElement()
-	 * @generated
-	 */
-	EAttribute getElement_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link usd.Element#getClass_ <em>Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Class</em>'.
-	 * @see usd.Element#getClass_()
-	 * @see #getElement()
-	 * @generated
-	 */
-	EAttribute getElement_Class();
-
-	/**
-	 * Returns the meta object for class '{@link usd.Text <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Text</em>'.
-	 * @see usd.Text
-	 * @generated
-	 */
-	EClass getText();
-
-	/**
-	 * Returns the meta object for class '{@link usd.Image <em>Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Image</em>'.
-	 * @see usd.Image
-	 * @generated
-	 */
-	EClass getImage();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link usd.Image#getLink <em>Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Link</em>'.
-	 * @see usd.Image#getLink()
-	 * @see #getImage()
-	 * @generated
-	 */
-	EReference getImage_Link();
-
-	/**
-	 * Returns the meta object for the attribute '{@link usd.Image#getImgSrc <em>Img Src</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Img Src</em>'.
-	 * @see usd.Image#getImgSrc()
-	 * @see #getImage()
-	 * @generated
-	 */
-	EAttribute getImage_ImgSrc();
-
-	/**
-	 * Returns the meta object for the attribute '{@link usd.Image#getAlt <em>Alt</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alt</em>'.
-	 * @see usd.Image#getAlt()
-	 * @see #getImage()
-	 * @generated
-	 */
-	EAttribute getImage_Alt();
 
 	/**
 	 * Returns the meta object for class '{@link usd.Paragraph <em>Paragraph</em>}'.
@@ -1472,6 +1635,174 @@ public interface UsdPackage extends EPackage {
 	EClass getEmphasis();
 
 	/**
+	 * Returns the meta object for class '{@link usd.Element <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Element</em>'.
+	 * @see usd.Element
+	 * @generated
+	 */
+	EClass getElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link usd.Element#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see usd.Element#getId()
+	 * @see #getElement()
+	 * @generated
+	 */
+	EAttribute getElement_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link usd.Element#getClasses <em>Classes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Classes</em>'.
+	 * @see usd.Element#getClasses()
+	 * @see #getElement()
+	 * @generated
+	 */
+	EAttribute getElement_Classes();
+
+	/**
+	 * Returns the meta object for class '{@link usd.Text <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text</em>'.
+	 * @see usd.Text
+	 * @generated
+	 */
+	EClass getText();
+
+	/**
+	 * Returns the meta object for class '{@link usd.Image <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Image</em>'.
+	 * @see usd.Image
+	 * @generated
+	 */
+	EClass getImage();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link usd.Image#getLink <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Link</em>'.
+	 * @see usd.Image#getLink()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EReference getImage_Link();
+
+	/**
+	 * Returns the meta object for the attribute '{@link usd.Image#getImgSrc <em>Img Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Img Src</em>'.
+	 * @see usd.Image#getImgSrc()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_ImgSrc();
+
+	/**
+	 * Returns the meta object for the attribute '{@link usd.Image#getAlt <em>Alt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alt</em>'.
+	 * @see usd.Image#getAlt()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Alt();
+
+	/**
+	 * Returns the meta object for class '{@link usd.Code <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code</em>'.
+	 * @see usd.Code
+	 * @generated
+	 */
+	EClass getCode();
+
+	/**
+	 * Returns the meta object for class '{@link usd.CodeBlock <em>Code Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code Block</em>'.
+	 * @see usd.CodeBlock
+	 * @generated
+	 */
+	EClass getCodeBlock();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link usd.CodeBlock#getCodelines <em>Codelines</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Codelines</em>'.
+	 * @see usd.CodeBlock#getCodelines()
+	 * @see #getCodeBlock()
+	 * @generated
+	 */
+	EReference getCodeBlock_Codelines();
+
+	/**
+	 * Returns the meta object for class '{@link usd.CodeLine <em>Code Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code Line</em>'.
+	 * @see usd.CodeLine
+	 * @generated
+	 */
+	EClass getCodeLine();
+
+	/**
+	 * Returns the meta object for the attribute '{@link usd.CodeLine#getTextContent <em>Text Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Content</em>'.
+	 * @see usd.CodeLine#getTextContent()
+	 * @see #getCodeLine()
+	 * @generated
+	 */
+	EAttribute getCodeLine_TextContent();
+
+	/**
+	 * Returns the meta object for class '{@link usd.BlockQuote <em>Block Quote</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Block Quote</em>'.
+	 * @see usd.BlockQuote
+	 * @generated
+	 */
+	EClass getBlockQuote();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link usd.BlockQuote#getQuotes <em>Quotes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Quotes</em>'.
+	 * @see usd.BlockQuote#getQuotes()
+	 * @see #getBlockQuote()
+	 * @generated
+	 */
+	EReference getBlockQuote_Quotes();
+
+	/**
+	 * Returns the meta object for class '{@link usd.Line <em>Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Line</em>'.
+	 * @see usd.Line
+	 * @generated
+	 */
+	EClass getLine();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1563,76 +1894,6 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEXT_ELEMENT__TEXT_CONTENT = eINSTANCE.getTextElement_TextContent();
-
-		/**
-		 * The meta object literal for the '{@link usd.impl.ElementImpl <em>Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see usd.impl.ElementImpl
-		 * @see usd.impl.UsdPackageImpl#getElement()
-		 * @generated
-		 */
-		EClass ELEMENT = eINSTANCE.getElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT__ID = eINSTANCE.getElement_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT__CLASS = eINSTANCE.getElement_Class();
-
-		/**
-		 * The meta object literal for the '{@link usd.impl.TextImpl <em>Text</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see usd.impl.TextImpl
-		 * @see usd.impl.UsdPackageImpl#getText()
-		 * @generated
-		 */
-		EClass TEXT = eINSTANCE.getText();
-
-		/**
-		 * The meta object literal for the '{@link usd.impl.ImageImpl <em>Image</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see usd.impl.ImageImpl
-		 * @see usd.impl.UsdPackageImpl#getImage()
-		 * @generated
-		 */
-		EClass IMAGE = eINSTANCE.getImage();
-
-		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IMAGE__LINK = eINSTANCE.getImage_Link();
-
-		/**
-		 * The meta object literal for the '<em><b>Img Src</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IMAGE__IMG_SRC = eINSTANCE.getImage_ImgSrc();
-
-		/**
-		 * The meta object literal for the '<em><b>Alt</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IMAGE__ALT = eINSTANCE.getImage_Alt();
 
 		/**
 		 * The meta object literal for the '{@link usd.impl.ParagraphImpl <em>Paragraph</em>}' class.
@@ -1825,6 +2086,150 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EMPHASIS = eINSTANCE.getEmphasis();
+
+		/**
+		 * The meta object literal for the '{@link usd.impl.ElementImpl <em>Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see usd.impl.ElementImpl
+		 * @see usd.impl.UsdPackageImpl#getElement()
+		 * @generated
+		 */
+		EClass ELEMENT = eINSTANCE.getElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ELEMENT__ID = eINSTANCE.getElement_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Classes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ELEMENT__CLASSES = eINSTANCE.getElement_Classes();
+
+		/**
+		 * The meta object literal for the '{@link usd.impl.TextImpl <em>Text</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see usd.impl.TextImpl
+		 * @see usd.impl.UsdPackageImpl#getText()
+		 * @generated
+		 */
+		EClass TEXT = eINSTANCE.getText();
+
+		/**
+		 * The meta object literal for the '{@link usd.impl.ImageImpl <em>Image</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see usd.impl.ImageImpl
+		 * @see usd.impl.UsdPackageImpl#getImage()
+		 * @generated
+		 */
+		EClass IMAGE = eINSTANCE.getImage();
+
+		/**
+		 * The meta object literal for the '<em><b>Link</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMAGE__LINK = eINSTANCE.getImage_Link();
+
+		/**
+		 * The meta object literal for the '<em><b>Img Src</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__IMG_SRC = eINSTANCE.getImage_ImgSrc();
+
+		/**
+		 * The meta object literal for the '<em><b>Alt</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__ALT = eINSTANCE.getImage_Alt();
+
+		/**
+		 * The meta object literal for the '{@link usd.impl.CodeImpl <em>Code</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see usd.impl.CodeImpl
+		 * @see usd.impl.UsdPackageImpl#getCode()
+		 * @generated
+		 */
+		EClass CODE = eINSTANCE.getCode();
+
+		/**
+		 * The meta object literal for the '{@link usd.impl.CodeBlockImpl <em>Code Block</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see usd.impl.CodeBlockImpl
+		 * @see usd.impl.UsdPackageImpl#getCodeBlock()
+		 * @generated
+		 */
+		EClass CODE_BLOCK = eINSTANCE.getCodeBlock();
+
+		/**
+		 * The meta object literal for the '<em><b>Codelines</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CODE_BLOCK__CODELINES = eINSTANCE.getCodeBlock_Codelines();
+
+		/**
+		 * The meta object literal for the '{@link usd.impl.CodeLineImpl <em>Code Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see usd.impl.CodeLineImpl
+		 * @see usd.impl.UsdPackageImpl#getCodeLine()
+		 * @generated
+		 */
+		EClass CODE_LINE = eINSTANCE.getCodeLine();
+
+		/**
+		 * The meta object literal for the '<em><b>Text Content</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CODE_LINE__TEXT_CONTENT = eINSTANCE.getCodeLine_TextContent();
+
+		/**
+		 * The meta object literal for the '{@link usd.impl.BlockQuoteImpl <em>Block Quote</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see usd.impl.BlockQuoteImpl
+		 * @see usd.impl.UsdPackageImpl#getBlockQuote()
+		 * @generated
+		 */
+		EClass BLOCK_QUOTE = eINSTANCE.getBlockQuote();
+
+		/**
+		 * The meta object literal for the '<em><b>Quotes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BLOCK_QUOTE__QUOTES = eINSTANCE.getBlockQuote_Quotes();
+
+		/**
+		 * The meta object literal for the '{@link usd.impl.LineImpl <em>Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see usd.impl.LineImpl
+		 * @see usd.impl.UsdPackageImpl#getLine()
+		 * @generated
+		 */
+		EClass LINE = eINSTANCE.getLine();
 
 	}
 

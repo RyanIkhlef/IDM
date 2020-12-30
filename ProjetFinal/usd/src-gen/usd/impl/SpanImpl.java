@@ -27,7 +27,7 @@ import usd.UsdPackage;
  *
  * @generated
  */
-public class SpanImpl extends TextElementImpl implements Span {
+public class SpanImpl extends ElementImpl implements Span {
 	/**
 	 * The cached value of the '{@link #getSpanContent() <em>Span Content</em>}' containment reference.
 	 * <!-- begin-user-doc -->

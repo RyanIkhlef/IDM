@@ -21,7 +21,7 @@ import usd.UsdPackage;
  * </p>
  * <ul>
  *   <li>{@link usd.impl.ElementImpl#getId <em>Id</em>}</li>
- *   <li>{@link usd.impl.ElementImpl#getClass_ <em>Class</em>}</li>
+ *   <li>{@link usd.impl.ElementImpl#getClasses <em>Classes</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,24 +48,24 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	protected String id = ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getClass_() <em>Class</em>}' attribute.
+	 * The default value of the '{@link #getClasses() <em>Classes</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getClass_()
+	 * @see #getClasses()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CLASS_EDEFAULT = null;
+	protected static final String CLASSES_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getClass_() <em>Class</em>}' attribute.
+	 * The cached value of the '{@link #getClasses() <em>Classes</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getClass_()
+	 * @see #getClasses()
 	 * @generated
 	 * @ordered
 	 */
-	protected String class_ = CLASS_EDEFAULT;
+	protected String classes = CLASSES_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,8 +115,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public String getClass_() {
-		return class_;
+	public String getClasses() {
+		return classes;
 	}
 
 	/**
@@ -125,11 +125,11 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setClass(String newClass) {
-		String oldClass = class_;
-		class_ = newClass;
+	public void setClasses(String newClasses) {
+		String oldClasses = classes;
+		classes = newClasses;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.ELEMENT__CLASS, oldClass, class_));
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.ELEMENT__CLASSES, oldClasses, classes));
 	}
 
 	/**
@@ -142,8 +142,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 		case UsdPackage.ELEMENT__ID:
 			return getId();
-		case UsdPackage.ELEMENT__CLASS:
-			return getClass_();
+		case UsdPackage.ELEMENT__CLASSES:
+			return getClasses();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,8 +159,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		case UsdPackage.ELEMENT__ID:
 			setId((String) newValue);
 			return;
-		case UsdPackage.ELEMENT__CLASS:
-			setClass((String) newValue);
+		case UsdPackage.ELEMENT__CLASSES:
+			setClasses((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,8 +177,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		case UsdPackage.ELEMENT__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case UsdPackage.ELEMENT__CLASS:
-			setClass(CLASS_EDEFAULT);
+		case UsdPackage.ELEMENT__CLASSES:
+			setClasses(CLASSES_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -194,8 +194,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 		case UsdPackage.ELEMENT__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-		case UsdPackage.ELEMENT__CLASS:
-			return CLASS_EDEFAULT == null ? class_ != null : !CLASS_EDEFAULT.equals(class_);
+		case UsdPackage.ELEMENT__CLASSES:
+			return CLASSES_EDEFAULT == null ? classes != null : !CLASSES_EDEFAULT.equals(classes);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,8 +213,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", class: ");
-		result.append(class_);
+		result.append(", classes: ");
+		result.append(classes);
 		result.append(')');
 		return result.toString();
 	}

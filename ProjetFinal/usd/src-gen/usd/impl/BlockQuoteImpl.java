@@ -14,40 +14,40 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import usd.BlockQuote;
 import usd.Element;
-import usd.Section;
 import usd.UsdPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Section</b></em>'.
+ * An implementation of the model object '<em><b>Block Quote</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link usd.impl.SectionImpl#getContents <em>Contents</em>}</li>
+ *   <li>{@link usd.impl.BlockQuoteImpl#getQuotes <em>Quotes</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SectionImpl extends ElementImpl implements Section {
+public class BlockQuoteImpl extends ElementImpl implements BlockQuote {
 	/**
-	 * The cached value of the '{@link #getContents() <em>Contents</em>}' containment reference list.
+	 * The cached value of the '{@link #getQuotes() <em>Quotes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContents()
+	 * @see #getQuotes()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Element> contents;
+	protected EList<Element> quotes;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SectionImpl() {
+	protected BlockQuoteImpl() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public class SectionImpl extends ElementImpl implements Section {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UsdPackage.Literals.SECTION;
+		return UsdPackage.Literals.BLOCK_QUOTE;
 	}
 
 	/**
@@ -67,11 +67,11 @@ public class SectionImpl extends ElementImpl implements Section {
 	 * @generated
 	 */
 	@Override
-	public EList<Element> getContents() {
-		if (contents == null) {
-			contents = new EObjectContainmentEList<Element>(Element.class, this, UsdPackage.SECTION__CONTENTS);
+	public EList<Element> getQuotes() {
+		if (quotes == null) {
+			quotes = new EObjectContainmentEList<Element>(Element.class, this, UsdPackage.BLOCK_QUOTE__QUOTES);
 		}
-		return contents;
+		return quotes;
 	}
 
 	/**
@@ -82,8 +82,8 @@ public class SectionImpl extends ElementImpl implements Section {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case UsdPackage.SECTION__CONTENTS:
-			return ((InternalEList<?>) getContents()).basicRemove(otherEnd, msgs);
+		case UsdPackage.BLOCK_QUOTE__QUOTES:
+			return ((InternalEList<?>) getQuotes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +96,8 @@ public class SectionImpl extends ElementImpl implements Section {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case UsdPackage.SECTION__CONTENTS:
-			return getContents();
+		case UsdPackage.BLOCK_QUOTE__QUOTES:
+			return getQuotes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +111,9 @@ public class SectionImpl extends ElementImpl implements Section {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case UsdPackage.SECTION__CONTENTS:
-			getContents().clear();
-			getContents().addAll((Collection<? extends Element>) newValue);
+		case UsdPackage.BLOCK_QUOTE__QUOTES:
+			getQuotes().clear();
+			getQuotes().addAll((Collection<? extends Element>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +127,8 @@ public class SectionImpl extends ElementImpl implements Section {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case UsdPackage.SECTION__CONTENTS:
-			getContents().clear();
+		case UsdPackage.BLOCK_QUOTE__QUOTES:
+			getQuotes().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,10 +142,10 @@ public class SectionImpl extends ElementImpl implements Section {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case UsdPackage.SECTION__CONTENTS:
-			return contents != null && !contents.isEmpty();
+		case UsdPackage.BLOCK_QUOTE__QUOTES:
+			return quotes != null && !quotes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //SectionImpl
+} //BlockQuoteImpl

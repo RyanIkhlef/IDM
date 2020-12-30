@@ -418,6 +418,121 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link usd.Code} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeItemProvider codeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link usd.Code}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCodeAdapter() {
+		if (codeItemProvider == null) {
+			codeItemProvider = new CodeItemProvider(this);
+		}
+
+		return codeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link usd.CodeBlock} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeBlockItemProvider codeBlockItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link usd.CodeBlock}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCodeBlockAdapter() {
+		if (codeBlockItemProvider == null) {
+			codeBlockItemProvider = new CodeBlockItemProvider(this);
+		}
+
+		return codeBlockItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link usd.CodeLine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeLineItemProvider codeLineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link usd.CodeLine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCodeLineAdapter() {
+		if (codeLineItemProvider == null) {
+			codeLineItemProvider = new CodeLineItemProvider(this);
+		}
+
+		return codeLineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link usd.BlockQuote} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BlockQuoteItemProvider blockQuoteItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link usd.BlockQuote}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBlockQuoteAdapter() {
+		if (blockQuoteItemProvider == null) {
+			blockQuoteItemProvider = new BlockQuoteItemProvider(this);
+		}
+
+		return blockQuoteItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link usd.Line} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LineItemProvider lineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link usd.Line}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLineAdapter() {
+		if (lineItemProvider == null) {
+			lineItemProvider = new LineItemProvider(this);
+		}
+
+		return lineItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -552,6 +667,16 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 			textItemProvider.dispose();
 		if (imageItemProvider != null)
 			imageItemProvider.dispose();
+		if (codeItemProvider != null)
+			codeItemProvider.dispose();
+		if (codeBlockItemProvider != null)
+			codeBlockItemProvider.dispose();
+		if (codeLineItemProvider != null)
+			codeLineItemProvider.dispose();
+		if (blockQuoteItemProvider != null)
+			blockQuoteItemProvider.dispose();
+		if (lineItemProvider != null)
+			lineItemProvider.dispose();
 	}
 
 }

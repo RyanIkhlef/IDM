@@ -85,6 +85,16 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createText();
 		case UsdPackage.IMAGE:
 			return createImage();
+		case UsdPackage.CODE:
+			return createCode();
+		case UsdPackage.CODE_BLOCK:
+			return createCodeBlock();
+		case UsdPackage.CODE_LINE:
+			return createCodeLine();
+		case UsdPackage.BLOCK_QUOTE:
+			return createBlockQuote();
+		case UsdPackage.LINE:
+			return createLine();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -253,6 +263,61 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	public Image createImage() {
 		ImageImpl image = new ImageImpl();
 		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Code createCode() {
+		CodeImpl code = new CodeImpl();
+		return code;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CodeBlock createCodeBlock() {
+		CodeBlockImpl codeBlock = new CodeBlockImpl();
+		return codeBlock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CodeLine createCodeLine() {
+		CodeLineImpl codeLine = new CodeLineImpl();
+		return codeLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BlockQuote createBlockQuote() {
+		BlockQuoteImpl blockQuote = new BlockQuoteImpl();
+		return blockQuote;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Line createLine() {
+		LineImpl line = new LineImpl();
+		return line;
 	}
 
 	/**
