@@ -48,7 +48,6 @@ mapping markdownMM::Paragraph::mdParagraph2usdParagraph() : usdMM::Paragraph {
 	contents += self.elements -> selectByType(Code) -> map mdCode2usdCode();
 }
 
-
 mapping markdownMM::Title::mdTitle2usdTitle() : usdMM::Title {
 	classes := 'title_level_' + self.level.toString();
 	level := self.level;
@@ -74,6 +73,11 @@ mapping markdownMM::Emphasis::mdEmphasis2usdEmphasis() : usdMM::Emphasis {
 }
 
 mapping markdownMM::Link::mdLink2usdLink() : usdMM::Link {
+	classes := "";
+	self.textElements -> selectByType(Text) -> forEach(t) {
+		classes := t.text.concat(classes);
+	};
+	
 	src := self.url;
 	textContent := self.title;
 }
@@ -129,6 +133,6 @@ mapping markdownMM::OrderedList::mdOrderedList2usdOrdoredList() : usdMM::Ordered
 	listElement += self.items.elements -> selectByType(BlockQuote) -> map mdBlockQuote2usdBlockQuote();
 	listElement += self.items.elements -> selectByType(BulletList) -> map mdBulletList2usdUnordoredList();
 	listElement += self.items.elements -> selectByType(OrderedList) -> map mdOrderedList2usdOrdoredList();
-
 }
+
 }
