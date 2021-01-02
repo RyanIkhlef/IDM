@@ -683,16 +683,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCodeLine_TextContent() {
-		return (EAttribute) codeLineEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getBlockQuote() {
 		return blockQuoteEClass;
 	}
@@ -808,7 +798,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		createEReference(codeBlockEClass, CODE_BLOCK__CODELINES);
 
 		codeLineEClass = createEClass(CODE_LINE);
-		createEAttribute(codeLineEClass, CODE_LINE__TEXT_CONTENT);
 
 		blockQuoteEClass = createEClass(BLOCK_QUOTE);
 		createEReference(blockQuoteEClass, BLOCK_QUOTE__QUOTES);
@@ -862,7 +851,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		imageEClass.getESuperTypes().add(this.getElement());
 		codeEClass.getESuperTypes().add(this.getTextElement());
 		codeBlockEClass.getESuperTypes().add(this.getElement());
-		codeLineEClass.getESuperTypes().add(this.getElement());
+		codeLineEClass.getESuperTypes().add(this.getTextElement());
 		blockQuoteEClass.getESuperTypes().add(this.getElement());
 		lineEClass.getESuperTypes().add(this.getElement());
 
@@ -969,8 +958,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		initEClass(codeLineEClass, CodeLine.class, "CodeLine", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCodeLine_TextContent(), ecorePackage.getEString(), "textContent", null, 0, 1, CodeLine.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(blockQuoteEClass, BlockQuote.class, "BlockQuote", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

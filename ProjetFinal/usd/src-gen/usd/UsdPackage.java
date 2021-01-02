@@ -1191,7 +1191,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_LINE__ID = ELEMENT__ID;
+	int CODE_LINE__ID = TEXT_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Classes</b></em>' attribute.
@@ -1200,7 +1200,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_LINE__CLASSES = ELEMENT__CLASSES;
+	int CODE_LINE__CLASSES = TEXT_ELEMENT__CLASSES;
 
 	/**
 	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
@@ -1209,7 +1209,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_LINE__TEXT_CONTENT = ELEMENT_FEATURE_COUNT + 0;
+	int CODE_LINE__TEXT_CONTENT = TEXT_ELEMENT__TEXT_CONTENT;
 
 	/**
 	 * The number of structural features of the '<em>Code Line</em>' class.
@@ -1218,7 +1218,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_LINE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+	int CODE_LINE_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Code Line</em>' class.
@@ -1227,7 +1227,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_LINE_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+	int CODE_LINE_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link usd.impl.BlockQuoteImpl <em>Block Quote</em>}' class.
@@ -1761,17 +1761,6 @@ public interface UsdPackage extends EPackage {
 	EClass getCodeLine();
 
 	/**
-	 * Returns the meta object for the attribute '{@link usd.CodeLine#getTextContent <em>Text Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text Content</em>'.
-	 * @see usd.CodeLine#getTextContent()
-	 * @see #getCodeLine()
-	 * @generated
-	 */
-	EAttribute getCodeLine_TextContent();
-
-	/**
 	 * Returns the meta object for class '{@link usd.BlockQuote <em>Block Quote</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2194,14 +2183,6 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CODE_LINE = eINSTANCE.getCodeLine();
-
-		/**
-		 * The meta object literal for the '<em><b>Text Content</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CODE_LINE__TEXT_CONTENT = eINSTANCE.getCodeLine_TextContent();
 
 		/**
 		 * The meta object literal for the '{@link usd.impl.BlockQuoteImpl <em>Block Quote</em>}' class.

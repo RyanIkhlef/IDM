@@ -260,6 +260,8 @@ public class UsdSwitch<T> extends Switch<T> {
 			CodeLine codeLine = (CodeLine) theEObject;
 			T result = caseCodeLine(codeLine);
 			if (result == null)
+				result = caseTextElement(codeLine);
+			if (result == null)
 				result = caseElement(codeLine);
 			if (result == null)
 				result = defaultCase(theEObject);

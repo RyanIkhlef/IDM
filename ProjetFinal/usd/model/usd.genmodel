@@ -62,9 +62,7 @@
     <genClasses ecoreClass="usd.ecore#//CodeBlock">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//CodeBlock/codelines"/>
     </genClasses>
-    <genClasses ecoreClass="usd.ecore#//CodeLine">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//CodeLine/textContent"/>
-    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//CodeLine"/>
     <genClasses ecoreClass="usd.ecore#//BlockQuote">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//BlockQuote/quotes"/>
     </genClasses>
