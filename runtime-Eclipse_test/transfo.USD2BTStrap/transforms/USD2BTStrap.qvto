@@ -1,0 +1,640 @@
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype btstrapMM "strict" uses "http://www.example.org/bstrap";
+
+
+transformation USD2BTStrap(in usd : usdMM, out btstrap : btstrapMM);
+
+main() {
+if(usd.rootObjects() -> selectByType(SiteRoot) -> notEmpty()) {
+		usd.rootObjects()[SiteRoot] -> map usdSiteRoot2site();
+	} else if(usd.rootObjects() -> selectByType(Page) -> notEmpty()) {
+		usd.rootObjects()[Page] -> map usdPage2page();
+	} else { 
+		log("not a website structure.");
+	}
+}
+
+mapping usdMM::SiteRoot::usdSiteRoot2site() : btstrapMM::SiteRoot {
+	name := self.name;
+	self.pages -> selectByType(Page) -> forEach(p) {
+		pages += p -> map usdPage2page();
+	};
+} 
+
+mapping usdMM::Page::usdPage2page() : btstrapMM::Page {
+	name := self.name;
+	
+	self.elements -> forEach(elem) {
+		if(elem.oclIsTypeOf(Paragraph)) {
+			elements += elem[Paragraph] -> map usdParagraph2paragraph();
+		} else if(elem.oclIsTypeOf(Title)) {
+			elements += elem[Title] -> map usdTitle2title();
+		} else if(elem.oclIsTypeOf(Text)) {
+			elements += elem[Text] -> map usdText2text(); 
+		} else if(elem.oclIsTypeOf(ImportantText)) {
+		 	elements += elem[ImportantText] -> map usdImportantText2boldText();
+		} else if(elem.oclIsTypeOf(Emphasis)) {
+			elements += elem[Emphasis] -> map usdEmphasis2italicText();
+		} else if(elem.oclIsTypeOf(BlockQuote)) {
+			elements += elem[BlockQuote] -> map usdBlockQuote2blockQuote();
+		} else if(elem.oclIsTypeOf(CodeBlock)) {
+			elements += elem[CodeBlock] -> map usdBlockCode2blockCode();
+		} else if(elem.oclIsTypeOf(Code)) {
+			elements += elem[Code] -> map usdCode2code();
+		} else if(elem.oclIsTypeOf(Image)) {
+			elements += elem[Image] -> map usdImage2image();
+		} else if(elem.oclIsTypeOf(Line)) {
+			elements += elem[Line] -> map usdLine2line();
+		} else if(elem.oclIsTypeOf(UnorderedList)) {
+			elements += elem[UnorderedList] -> map usdUl2ul();
+		} else if(elem.oclIsTypeOf(OrderedList)) {
+			elements += elem[OrderedList] -> map usdOl2ol();
+		}
+		
+		else if(elem.oclIsTypeOf(Link)) {
+			if(elem.classes.find('btn') > 0) { -- Ce lien est un bouton bootstrap.
+				if(elem.classes.find("-primary")) {
+					elements += elem[Link] -> map usdLink2primaryBtn();
+				} else if(elem.classes.find("-secondary") > 0) {
+					elements += elem[Link] -> map usdLink2secondaryBtn();
+				} else if(elem.classes.find("-success") > 0) {
+					elements += elem[Link] -> map usdLink2successBtn();
+				} else if(elem.classes.find("-info") > 0) {
+					elements += elem[Link] -> map usdLink2infoBtn();
+				} else if(elem.classes.find("-warning") > 0) {
+					elements += elem[Link] -> map usdLink2warningBtn();
+				} else if(elem.classes.find("-danger") > 0) {
+					elements += elem[Link] -> map usdLink2dangerBtn();
+				} else if(elem.classes.find("-dark") > 0) {
+					elements += elem[Link] -> map usdLink2darkBtn();
+				} else if(elem.classes.find("-light") > 0) {
+					elements += elem[Link] -> map usdLink2lightBtn();
+				} else if(elem.classes.find("-link") > 0) {
+					elements += elem[Link] -> map usdLink2linkBtn();
+				} else {
+					elements += elem[Link] -> map usdLink2button();
+				}
+				
+			} else if(elem.classes.find('Navbar') > 0) { -- Ce lien est un navbar.
+				elements += elem[Link] -> map usdLink2navbar();
+				
+			} else { -- Ce lien est "normal"
+				elements += elem[Link] -> map usdLink2link();
+			}
+		} else {
+			log("Transformation pas prise en charge dans une page : " + elem.toString());
+		};
+	};
+}
+
+mapping usdMM::Paragraph::usdParagraph2paragraph() : btstrapMM::Paragraph {
+	classes := self.classes;
+	id := self.id;
+	
+	self.contents -> forEach(elem) {
+		if(elem.oclIsTypeOf(Paragraph)) {
+			contents += elem[Paragraph] -> map usdParagraph2paragraph();
+		} else if(elem.oclIsTypeOf(Title)) {
+			contents += elem[Title] -> map usdTitle2title();
+		} else if(elem.oclIsTypeOf(Text)) {
+			contents += elem[Text] -> map usdText2text(); 
+		} else if(elem.oclIsTypeOf(ImportantText)) {
+		 	contents += elem[ImportantText] -> map usdImportantText2boldText();
+		} else if(elem.oclIsTypeOf(Emphasis)) {
+			contents += elem[Emphasis] -> map usdEmphasis2italicText();
+		} else if(elem.oclIsTypeOf(BlockQuote)) {
+			contents += elem[BlockQuote] -> map usdBlockQuote2blockQuote();
+		} else if(elem.oclIsTypeOf(CodeBlock)) {
+			contents += elem[CodeBlock] -> map usdBlockCode2blockCode();
+		} else if(elem.oclIsTypeOf(Code)) {
+			contents += elem[Code] -> map usdCode2code();
+		} else if(elem.oclIsTypeOf(Image)) {
+			contents += elem[Image] -> map usdImage2image();
+		} else if(elem.oclIsTypeOf(Line)) {
+			contents += elem[Line] -> map usdLine2line();
+		} else if(elem.oclIsTypeOf(UnorderedList)) {
+			contents += elem[UnorderedList] -> map usdUl2ul();
+		} else if(elem.oclIsTypeOf(OrderedList)) {
+			contents += elem[OrderedList] -> map usdOl2ol();
+		} 
+		
+		else if(elem.oclIsTypeOf(Link)) {
+			if(elem.classes.find("btn") > 0) { -- le lien est un bouton
+				if(elem.classes.find("-primary")) {
+					contents += elem[Link] -> map usdLink2primaryBtn();
+				} else if(elem.classes.find("-secondary") > 0) {
+					contents += elem[Link] -> map usdLink2secondaryBtn();
+				} else if(elem.classes.find("-success") > 0) {
+					contents += elem[Link] -> map usdLink2successBtn();
+				} else if(elem.classes.find("-info") > 0) {
+					contents += elem[Link] -> map usdLink2infoBtn();
+				} else if(elem.classes.find("-warning") > 0) {
+					contents += elem[Link] -> map usdLink2warningBtn();
+				} else if(elem.classes.find("-danger") > 0) {
+					contents += elem[Link] -> map usdLink2dangerBtn();
+				} else if(elem.classes.find("-dark") > 0) {
+					contents += elem[Link] -> map usdLink2darkBtn();
+				} else if(elem.classes.find("-light") > 0) {
+					contents += elem[Link] -> map usdLink2lightBtn();
+				} else if(elem.classes.find("-link") > 0) {
+					contents += elem[Link] -> map usdLink2linkBtn();
+				} else {
+					contents += elem[Link] -> map usdLink2button();
+				}
+				
+			} else if (elem.classes.find("navbar") > 0) { 
+				contents += self -> map usdParagraph2navbar();
+				break; -- Le mapping fini le travail, on peut arrêter la boucle : on considère qu'un paragraph contenant un navbar indique qu'il est lui-même le navbar et qu'il ne possède rien d'autre que les elements du navbar.
+			} else { -- Le lien est un "vrai" lien
+				contents += elem[Link] -> map usdLink2link();
+			}
+		} else {
+			log("Transformation pas prise en charge dans un paragraphe : " + elem.toString());
+		};
+	};
+}
+
+mapping usdMM::Paragraph::usdParagraph2navbar() : btstrapMM::Navbar {
+	classes := self.classes;
+	id := self.id;
+	
+	self.contents -> selectByType(Link) -> forEach(l) {
+		links += l -> map usdLink2link();
+	};
+}
+
+mapping usdMM::Title::usdTitle2title() : btstrapMM::Title {
+	classes := self.classes;
+	id := self.id;
+	
+	self.contents -> selectByType(Text) -> forEach(txt) {
+		contents += txt -> map usdText2text();
+	};
+	
+	level := self.level;
+}
+
+mapping usdMM::Text::usdText2text() : btstrapMM::Text  {
+	classes := self.classes;
+	id := self.id;
+	textContent := self.textContent;
+}
+
+mapping usdMM::ImportantText::usdImportantText2boldText() : btstrapMM::BoldText {
+	classes := self.classes;
+	id := self.id;
+	textContent := self.textContent;
+}
+
+mapping usdMM::Emphasis::usdEmphasis2italicText() : btstrapMM::ItalicText {
+	classes := self.classes;
+	id := self.id;
+	textContent := self.textContent;
+}
+
+mapping usdMM::BlockQuote::usdBlockQuote2blockQuote() : btstrapMM::BlockQuote {
+	classes := self.classes;
+	id := self.id;
+	
+	self.quotes -> forEach(elem) {
+		if(elem.oclIsTypeOf(Paragraph)) {
+			quotes += elem[Paragraph] -> map usdParagraph2paragraph();
+		} else if(elem.oclIsTypeOf(Title)) {
+			quotes += elem[Title] -> map usdTitle2title();
+		} else if(elem.oclIsTypeOf(Text)) {
+			quotes += elem[Text] -> map usdText2text();
+		} else if(elem.oclIsTypeOf(ImportantText)) {
+			quotes += elem[ImportantText] -> map usdImportantText2boldText();
+		} else if(elem.oclIsTypeOf(Emphasis)) {
+			quotes += elem[Emphasis] -> map usdEmphasis2italicText();
+		} else if(elem.oclIsTypeOf(Link)) {
+			quotes += elem[Link] -> map usdLink2link();
+		} else if(elem.oclIsTypeOf(Image)) {
+			quotes += elem[Image] -> map usdImage2image();
+		} else if(elem.oclIsTypeOf(Code)) {
+			quotes += elem[Code] -> map usdCode2code();
+		} else if(elem.oclIsTypeOf(CodeBlock)) {
+			quotes += elem[CodeBlock] -> map usdBlockCode2blockCode();
+		}  else if(elem.oclIsTypeOf(BlockQuote)) {
+			quotes += elem[BlockQuote] -> map usdBlockQuote2blockQuote();
+		} else if(elem.oclIsTypeOf(Line)) {
+			quotes += elem[Line] -> map usdLine2line();
+		} else if(elem.oclIsTypeOf(UnorderedList)) {
+			quotes += elem[UnorderedList] -> map usdUl2ul();
+		} else if(elem.oclIsTypeOf(OrderedList)) {
+			quotes += elem[OrderedList] -> map usdOl2ol();
+		} else {
+			log("Transformation pas prise en charge dans un block quote : " + elem.toString());
+		};
+	};
+}
+
+mapping usdMM::CodeBlock::usdBlockCode2blockCode() : btstrapMM::CodeBlock {
+	classes := self.classes;
+	id := self.id;
+	
+	self.codelines -> forEach(codeline) {
+		codelines += codeline -> map usdCodeLine2codeLine();
+	};
+}
+
+mapping usdMM::CodeLine::usdCodeLine2codeLine() : btstrapMM::CodeLine {
+	textContent := self.textContent;
+}
+
+mapping usdMM::Code::usdCode2code() : btstrapMM::Code {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+}
+
+mapping usdMM::Image::usdImage2image() : btstrapMM::Image {
+	classes := self.classes;
+	id := self.id;
+	
+	imgSrc := self.imgSrc;
+	alt := self.alt;
+}
+
+mapping usdMM::Line::usdLine2line() : btstrapMM::Line {
+	classes := self.classes;
+	id := self.id;
+}
+
+mapping usdMM::UnorderedList::usdUl2ul() : btstrapMM::UnorderedList {
+	classes := self.classes;
+	id := self.id;
+	
+	self.listElement -> forEach(elem) {
+		if(elem.oclIsTypeOf(Paragraph)) {
+			listElements += elem[Paragraph] -> map usdParagraph2paragraph();
+		} else if(elem.oclIsTypeOf(CodeBlock)) {
+			listElements += elem[CodeBlock] -> map usdBlockCode2blockCode();
+		} else if(elem.oclIsTypeOf(BlockQuote)) {
+			listElements += elem[BlockQuote] -> map usdBlockQuote2blockQuote();
+		} else if(elem.oclIsTypeOf(UnorderedList)) {
+			listElements += elem[UnorderedList] -> map usdUl2ul();
+		} else if(elem.oclIsTypeOf(OrderedList)) {
+			listElements += elem[OrderedList] -> map usdOl2ol();
+		} else {
+			log("Transformation pas prise en charge dans une liste non-ordonnée: " + elem.toString());
+		};
+	};
+}
+
+mapping usdMM::OrderedList::usdOl2ol() : btstrapMM::OrderedList {
+	classes := self.classes;
+	id := self.id;
+	
+	self.listElement -> forEach(elem) {
+		if(elem.oclIsTypeOf(Paragraph)) {
+			listElements += elem[Paragraph] -> map usdParagraph2paragraph();
+		} else if(elem.oclIsTypeOf(CodeBlock)) {
+			listElements += elem[CodeBlock] -> map usdBlockCode2blockCode();
+		} else if(elem.oclIsTypeOf(BlockQuote)) {
+			listElements += elem[BlockQuote] -> map usdBlockQuote2blockQuote();
+		} else if(elem.oclIsTypeOf(UnorderedList)) {
+			listElements += elem[UnorderedList] -> map usdUl2ul();
+		} else if(elem.oclIsTypeOf(OrderedList)) {
+			listElements += elem[OrderedList] -> map usdOl2ol();
+		} else {
+			log("Transformation pas prise en charge dans une liste ordonnée: " + elem.toString());
+		};
+	};
+}
+
+mapping usdMM::Link::usdLink2link() : btstrapMM::Link {
+	classes := self.classes;
+	id := self.id;
+	
+	url := self.src;
+	textContent := self.textContent;
+}
+
+mapping usdMM::Link::usdLink2button() : btstrapMM::Button {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2primaryBtn() : btstrapMM::PrimaryButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2secondaryBtn() : btstrapMM::SecondaryButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2successBtn() : btstrapMM::SuccessButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2infoBtn() : btstrapMM::InfoButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2warningBtn() : btstrapMM::WarningButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2dangerBtn() : btstrapMM::DangerButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2darkBtn() : btstrapMM::DarkButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2lightBtn() : btstrapMM::LightButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2linkBtn() : btstrapMM::LinkButton {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+	target.url := self.src;
+	
+	if(self.classes.find("btn-lg") > 0) {
+		size := "btn-lg";
+	} else if (self.classes.find("btn-sm") > 0) {
+		size := "btn-sm"
+	} else {
+		size := "";
+	};
+	
+	if(self.classes.find('outline') > 0) {
+		isOutline := true;
+	};
+	
+	if(self.classes.find("disabled") > 0) {
+		isEnable := false;
+	};
+	
+	if(self.classes.find("spinner") > 0) {
+		isSpinner := true;
+	};
+	
+	if(self.classes.find("btn-block") > 0) {
+		isBlockButton := true;
+	};
+}
+
+mapping usdMM::Link::usdLink2navbar() : btstrapMM::Navbar {
+	classes := self.classes;
+	id := self.id;
+	
+	textContent := self.textContent;
+}
