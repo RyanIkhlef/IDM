@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated bstrap -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="bstrap.presentation.BstrapModelWizardID"
+            name="%_UI_BstrapModelWizard_label"
+            class="bstrap.presentation.BstrapModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BstrapModelFile.gif">
+         <description>%_UI_BstrapModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated bstrap -->
+      <editor
+            id="bstrap.presentation.BstrapEditorID"
+            name="%_UI_BstrapEditor_label"
+            icon="icons/full/obj16/BstrapModelFile.gif"
+            extensions="bstrap"
+            class="bstrap.presentation.BstrapEditor"
+            contributorClass="bstrap.presentation.BstrapActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

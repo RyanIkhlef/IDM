@@ -1,11 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/bstrap/src-gen" creationIcons="false" editDirectory="/bstrap.edit/src-gen"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/bstrap/src-gen" creationIcons="false" editDirectory="/bstrap.edit/src-gen"
     editorDirectory="/bstrap.editor/src-gen" modelPluginID="bstrap" modelName="Bstrap"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>bstrap.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Bstrap" disposableProviderFactory="true" ecorePackage="bstrap.ecore#/"/>
+  <genPackages prefix="Bstrap" disposableProviderFactory="true" ecorePackage="bstrap.ecore#/">
+    <genClasses ecoreClass="bstrap.ecore#//SiteRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//SiteRoot/pages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//SiteRoot/name"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Page/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Page/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Element/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Element/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Button">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Button/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Button/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Button/isOutline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Button/isEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Button/isSpinner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Button/isBlockButton"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//ButtonGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//ButtonGroup/buttons"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//ButtonGroup/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//ButtonGroup/isVertical"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Navbar">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Navbar/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Navbar/imageBrand"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Link/url"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Image">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Image/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Image/imgSrc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Image/alt"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//TextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//TextElement/textContent"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Title">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Title/level"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Title/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Paragraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Paragraph/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Text"/>
+    <genClasses ecoreClass="bstrap.ecore#//PrimaryButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//SecondaryButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//SuccessButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//InfoButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//WarningButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//DarkButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//LightButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//LinkButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//DangerButton"/>
+    <genClasses ecoreClass="bstrap.ecore#//CodeLine"/>
+    <genClasses ecoreClass="bstrap.ecore#//CodeBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//CodeBlock/codelines"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//BoldText"/>
+    <genClasses ecoreClass="bstrap.ecore#//ItalicText"/>
+    <genClasses ecoreClass="bstrap.ecore#//UnorderedList"/>
+    <genClasses ecoreClass="bstrap.ecore#//OrderedList"/>
+    <genClasses ecoreClass="bstrap.ecore#//List">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//List/listElements"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//BlockQuote">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//BlockQuote/quotes"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Line"/>
+    <genClasses ecoreClass="bstrap.ecore#//Code"/>
+  </genPackages>
 </genmodel:GenModel>
