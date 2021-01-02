@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="\markdowns\navbar.simplemarkdown">
+  <contents xsi:type="simplemarkdown:Title" level="1"/>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[navbar-brand]Navbar brand"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="Link 1"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="Link 2"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="Link 3"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Section"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="3">
+    <elements xsi:type="simplemarkdown:Text" text="Collapsible Navbar"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window)."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Only when the button is clicked, the navigation bar will be displayed."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" text="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-info]Doc bootstrap"/>
+    </elements>
+  </contents>
+</simplemarkdown:Document>

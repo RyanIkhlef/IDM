@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="\markdowns\buttons.simplemarkdown">
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="Button Styles"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn]Primary"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-primary]Primary"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-secondary]Secondary"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-success]Success"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-info]Info"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-warning]Warning"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-danger]Danger"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-dark]Dark"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-light]Light"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-link]Link"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="Buttton Size"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-primary btn-lg]Large"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-primary btn-md]Default"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-primary btn-sm]Small"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="Button States"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-primary btn-lg]Primary Button"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-primary active]Active Primary"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[btn-primary disabled]Disabled Primary"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[lnk btn-primary disabled]Disabled Primary"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[lnk btn-primary]Enabled Primary"/>
+    </elements>
+  </contents>
+</simplemarkdown:Document>

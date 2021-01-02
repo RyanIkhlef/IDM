@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="\markdowns\tests.simplemarkdown">
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="File for tests markdown parser"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Code"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="This is a normal paragraph:"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:CodeBlock">
+    <codelines text="This is a code block.&#xA;"/>
+    <codelines text="On several line&#xA;"/>
+    <codelines text="&#xA;"/>
+    <codelines text="And even with a blank line&#xA;"/>
+    <codelines text="&#xA;"/>
+    <codelines text="[link in code](#)&#xA;"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:CodeBlock">
+    <codelines text="Code en debut de ligne&#xD;&#xA;"/>
+    <codelines text="&#xD;&#xA;"/>
+    <codelines text="Avec ````&#xD;&#xA;"/>
+    <codelines text="Comme separateur&#xD;&#xA;"/>
+    <codelines text="  [link in code](#)&#xD;&#xA;"/>
+    <codelines text="&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="A paragraphe with "/>
+    <elements xsi:type="simplemarkdown:Code" text="inline code [link in code](#)"/>
+    <elements xsi:type="simplemarkdown:Text" text=" and an end."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="This is a paragraphe."/>
+    <elements xsi:type="simplemarkdown:Text" text="It continue on this line"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="This is a 2nd paragraphe."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="Title level 2"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Hello the world."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="2 Title level 2"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="A line with "/>
+    <elements xsi:type="simplemarkdown:StrongEmphasis" text="**strong**"/>
+    <elements xsi:type="simplemarkdown:Text" text=" and an "/>
+    <elements xsi:type="simplemarkdown:Text" text="italic"/>
+    <elements xsi:type="simplemarkdown:Text" text="."/>
+    <elements xsi:type="simplemarkdown:Text" text="Et aussi un "/>
+    <elements xsi:type="simplemarkdown:Text" text="mix"/>
+    <elements xsi:type="simplemarkdown:Text" text="."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="A line with double space at the end"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="A normal line."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Links"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="A paragraph with a  "/>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="link"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" not at the end."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="A link"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text="at beginning of text."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Try "/>
+    <elements xsi:type="simplemarkdown:Link" text="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" url="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" title="">
+      <textElements xsi:type="simplemarkdown:StrongEmphasis" text="**strong**"/>
+      <textElements xsi:type="simplemarkdown:Text" text=" title"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text="."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Now, try "/>
+    <elements xsi:type="simplemarkdown:Link" text="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" url="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="image "/>
+      <textElements xsi:type="simplemarkdown:Image" text="https://www.eclipse.org/images/egg-incubation.png" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+        <textElements xsi:type="simplemarkdown:Text" text="image"/>
+      </textElements>
+      <textElements xsi:type="simplemarkdown:Text" text=""/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text="."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="And now an image : "/>
+    <elements xsi:type="simplemarkdown:Image" text="https://www.eclipse.org/images/egg-incubation.png" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="image"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="And finally a "/>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="title">
+      <textElements xsi:type="simplemarkdown:Text" text="linkwith title"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Title level 1"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="List :"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:BulletList">
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="start list. This is a paragraph"/>
+        <elements xsi:type="simplemarkdown:Text" text="on multiple lines."/>
+      </elements>
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="And another paragraph"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="item 2."/>
+      </elements>
+      <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="level 2 item 1"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="level 2 item 2"/>
+          </elements>
+        </items>
+      </elements>
+      <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="level 2 item 3"/>
+          </elements>
+          <elements xsi:type="simplemarkdown:BulletList">
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Text" text="level 3 item 1"/>
+              </elements>
+            </items>
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Text" text="level 3 item 2"/>
+              </elements>
+            </items>
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Text" text="level 3 item 3"/>
+              </elements>
+            </items>
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Text" text="level 4 item 1"/>
+              </elements>
+              <elements xsi:type="simplemarkdown:BulletList">
+                <items xsi:type="simplemarkdown:BulletListItem">
+                  <elements xsi:type="simplemarkdown:Paragraph">
+                    <elements xsi:type="simplemarkdown:Text" text="next level ??"/>
+                  </elements>
+                </items>
+              </elements>
+            </items>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="level 2 item 4"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="level 2 item 5"/>
+          </elements>
+        </items>
+      </elements>
+    </items>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="un paragraphe"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Try Citation"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Citation :"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="Start citation"/>
+    </contents>
+    <contents xsi:type="simplemarkdown:BlockQuote">
+      <contents xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="double citation"/>
+      </contents>
+      <contents xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="list in citation"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="item 2"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="item 3"/>
+            <elements xsi:type="simplemarkdown:Text" text="fin de list"/>
+          </elements>
+        </items>
+      </contents>
+    </contents>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Titre avec un "/>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="lien"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" et un "/>
+    <elements xsi:type="simplemarkdown:Text" text="italic"/>
+    <elements xsi:type="simplemarkdown:Text" text="*"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Un dernier paragraphe."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Lines"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:HorizontalLine"/>
+  <contents xsi:type="simplemarkdown:HorizontalLine"/>
+  <contents xsi:type="simplemarkdown:HorizontalLine"/>
+  <contents xsi:type="simplemarkdown:HorizontalLine"/>
+</simplemarkdown:Document>

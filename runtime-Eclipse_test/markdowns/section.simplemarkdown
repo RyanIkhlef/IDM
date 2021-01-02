@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="\markdowns\section.simplemarkdown">
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="My First Bootstrap 4 Page"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Resize this responsive page to see the effect!"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1"/>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="[]Navbar"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="Link 1"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="Link 2"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" text="#" url="#" title="">
+      <textElements xsi:type="simplemarkdown:Text" text="Link 3"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1"/>
+  <contents xsi:type="simplemarkdown:Title" level="2"/>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="About Me"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="6">
+    <elements xsi:type="simplemarkdown:Text" text="Photo of Me:"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Some text about me in culpa qui officia deserunt mollit anim.."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="3">
+    <elements xsi:type="simplemarkdown:Text" text="Some Links"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Lorem ipsum dolor sit ame."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2"/>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="TITLE HEADING"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="5">
+    <elements xsi:type="simplemarkdown:Text" text="Title description, Sep 2, 2017"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Some text.."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1"/>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Footer"/>
+  </contents>
+</simplemarkdown:Document>
