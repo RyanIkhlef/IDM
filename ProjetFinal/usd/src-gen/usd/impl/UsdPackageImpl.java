@@ -533,6 +533,16 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getLink_Title() {
+		return (EAttribute) linkEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getButton() {
 		return buttonEClass;
 	}
@@ -635,6 +645,16 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	@Override
 	public EAttribute getImage_Alt() {
 		return (EAttribute) imageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getImage_Title() {
+		return (EAttribute) imageEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -775,6 +795,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		linkEClass = createEClass(LINK);
 		createEAttribute(linkEClass, LINK__SRC);
+		createEAttribute(linkEClass, LINK__TITLE);
 
 		buttonEClass = createEClass(BUTTON);
 		createEReference(buttonEClass, BUTTON__LINK);
@@ -791,6 +812,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		createEReference(imageEClass, IMAGE__LINK);
 		createEAttribute(imageEClass, IMAGE__IMG_SRC);
 		createEAttribute(imageEClass, IMAGE__ALT);
+		createEAttribute(imageEClass, IMAGE__TITLE);
 
 		codeEClass = createEClass(CODE);
 
@@ -922,6 +944,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLink_Src(), ecorePackage.getEString(), "src", null, 0, 1, Link.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLink_Title(), ecorePackage.getEString(), "title", null, 0, 1, Link.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getButton_Link(), this.getLink(), null, "link", null, 0, 1, Button.class, !IS_TRANSIENT,
@@ -946,6 +970,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		initEAttribute(getImage_ImgSrc(), ecorePackage.getEString(), "imgSrc", null, 0, 1, Image.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_Alt(), ecorePackage.getEString(), "alt", null, 0, 1, Image.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_Title(), ecorePackage.getEString(), "title", null, 0, 1, Image.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(codeEClass, Code.class, "Code", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

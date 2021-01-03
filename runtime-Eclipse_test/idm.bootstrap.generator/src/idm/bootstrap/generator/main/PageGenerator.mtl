@@ -1,0 +1,80 @@
+[comment encoding = UTF-8 /]
+[**
+ * Main module to generate website powered by bootstrap : https://www.w3schools.com/default.asp
+ * 
+ * @author Ikhlef Ryan - master 1 e-services
+ */]
+[module PageGenerator('http://www.example.org/bstrap')]
+[import idm::bootstrap::generator::main::ElementGenerator/]
+
+[**
+ * Generates web site
+ * @param page the first page of the model.
+ */]
+[template public generateMain(page : Page)]
+[comment @main/]
+[if (page.ancestors(SiteRoot) -> notEmpty())]
+	[generateFolder(page.ancestors(SiteRoot) -> first())/]
+
+[else]
+	[generatePage(page)/]
+[/if]
+
+[/template]
+
+[**
+ * Generates the source folder, if the model have one and generates the pages contained in the root.
+ * @param aSiteRoot the root model object
+ */]
+[template public generateFolder(aSiteRoot : SiteRoot)]
+[for (page : Page | aSiteRoot.pages)]
+[file (aSiteRoot.name + '/' + page.name + '.html', false, 'UTF-8')]
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>[page.name/]</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+[for (element : Element | page.elements)]
+[setupElement(element)/]	
+[/for]
+</body>
+</html>
+[/file]
+[/for]
+[/template]
+
+
+[**
+ * Generates the page when the website have only one page.
+ * @param page the page that you want to generate.
+ */]
+[template public generatePage(page : Page)]
+[file (page.name + '.html', false, 'UTF-8')]
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>[page.name/]</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+[for (element : Element | page.elements)]
+[setupElement(element)/]	
+[/for]
+</body>
+</html>
+[/file]
+[/template]

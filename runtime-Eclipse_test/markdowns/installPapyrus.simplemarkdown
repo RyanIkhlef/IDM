@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="\markdowns\installPapyrus.simplemarkdown">
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Installer Papyrus pour IDM et Projects"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Vous pouvez installer Papyrus sur votre machine Windows, Linux et Mac."/>
+    <elements xsi:type="simplemarkdown:Text" text="Dans les cours, nous utilisons Papyrus et d'autres fonctionalit&#xc3;&#xa9;s comme Acceleo, Sirius, XText ..."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Pour avoir la m&#xc3;&#xaa;me configuration que au M5, vous devez installer les projets Eclipses suivants (voir plus loin pour comment le faire):"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:BulletList">
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Eclipse modeling"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Papyrus"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Papyrus Designer (g&#xc3;&#xa9;n&#xc3;&#xa9;ration de code Java)"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Acceleo (Model to Text)"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Sirius (Modeleur Graphique)"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="XText (pour &#xc3;&#xa9;crire des DSL)"/>
+      </elements>
+    </items>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Pour "/>
+    <elements xsi:type="simplemarkdown:StrongEmphasis" text="**l'ann&#xc3;&#xa9;e 2020-2021**"/>
+    <elements xsi:type="simplemarkdown:Text" text=", la version du M5 est "/>
+    <elements xsi:type="simplemarkdown:StrongEmphasis" text="**Eclipse Modeling 2020-06**"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="ATENTION : Ce n'est pas la toute derni&#xc3;&#xa8;re version d'Eclipse. En effet, la derni&#xc3;&#xa8;re version d'Eclipse est incompatible avec Papyrus (le Model Explorer n'apparait pas)."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Comment installer les projets Eclipses:"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Vous devez commencer par installer Eclipse Modeling."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:BulletList">
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Link" text="installerPapyrus.html" url="installerPapyrus.html" title="">
+          <textElements xsi:type="simplemarkdown:Text" text="Installer Eclipse Modeling et Papyrus"/>
+        </elements>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Installer Papyrus Designer (g&#xc3;&#xa9;n&#xc3;&#xa9;rateur de code Java)"/>
+      </elements>
+      <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Faites un Drag du bouton suivant vers votre installation de Eclipse"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Link" text="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=3724955" url="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=3724955" title="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client">
+              <textElements xsi:type="simplemarkdown:Image" text="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg" url="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg" title="">
+                <textElements xsi:type="simplemarkdown:Text" text="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client"/>
+              </textElements>
+            </elements>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Ou "/>
+            <elements xsi:type="simplemarkdown:Link" text="installerPapyrusDesigner.html" url="installerPapyrusDesigner.html" title="">
+              <textElements xsi:type="simplemarkdown:Text" text="Installer Papyrus Designer"/>
+            </elements>
+          </elements>
+        </items>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Installer Acceleo"/>
+      </elements>
+      <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Link" text="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=195" url="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=195" title="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client">
+              <textElements xsi:type="simplemarkdown:Image" text="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg" url="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg" title="">
+                <textElements xsi:type="simplemarkdown:Text" text="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client"/>
+              </textElements>
+            </elements>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="ou https://www.eclipse.org/acceleo/download.html"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="ou Utiliser le Marketplace : Acceleo"/>
+          </elements>
+        </items>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Installer Sirius"/>
+      </elements>
+      <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Link" text="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1318261" url="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1318261" title="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client">
+              <textElements xsi:type="simplemarkdown:Image" text="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg" url="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg" title="">
+                <textElements xsi:type="simplemarkdown:Text" text="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client"/>
+              </textElements>
+            </elements>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Ou https://www.eclipse.org/sirius/download.html"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Ou utiliser le Marketplace : Sirius"/>
+          </elements>
+        </items>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Installer XText"/>
+      </elements>
+      <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Link" text="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1073" url="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1073" title="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client">
+              <textElements xsi:type="simplemarkdown:Image" text="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg" url="https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.svg" title="">
+                <textElements xsi:type="simplemarkdown:Text" text="Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client"/>
+              </textElements>
+            </elements>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Ou Utiliser le Marketplace : XText"/>
+          </elements>
+        </items>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Installer "/>
+        <elements xsi:type="simplemarkdown:StrongEmphasis" text="**ATL (Model Transformation Language)**"/>
+      </elements>
+      <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Il faut utiliser l'"/>
+            <elements xsi:type="simplemarkdown:Code" text="update site"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="A trouver ici : https://www.eclipse.org/atl/downloads/"/>
+          </elements>
+          <elements xsi:type="simplemarkdown:BulletList">
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Text" text="Pour 2020-21:"/>
+              </elements>
+              <elements xsi:type="simplemarkdown:BulletList">
+                <items xsi:type="simplemarkdown:BulletListItem">
+                  <elements xsi:type="simplemarkdown:Paragraph">
+                    <elements xsi:type="simplemarkdown:Text" text="https://download.eclipse.org/mmt/atl/updates/releases"/>
+                  </elements>
+                </items>
+              </elements>
+            </items>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Copiez l'URL de l'updatesite (ou ouvrez la pour avoir un mode d'emploi)"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Dans Eclipse :"/>
+          </elements>
+          <elements xsi:type="simplemarkdown:BulletList">
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Code" text="Help -> Install New Softwares"/>
+              </elements>
+            </items>
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Text" text="collez l'URL dans "/>
+                <elements xsi:type="simplemarkdown:Code" text="Work with:"/>
+              </elements>
+            </items>
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Code" text="Next"/>
+                <elements xsi:type="simplemarkdown:Text" text=" ..."/>
+              </elements>
+            </items>
+          </elements>
+        </items>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Installer "/>
+        <elements xsi:type="simplemarkdown:StrongEmphasis" text="**QVTo**"/>
+      </elements>
+      <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Il faut utiliser l'"/>
+            <elements xsi:type="simplemarkdown:Code" text="update site"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="A trouver ici : https://projects.eclipse.org/projects/modeling.mmt.qvt-oml/downloads"/>
+          </elements>
+          <elements xsi:type="simplemarkdown:BulletList">
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Text" text="Pour 2020-21:"/>
+              </elements>
+              <elements xsi:type="simplemarkdown:BulletList">
+                <items xsi:type="simplemarkdown:BulletListItem">
+                  <elements xsi:type="simplemarkdown:Paragraph">
+                    <elements xsi:type="simplemarkdown:Text" text="https://download.eclipse.org/mmt/qvto/updates/releases"/>
+                  </elements>
+                </items>
+              </elements>
+            </items>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Copiez l'URL de l'updatesite (ou ouvrez la pour avoir un mode d'emploi)"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Dans Eclipse :"/>
+          </elements>
+          <elements xsi:type="simplemarkdown:BulletList">
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Code" text="Help -> Install New Softwares"/>
+              </elements>
+            </items>
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Text" text="collez l'URL dans "/>
+                <elements xsi:type="simplemarkdown:Code" text="Work with:"/>
+              </elements>
+            </items>
+            <items xsi:type="simplemarkdown:BulletListItem">
+              <elements xsi:type="simplemarkdown:Paragraph">
+                <elements xsi:type="simplemarkdown:Code" text="Next"/>
+                <elements xsi:type="simplemarkdown:Text" text=" ..."/>
+              </elements>
+            </items>
+          </elements>
+        </items>
+      </elements>
+    </items>
+  </contents>
+</simplemarkdown:Document>

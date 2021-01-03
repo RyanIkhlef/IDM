@@ -12,6 +12,7 @@ package bstrap;
  * </p>
  * <ul>
  *   <li>{@link bstrap.Link#getUrl <em>Url</em>}</li>
+ *   <li>{@link bstrap.Link#getTitle <em>Title</em>}</li>
  * </ul>
  *
  * @see bstrap.BstrapPackage#getLink()
@@ -40,5 +41,27 @@ public interface Link extends TextElement {
 	 * @generated
 	 */
 	void setUrl(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
+	 * @see bstrap.BstrapPackage#getLink_Title()
+	 * @model
+	 * @generated
+	 */
+	String getTitle();
+
+	/**
+	 * Sets the value of the '{@link bstrap.Link#getTitle <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Title</em>' attribute.
+	 * @see #getTitle()
+	 * @generated
+	 */
+	void setTitle(String value);
 
 } // Link

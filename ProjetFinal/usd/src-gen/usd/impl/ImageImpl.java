@@ -25,6 +25,7 @@ import usd.UsdPackage;
  *   <li>{@link usd.impl.ImageImpl#getLink <em>Link</em>}</li>
  *   <li>{@link usd.impl.ImageImpl#getImgSrc <em>Img Src</em>}</li>
  *   <li>{@link usd.impl.ImageImpl#getAlt <em>Alt</em>}</li>
+ *   <li>{@link usd.impl.ImageImpl#getTitle <em>Title</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +80,26 @@ public class ImageImpl extends ElementImpl implements Image {
 	 * @ordered
 	 */
 	protected String alt = ALT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TITLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,6 +223,29 @@ public class ImageImpl extends ElementImpl implements Image {
 	 * @generated
 	 */
 	@Override
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.IMAGE__TITLE, oldTitle, title));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case UsdPackage.IMAGE__LINK:
@@ -224,6 +268,8 @@ public class ImageImpl extends ElementImpl implements Image {
 			return getImgSrc();
 		case UsdPackage.IMAGE__ALT:
 			return getAlt();
+		case UsdPackage.IMAGE__TITLE:
+			return getTitle();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -244,6 +290,9 @@ public class ImageImpl extends ElementImpl implements Image {
 			return;
 		case UsdPackage.IMAGE__ALT:
 			setAlt((String) newValue);
+			return;
+		case UsdPackage.IMAGE__TITLE:
+			setTitle((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -266,6 +315,9 @@ public class ImageImpl extends ElementImpl implements Image {
 		case UsdPackage.IMAGE__ALT:
 			setAlt(ALT_EDEFAULT);
 			return;
+		case UsdPackage.IMAGE__TITLE:
+			setTitle(TITLE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -284,6 +336,8 @@ public class ImageImpl extends ElementImpl implements Image {
 			return IMG_SRC_EDEFAULT == null ? imgSrc != null : !IMG_SRC_EDEFAULT.equals(imgSrc);
 		case UsdPackage.IMAGE__ALT:
 			return ALT_EDEFAULT == null ? alt != null : !ALT_EDEFAULT.equals(alt);
+		case UsdPackage.IMAGE__TITLE:
+			return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -303,6 +357,8 @@ public class ImageImpl extends ElementImpl implements Image {
 		result.append(imgSrc);
 		result.append(", alt: ");
 		result.append(alt);
+		result.append(", title: ");
+		result.append(title);
 		result.append(')');
 		return result.toString();
 	}

@@ -14,6 +14,7 @@ package usd;
  *   <li>{@link usd.Image#getLink <em>Link</em>}</li>
  *   <li>{@link usd.Image#getImgSrc <em>Img Src</em>}</li>
  *   <li>{@link usd.Image#getAlt <em>Alt</em>}</li>
+ *   <li>{@link usd.Image#getTitle <em>Title</em>}</li>
  * </ul>
  *
  * @see usd.UsdPackage#getImage()
@@ -86,5 +87,27 @@ public interface Image extends Element {
 	 * @generated
 	 */
 	void setAlt(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
+	 * @see usd.UsdPackage#getImage_Title()
+	 * @model
+	 * @generated
+	 */
+	String getTitle();
+
+	/**
+	 * Sets the value of the '{@link usd.Image#getTitle <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Title</em>' attribute.
+	 * @see #getTitle()
+	 * @generated
+	 */
+	void setTitle(String value);
 
 } // Image

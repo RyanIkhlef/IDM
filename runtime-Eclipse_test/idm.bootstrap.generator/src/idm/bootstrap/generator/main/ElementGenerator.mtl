@@ -1,0 +1,320 @@
+[comment encoding = UTF-8 /]
+[**
+ * Element generator module.
+ * This module generate all elements that model can contains.
+ * 
+ * @author Ikhlef Ryan - master 1 e-services
+ */]
+[module ElementGenerator('http://www.example.org/bstrap')]
+
+
+[**
+ * Default template for element. Element is abstract, so this template show a warning alert to explain the error.
+ * Should never be called.
+ * @param anElement abstract element.
+ */]
+[template public setupElement(anElement : Element)]
+	[warningAlert('This element ' + anElement.toString() +' can\'t be automatically generate.')/]
+
+[/template]
+
+[**
+ * This templates generate paragraph.
+ * If the paragraph is only compose of navbar, so this template will only generate navbar.
+ * 
+ * @param element the paragraph that you want to generate
+ */]
+[template public setupElement(element : Paragraph)]
+	[if(element.contents -> selectByType(Navbar) -> size() = element.contents -> size())] [comment le paragraphe est en réalité un navbar, on ne génère donc pas les balises "<p>" qui ne servent pas./]
+		[for (e : Element | element.contents) separator('\n')]
+	
+	[setupElement(e)/]
+		[/for]
+	[else]
+		[for (e : Element | element.contents) before('<p class="' + element.classes + '" id="' + element.id + '">') separator('\n') after('</p>')]
+	
+	[setupElement(e)/]
+		[/for]
+	[/if]
+[/template]
+
+[**
+ * This templates generate Title.
+ *  * 
+ * @param element the title that you want to generate
+ */]
+[template public setupElement(element : Title)]
+	[if (element.level <= 0)] 
+	[warningAlert('title level need to be positive (>0)')/]
+
+	[elseif (element.level > 6)]
+	[warningAlert('title level need to be inferior to 7 (<7)')/]
+
+	[else]
+	<h[element.level.toString()/] class="[element.classes/]" id="[element.id/]">
+		[for (e : Element | element.contents)]
+		[setupElement(e)/]
+		[/for]
+	</h[element.level.toString()/]>
+	[/if] 
+[/template]
+
+[**
+ * This templates generate Text.
+ * 
+ * @param element the Text that you want to generate
+ */]
+[template public setupElement(element : Text)]
+	[element.textContent/]
+[/template]
+
+[**
+ * This templates generate Text encapsulate by strong html tags.
+ * 
+ * @param element the Text that you want to generate
+ */]
+[template public setupElement(element : BoldText)]
+	<strong class="[element.classes/]" id="[element.id/]">[element.textContent/]</strong>
+[/template]
+
+[**
+ * This templates generate Text encapsulate by em html tags.
+ * 
+ * @param element the Text that you want to generate
+ */]
+[template public setupElement(element : ItalicText)]
+	<em class="[element.classes/]" id="[element.id/]">[element.textContent/]</em>
+[/template]
+
+[**
+ * This templates generate BlockQuote.
+ * 
+ * @param element the BlockQuote that you want to generate
+ */]
+[template public setupElement(element : BlockQuote)]
+<blockquote class="[element.classes/]" id="[element.id/]">
+	[for (elem : Element | element.quotes)]
+	[setupElement(elem)/]
+	[/for]
+</blockquote>
+[/template]
+
+[**
+ * This templates generate ButtonGroup.
+ * 
+ * @param element the ButtonGroup that you want to generate
+ */]
+[template public setupElement(element : ButtonGroup)]
+	[if (element.isVertical)]
+	<div class="btn-group-vertical [element.size/]">
+	[else]
+	<div class="btn-group-vertical [element.size/]">
+	[/if]
+
+	[for (button : Button | element.buttons)]
+	[setupElement(button)/]
+	[/for]
+
+	</div>
+	
+[/template]
+
+[**
+ * This templates generate Button.
+ * 
+ * @param element the Button that you want to generate
+ */]
+[template public setupElement(element : Button)]
+[if (element.oclIsTypeOf(PrimaryButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-primary [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-primary [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[elseif (element.oclIsTypeOf(SecondaryButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-secondary [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-secondary [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[elseif (element.oclIsTypeOf(SuccessButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-success [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-success [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[elseif (element.oclIsTypeOf(InfoButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-info [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-info [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[elseif (element.oclIsTypeOf(WarningButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-warning [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-warning [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[elseif (element.oclIsTypeOf(DangerButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-danger [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-danger [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[elseif (element.oclIsTypeOf(DarkButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-dark [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-dark [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[elseif (element.oclIsTypeOf(LightButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-light [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-light [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[elseif (element.oclIsTypeOf(LinkButton))]
+	[if (element.isOutline)]
+<button class="btn btn-outline-link [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[else]
+<button class="btn btn-link [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+	[/if]
+[else]
+<button class="btn [element.size/] [if(element.isBlockButton)]btn-block[/if] [if(element.isSpinner)]disabled[/if]">
+[/if]
+[if (element.isSpinner)]	<span class="spinner-border spinner-border-sm"></span>[/if]
+[element.textContent/]
+[if(element.target -> size() > 0)]
+[setupElement(element.target)/]
+[/if]
+</button>
+[/template]
+
+[**
+ * This templates generate Link.
+ * 
+ * @param element the Link that you want to generate
+ */]
+[template public setupElement(element : Link)]
+<a href="[element.url/]" class="[element.classes/]" id="[element.id/]" title="[element.title/]">[element.textContent/]</a>
+[/template]
+
+[**
+ * This templates generate Navbar.
+ * Default attributs : navbar-expand-sm  -> that defines the size between nav items
+ * 					   bg-dark -> defines the backgroud color on dark of the navbar.
+ * 
+ * @param element the Navbar that you want to generate
+ */]
+[template public setupElement(element : Navbar)]
+<nav class="navbar navbar-expand-sm  bg-dark">
+	[for (link : Link | element.links)]
+	[if (link.classes.contains('navbar-brand'))]	
+	<a class="navbar-brand" href="[link.url/]">[link.textContent/]</a>
+	[/if]
+	[/for]
+
+	<ul class="navbar-nav">
+	[for (link : Link | element.links)]
+		<li class="nav-item">
+			<a class="nav-link" href="[link.url/]">[link.textContent/]</a>
+		</li>
+	[/for]
+	</ul>
+</nav>
+[/template]
+
+[**
+ * This templates generate Image.
+ * An image can be clickable.
+ * 
+ * @param element the Image that you want to generate
+ */]
+[template public setupElement(element : Image)]
+[if (element.link -> size() > 0)]
+<a href="[element.link.url/]" class="[element.link.classes/]" id="[element.link.id/]" title="[element.link.title/]">
+	<img src="[element.imgSrc/]" alt="[element.alt/]" class="[element.classes/]" id="[element.alt/]" title="[element.title/]">
+</a>
+[else]
+<img src="[element.imgSrc/]" alt="[element.alt/]" class="[element.classes/]" id="[element.alt/]" title="[element.title/]">
+[/if]
+[/template]
+
+[**
+ * This templates generate Line.
+ * 
+ * @param element the Line that you want to generate
+ */]
+[template public setupElement(element : Line)]
+<hr class="[element.classes/]" id="[element.id/]">
+[/template]
+
+[**
+ * List is an abstract object, so when this templates it's call, warning message is shown to explain the error.
+ * Should be never called.
+ * 
+ * @param element List.
+ */]
+[template public setupElement(element : List)]
+[warningAlert('This type of list cannot be implemented !')/]
+[/template]
+
+[**
+ * This templates generate UnorderedList and it's items.
+ * 
+ * @param element the UnorderedList that you want to generate
+ */]
+[template public setupElement(element : UnorderedList)]
+<ul class="[element.classes/]" id="[element.id/]">
+	[for (listElem : Element | element.listElements) before('<li>') after('</li>')]
+		[setupElement(listElem)/]
+	[/for]
+</ul>
+[/template]
+
+[**
+ * This templates generate OrderedList and it's items.
+ * 
+ * @param element the OrderedList that you want to generate
+ */]
+[template public setupElement(element : OrderedList)]
+<ol class="[element.classes/]" id="[element.id/]">
+	[for (listElem : Element | element.listElements) before('<li>') after('</li>')]
+		[setupElement(listElem)/]
+	[/for]
+</ol>
+[/template]
+
+[**
+ * This templates generate CodeBlock.
+ * 
+ * @param element the CodeBlock that you want to generate
+ */]
+[template public setupElement(element : CodeBlock)]
+	<pre>
+		[for (line : CodeLine | element.codelines)]
+		<code> [line.textContent/] </code>
+		[/for]
+	</pre>
+[/template]
+
+[**
+ * This templates generate Code.
+ * 
+ * @param element the Code that you want to generate
+ */]
+[template public setupElement(element : Code)]
+	<code> [element.textContent/] </code>
+[/template]
+
+[**
+ * This templates generate warning alert with message.
+ * Used to show templates errors.
+ * 
+ * @param msg the message that you want to show.
+ */]
+[template public warningAlert(msg : String)]
+	<div class="alert alert-warning">
+		[msg/]
+	</div>
+[/template]

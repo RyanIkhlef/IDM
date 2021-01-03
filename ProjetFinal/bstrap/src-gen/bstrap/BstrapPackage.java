@@ -571,13 +571,22 @@ public interface BstrapPackage extends EPackage {
 	int LINK__URL = TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__TITLE = TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int LINK_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -634,13 +643,22 @@ public interface BstrapPackage extends EPackage {
 	int IMAGE__ALT = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__TITLE = ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Image</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
+	int IMAGE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Image</em>' class.
@@ -2606,6 +2624,17 @@ public interface BstrapPackage extends EPackage {
 	EAttribute getLink_Url();
 
 	/**
+	 * Returns the meta object for the attribute '{@link bstrap.Link#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see bstrap.Link#getTitle()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EAttribute getLink_Title();
+
+	/**
 	 * Returns the meta object for class '{@link bstrap.Image <em>Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2647,6 +2676,17 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getImage_Alt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link bstrap.Image#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see bstrap.Image#getTitle()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Title();
 
 	/**
 	 * Returns the meta object for class '{@link bstrap.TextElement <em>Text Element</em>}'.
@@ -3193,6 +3233,14 @@ public interface BstrapPackage extends EPackage {
 		EAttribute LINK__URL = eINSTANCE.getLink_Url();
 
 		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINK__TITLE = eINSTANCE.getLink_Title();
+
+		/**
 		 * The meta object literal for the '{@link bstrap.impl.ImageImpl <em>Image</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3225,6 +3273,14 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IMAGE__ALT = eINSTANCE.getImage_Alt();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__TITLE = eINSTANCE.getImage_Title();
 
 		/**
 		 * The meta object literal for the '{@link bstrap.impl.TextElementImpl <em>Text Element</em>}' class.

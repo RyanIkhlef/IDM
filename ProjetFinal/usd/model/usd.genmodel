@@ -43,6 +43,7 @@
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//Link">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Link/src"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Link/title"/>
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//Button">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Button/link"/>
@@ -57,6 +58,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Image/link"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Image/imgSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Image/alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Image/title"/>
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//Code"/>
     <genClasses ecoreClass="usd.ecore#//CodeBlock">

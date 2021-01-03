@@ -44,6 +44,7 @@ public class LinkItemProvider extends TextElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addUrlPropertyDescriptor(object);
+			addTitlePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -60,6 +61,21 @@ public class LinkItemProvider extends TextElementItemProvider {
 						getResourceLocator(), getString("_UI_Link_url_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Link_url_feature", "_UI_Link_type"),
 						BstrapPackage.Literals.LINK__URL, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Link_title_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Link_title_feature", "_UI_Link_type"),
+						BstrapPackage.Literals.LINK__TITLE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -110,6 +126,7 @@ public class LinkItemProvider extends TextElementItemProvider {
 
 		switch (notification.getFeatureID(Link.class)) {
 		case BstrapPackage.LINK__URL:
+		case BstrapPackage.LINK__TITLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

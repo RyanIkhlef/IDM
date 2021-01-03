@@ -587,6 +587,16 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getLink_Title() {
+		return (EAttribute) linkEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getImage() {
 		return imageEClass;
 	}
@@ -619,6 +629,16 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	@Override
 	public EAttribute getImage_Alt() {
 		return (EAttribute) imageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getImage_Title() {
+		return (EAttribute) imageEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -982,11 +1002,13 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		linkEClass = createEClass(LINK);
 		createEAttribute(linkEClass, LINK__URL);
+		createEAttribute(linkEClass, LINK__TITLE);
 
 		imageEClass = createEClass(IMAGE);
 		createEReference(imageEClass, IMAGE__LINK);
 		createEAttribute(imageEClass, IMAGE__IMG_SRC);
 		createEAttribute(imageEClass, IMAGE__ALT);
+		createEAttribute(imageEClass, IMAGE__TITLE);
 
 		textElementEClass = createEClass(TEXT_ELEMENT);
 		createEAttribute(textElementEClass, TEXT_ELEMENT__TEXT_CONTENT);
@@ -1159,6 +1181,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLink_Url(), ecorePackage.getEString(), "url", null, 0, 1, Link.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLink_Title(), ecorePackage.getEString(), "title", null, 0, 1, Link.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImage_Link(), this.getLink(), null, "link", null, 0, 1, Image.class, !IS_TRANSIENT,
@@ -1167,6 +1191,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEAttribute(getImage_ImgSrc(), ecorePackage.getEString(), "imgSrc", null, 0, 1, Image.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_Alt(), ecorePackage.getEString(), "alt", null, 0, 1, Image.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_Title(), ecorePackage.getEString(), "title", null, 0, 1, Image.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textElementEClass, TextElement.class, "TextElement", IS_ABSTRACT, !IS_INTERFACE,

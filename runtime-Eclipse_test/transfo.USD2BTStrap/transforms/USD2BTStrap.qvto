@@ -53,7 +53,7 @@ mapping usdMM::Page::usdPage2page() : btstrapMM::Page {
 		
 		else if(elem.oclIsTypeOf(Link)) {
 			if(elem.classes.find('btn') > 0) { -- Ce lien est un bouton bootstrap.
-				if(elem.classes.find("-primary")) {
+				if(elem.classes.find("-primary") > 0) {
 					elements += elem[Link] -> map usdLink2primaryBtn();
 				} else if(elem.classes.find("-secondary") > 0) {
 					elements += elem[Link] -> map usdLink2secondaryBtn();
@@ -120,7 +120,7 @@ mapping usdMM::Paragraph::usdParagraph2paragraph() : btstrapMM::Paragraph {
 		
 		else if(elem.oclIsTypeOf(Link)) {
 			if(elem.classes.find("btn") > 0) { -- le lien est un bouton
-				if(elem.classes.find("-primary")) {
+				if(elem.classes.find("-primary") > 0) {
 					contents += elem[Link] -> map usdLink2primaryBtn();
 				} else if(elem.classes.find("-secondary") > 0) {
 					contents += elem[Link] -> map usdLink2secondaryBtn();
@@ -142,7 +142,7 @@ mapping usdMM::Paragraph::usdParagraph2paragraph() : btstrapMM::Paragraph {
 					contents += elem[Link] -> map usdLink2button();
 				}
 				
-			} else if (elem.classes.find("navbar") > 0) { 
+			} else if (elem.classes.find("Navbar") > 0) { 
 				contents += self -> map usdParagraph2navbar();
 				break; -- Le mapping fini le travail, on peut arrêter la boucle : on considère qu'un paragraph contenant un navbar indique qu'il est lui-même le navbar et qu'il ne possède rien d'autre que les elements du navbar.
 			} else { -- Le lien est un "vrai" lien
@@ -255,6 +255,7 @@ mapping usdMM::Image::usdImage2image() : btstrapMM::Image {
 	
 	imgSrc := self.imgSrc;
 	alt := self.alt;
+	title := self.title;
 }
 
 mapping usdMM::Line::usdLine2line() : btstrapMM::Line {
@@ -310,6 +311,7 @@ mapping usdMM::Link::usdLink2link() : btstrapMM::Link {
 	
 	url := self.src;
 	textContent := self.textContent;
+	title := self.title;
 }
 
 mapping usdMM::Link::usdLink2button() : btstrapMM::Button {

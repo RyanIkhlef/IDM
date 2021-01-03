@@ -40,11 +40,13 @@
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//Link">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Link/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Link/title"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//Image">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Image/link"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Image/imgSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Image/alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Image/title"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//TextElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//TextElement/textContent"/>

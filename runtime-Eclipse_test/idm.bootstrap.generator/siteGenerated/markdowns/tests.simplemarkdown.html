@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>\markdowns\tests.simplemarkdown</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<h1 class="title_level_1" id="">
+			File for tests markdown parser
+	</h1>
+	
+	<h1 class="title_level_1" id="">
+			Code
+	</h1>
+	
+<p class="" id="">			To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:
+</p>	
+<p class="" id="">			This is a normal paragraph:
+</p>	
+	<pre>
+		<code> This is a code block.
+ </code>
+		<code> On several line
+ </code>
+		<code> 
+ </code>
+		<code> And even with a blank line
+ </code>
+		<code> 
+ </code>
+		<code> [link in code](#)
+ </code>
+	</pre>	
+	<pre>
+		<code> Code en debut de ligne
+ </code>
+		<code> 
+ </code>
+		<code> Avec ````
+ </code>
+		<code> Comme separateur
+ </code>
+		<code>   [link in code](#)
+ </code>
+		<code> 
+ </code>
+	</pre>	
+<p class="" id="">			A paragraphe with 
+
+			<code> inline code [link in code](#) </code>
+
+			 and an end.
+</p>	
+<p class="" id="">			This is a paragraphe.
+
+			It continue on this line
+</p>	
+<p class="" id="">			This is a 2nd paragraphe.
+</p>	
+	<h2 class="title_level_2" id="">
+			Title level 2
+	</h2>
+	
+<p class="" id="">			Hello the world.
+</p>	
+	<h2 class="title_level_2" id="">
+			2 Title level 2
+	</h2>
+	
+<p class="" id="">			A line with 
+
+			<strong class="" id="">**strong**</strong>
+
+			 and an 
+
+			italic
+
+			.
+
+			Et aussi un 
+
+			mix
+
+			.
+</p>	
+<p class="" id="">			A line with double space at the end
+</p>	
+<p class="" id="">			A normal line.
+</p>	
+	<h1 class="title_level_1" id="">
+			Links
+	</h1>
+	
+<p class="" id="">			A paragraph with a  
+
+		<a href="#" class="link" id="" title=""></a>
+
+			 not at the end.
+</p>	
+<p class="" id="">		<a href="#" class="A link" id="" title=""></a>
+
+			at beginning of text.
+</p>	
+<p class="" id="">			Try 
+
+		<a href="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" class=" title" id="" title=""></a>
+
+			.
+</p>	
+<p class="" id="">			Now, try 
+
+		<a href="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" class="image " id="" title=""></a>
+
+			.
+</p>	
+<p class="" id="">			And now an image : 
+
+		<img src="https://www.eclipse.org/images/egg-incubation.png" alt="https://www.eclipse.org/images/egg-incubation.png" class="" id="https://www.eclipse.org/images/egg-incubation.png" title="">
+		
+</p>	
+<p class="" id="">			And finally a 
+
+		<a href="#" class="linkwith title" id="" title="">title</a>
+</p>	
+	<h1 class="title_level_1" id="">
+			Title level 1
+	</h1>
+	
+<p class="" id="">			List :
+</p>	
+<ul class="" id="">
+<li>		<p class="" id="">			start list. This is a paragraph
+
+			on multiple lines.
+</p>
+		<p class="" id="">			And another paragraph
+		</p>
+		<p class="" id="">			item 2.
+		</p>
+		<ul class="" id="">
+		<li>		<p class="" id="">			level 2 item 1
+		</p>
+				<p class="" id="">			level 2 item 2
+				</p>
+		</li></ul>
+		<ul class="" id="">
+		<li>		<p class="" id="">			level 2 item 3
+		</p>
+				<ul class="" id="">
+				<li>		<p class="" id="">			level 3 item 1
+				</p>
+						<p class="" id="">			level 3 item 2
+						</p>
+						<p class="" id="">			level 3 item 3
+						</p>
+						<p class="" id="">			level 4 item 1
+						</p>
+						<ul class="" id="">
+						<li>		<p class="" id="">			next level ??
+						</p>
+						</li></ul>
+				</li></ul>
+				<p class="" id="">			level 2 item 4
+				</p>
+				<p class="" id="">			level 2 item 5
+				</p>
+		</li></ul>
+</li></ul>	
+<p class="" id="">			un paragraphe
+</p>	
+	<h1 class="title_level_1" id="">
+			Try Citation
+	</h1>
+	
+<p class="" id="">			Citation :
+</p>	
+<blockquote class="" id="">
+	<p class="" id="">			Start citation
+	</p>
+	<blockquote class="" id="">
+		<p class="" id="">			double citation
+		</p>
+		<ul class="" id="">
+		<li>		<p class="" id="">			list in citation
+		</p>
+				<p class="" id="">			item 2
+				</p>
+				<p class="" id="">			item 3
+				
+							fin de list
+				</p>
+		</li></ul>
+	</blockquote>
+</blockquote>	
+	<h1 class="title_level_1" id="">
+			Titre avec un 
+			 et un 
+			italic
+			*
+	</h1>
+	
+<p class="" id="">			Un dernier paragraphe.
+</p>	
+	<h1 class="title_level_1" id="">
+			Lines
+	</h1>
+	
+<hr class="" id="">	
+<hr class="" id="">	
+<hr class="" id="">	
+<hr class="" id="">	
+</body>
+</html>

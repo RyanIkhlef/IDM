@@ -49,6 +49,7 @@ public class ImageItemProvider extends ElementItemProvider {
 
 			addImgSrcPropertyDescriptor(object);
 			addAltPropertyDescriptor(object);
+			addTitlePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -81,6 +82,21 @@ public class ImageItemProvider extends ElementItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Image_alt_feature", "_UI_Image_type"),
 						UsdPackage.Literals.IMAGE__ALT, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 						null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Image_title_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Image_title_feature", "_UI_Image_type"),
+						UsdPackage.Literals.IMAGE__TITLE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -161,6 +177,7 @@ public class ImageItemProvider extends ElementItemProvider {
 		switch (notification.getFeatureID(Image.class)) {
 		case UsdPackage.IMAGE__IMG_SRC:
 		case UsdPackage.IMAGE__ALT:
+		case UsdPackage.IMAGE__TITLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case UsdPackage.IMAGE__LINK:

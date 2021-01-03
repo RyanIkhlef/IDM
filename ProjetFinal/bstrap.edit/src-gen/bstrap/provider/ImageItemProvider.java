@@ -13,7 +13,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -49,6 +48,7 @@ public class ImageItemProvider extends ElementItemProvider {
 
 			addImgSrcPropertyDescriptor(object);
 			addAltPropertyDescriptor(object);
+			addTitlePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -80,6 +80,21 @@ public class ImageItemProvider extends ElementItemProvider {
 						getResourceLocator(), getString("_UI_Image_alt_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Image_alt_feature", "_UI_Image_type"),
 						BstrapPackage.Literals.IMAGE__ALT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Image_title_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Image_title_feature", "_UI_Image_type"),
+						BstrapPackage.Literals.IMAGE__TITLE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -161,6 +176,7 @@ public class ImageItemProvider extends ElementItemProvider {
 		switch (notification.getFeatureID(Image.class)) {
 		case BstrapPackage.IMAGE__IMG_SRC:
 		case BstrapPackage.IMAGE__ALT:
+		case BstrapPackage.IMAGE__TITLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case BstrapPackage.IMAGE__LINK:

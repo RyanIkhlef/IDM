@@ -1,201 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bstrap:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bstrap="http://www.example.org/bstrap" name="\markdowns\tests.simplemarkdown">
-  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
-    <contents xsi:type="bstrap:Text" textContent="File for tests markdown parser"/>
-  </elements>
-  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
-    <contents xsi:type="bstrap:Text" textContent="Code"/>
-  </elements>
+<bstrap:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bstrap="http://www.example.org/bstrap" name="\markdowns\navbar.simplemarkdown">
+  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1"/>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="This is a normal paragraph:"/>
-  </elements>
-  <elements xsi:type="bstrap:CodeBlock">
-    <codelines textContent="This is a code block.&#xA;"/>
-    <codelines textContent="On several line&#xA;"/>
-    <codelines textContent="&#xA;"/>
-    <codelines textContent="And even with a blank line&#xA;"/>
-    <codelines textContent="&#xA;"/>
-    <codelines textContent="[link in code](#)&#xA;"/>
-  </elements>
-  <elements xsi:type="bstrap:CodeBlock">
-    <codelines textContent="Code en debut de ligne&#xD;&#xA;"/>
-    <codelines textContent="&#xD;&#xA;"/>
-    <codelines textContent="Avec ````&#xD;&#xA;"/>
-    <codelines textContent="Comme separateur&#xD;&#xA;"/>
-    <codelines textContent="  [link in code](#)&#xD;&#xA;"/>
-    <codelines textContent="&#xD;&#xA;"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="A paragraphe with "/>
-    <contents xsi:type="bstrap:Code" textContent="inline code [link in code](#)"/>
-    <contents xsi:type="bstrap:Text" textContent=" and an end."/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="This is a paragraphe."/>
-    <contents xsi:type="bstrap:Text" textContent="It continue on this line"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="This is a 2nd paragraphe."/>
-  </elements>
-  <elements xsi:type="bstrap:Title" classes="title_level_2" level="2">
-    <contents xsi:type="bstrap:Text" textContent="Title level 2"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="Hello the world."/>
-  </elements>
-  <elements xsi:type="bstrap:Title" classes="title_level_2" level="2">
-    <contents xsi:type="bstrap:Text" textContent="2 Title level 2"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="A line with "/>
-    <contents xsi:type="bstrap:BoldText" textContent="**strong**"/>
-    <contents xsi:type="bstrap:Text" textContent=" and an "/>
-    <contents xsi:type="bstrap:Text" textContent="italic"/>
-    <contents xsi:type="bstrap:Text" textContent="."/>
-    <contents xsi:type="bstrap:Text" textContent="Et aussi un "/>
-    <contents xsi:type="bstrap:Text" textContent="mix"/>
-    <contents xsi:type="bstrap:Text" textContent="."/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="A line with double space at the end"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="A normal line."/>
+    <contents xsi:type="bstrap:Navbar">
+      <links classes="[navbar-brand]Navbar brand" textContent="#" url="#" title=""/>
+      <links classes="Link 1" textContent="#" url="#" title=""/>
+      <links classes="Link 2" textContent="#" url="#" title=""/>
+      <links classes="Link 3" textContent="#" url="#" title=""/>
+    </contents>
   </elements>
   <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
-    <contents xsi:type="bstrap:Text" textContent="Links"/>
+    <contents xsi:type="bstrap:Text" textContent="Section"/>
+  </elements>
+  <elements xsi:type="bstrap:Title" classes="title_level_3" level="3">
+    <contents xsi:type="bstrap:Text" textContent="Collapsible Navbar"/>
   </elements>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="A paragraph with a  "/>
-    <contents xsi:type="bstrap:Link" classes="link" textContent="" url="#"/>
-    <contents xsi:type="bstrap:Text" textContent=" not at the end."/>
+    <contents xsi:type="bstrap:Text" textContent="In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window)."/>
   </elements>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Link" classes="A link" textContent="" url="#"/>
-    <contents xsi:type="bstrap:Text" textContent="at beginning of text."/>
+    <contents xsi:type="bstrap:Text" textContent="Only when the button is clicked, the navigation bar will be displayed."/>
   </elements>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="Try "/>
-    <contents xsi:type="bstrap:Link" classes=" title" textContent="" url="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API"/>
-    <contents xsi:type="bstrap:Text" textContent="."/>
+    <contents xsi:type="bstrap:Text" textContent="Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button."/>
   </elements>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="Now, try "/>
-    <contents xsi:type="bstrap:Link" classes="image " textContent="" url="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API"/>
-    <contents xsi:type="bstrap:Text" textContent="."/>
+    <contents xsi:type="bstrap:InfoButton" classes="[btn-info]Doc bootstrap" textContent="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" size=""/>
   </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="And now an image : "/>
-    <contents xsi:type="bstrap:Image" imgSrc="https://www.eclipse.org/images/egg-incubation.png" alt="https://www.eclipse.org/images/egg-incubation.png"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="And finally a "/>
-    <contents xsi:type="bstrap:Link" classes="linkwith title" textContent="title" url="#"/>
-  </elements>
-  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
-    <contents xsi:type="bstrap:Text" textContent="Title level 1"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="List :"/>
-  </elements>
-  <elements xsi:type="bstrap:UnorderedList">
-    <listElements xsi:type="bstrap:Paragraph">
-      <contents xsi:type="bstrap:Text" textContent="start list. This is a paragraph"/>
-      <contents xsi:type="bstrap:Text" textContent="on multiple lines."/>
-    </listElements>
-    <listElements xsi:type="bstrap:Paragraph">
-      <contents xsi:type="bstrap:Text" textContent="And another paragraph"/>
-    </listElements>
-    <listElements xsi:type="bstrap:Paragraph">
-      <contents xsi:type="bstrap:Text" textContent="item 2."/>
-    </listElements>
-    <listElements xsi:type="bstrap:UnorderedList">
-      <listElements xsi:type="bstrap:Paragraph">
-        <contents xsi:type="bstrap:Text" textContent="level 2 item 1"/>
-      </listElements>
-      <listElements xsi:type="bstrap:Paragraph">
-        <contents xsi:type="bstrap:Text" textContent="level 2 item 2"/>
-      </listElements>
-    </listElements>
-    <listElements xsi:type="bstrap:UnorderedList">
-      <listElements xsi:type="bstrap:Paragraph">
-        <contents xsi:type="bstrap:Text" textContent="level 2 item 3"/>
-      </listElements>
-      <listElements xsi:type="bstrap:UnorderedList">
-        <listElements xsi:type="bstrap:Paragraph">
-          <contents xsi:type="bstrap:Text" textContent="level 3 item 1"/>
-        </listElements>
-        <listElements xsi:type="bstrap:Paragraph">
-          <contents xsi:type="bstrap:Text" textContent="level 3 item 2"/>
-        </listElements>
-        <listElements xsi:type="bstrap:Paragraph">
-          <contents xsi:type="bstrap:Text" textContent="level 3 item 3"/>
-        </listElements>
-        <listElements xsi:type="bstrap:Paragraph">
-          <contents xsi:type="bstrap:Text" textContent="level 4 item 1"/>
-        </listElements>
-        <listElements xsi:type="bstrap:UnorderedList">
-          <listElements xsi:type="bstrap:Paragraph">
-            <contents xsi:type="bstrap:Text" textContent="next level ??"/>
-          </listElements>
-        </listElements>
-      </listElements>
-      <listElements xsi:type="bstrap:Paragraph">
-        <contents xsi:type="bstrap:Text" textContent="level 2 item 4"/>
-      </listElements>
-      <listElements xsi:type="bstrap:Paragraph">
-        <contents xsi:type="bstrap:Text" textContent="level 2 item 5"/>
-      </listElements>
-    </listElements>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="un paragraphe"/>
-  </elements>
-  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
-    <contents xsi:type="bstrap:Text" textContent="Try Citation"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="Citation :"/>
-  </elements>
-  <elements xsi:type="bstrap:BlockQuote">
-    <quotes xsi:type="bstrap:Paragraph">
-      <contents xsi:type="bstrap:Text" textContent="Start citation"/>
-    </quotes>
-    <quotes xsi:type="bstrap:BlockQuote">
-      <quotes xsi:type="bstrap:Paragraph">
-        <contents xsi:type="bstrap:Text" textContent="double citation"/>
-      </quotes>
-      <quotes xsi:type="bstrap:UnorderedList">
-        <listElements xsi:type="bstrap:Paragraph">
-          <contents xsi:type="bstrap:Text" textContent="list in citation"/>
-        </listElements>
-        <listElements xsi:type="bstrap:Paragraph">
-          <contents xsi:type="bstrap:Text" textContent="item 2"/>
-        </listElements>
-        <listElements xsi:type="bstrap:Paragraph">
-          <contents xsi:type="bstrap:Text" textContent="item 3"/>
-          <contents xsi:type="bstrap:Text" textContent="fin de list"/>
-        </listElements>
-      </quotes>
-    </quotes>
-  </elements>
-  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
-    <contents xsi:type="bstrap:Text" textContent="Titre avec un "/>
-    <contents xsi:type="bstrap:Text" textContent=" et un "/>
-    <contents xsi:type="bstrap:Text" textContent="italic"/>
-    <contents xsi:type="bstrap:Text" textContent="*"/>
-  </elements>
-  <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="Un dernier paragraphe."/>
-  </elements>
-  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
-    <contents xsi:type="bstrap:Text" textContent="Lines"/>
-  </elements>
-  <elements xsi:type="bstrap:Line"/>
-  <elements xsi:type="bstrap:Line"/>
-  <elements xsi:type="bstrap:Line"/>
-  <elements xsi:type="bstrap:Line"/>
 </bstrap:Page>

@@ -1,202 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="\markdowns\tests.simplemarkdown">
-  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
-    <contents xsi:type="usd:Text" textContent="File for tests markdown parser"/>
-  </elements>
-  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
-    <contents xsi:type="usd:Text" textContent="Code"/>
-  </elements>
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="\markdowns\navbar.simplemarkdown">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1"/>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="This is a normal paragraph:"/>
-  </elements>
-  <elements xsi:type="usd:CodeBlock">
-    <codelines textContent="This is a code block.&#xA;"/>
-    <codelines textContent="On several line&#xA;"/>
-    <codelines textContent="&#xA;"/>
-    <codelines textContent="And even with a blank line&#xA;"/>
-    <codelines textContent="&#xA;"/>
-    <codelines textContent="[link in code](#)&#xA;"/>
-  </elements>
-  <elements xsi:type="usd:CodeBlock">
-    <codelines textContent="Code en debut de ligne&#xD;&#xA;"/>
-    <codelines textContent="&#xD;&#xA;"/>
-    <codelines textContent="Avec ````&#xD;&#xA;"/>
-    <codelines textContent="Comme separateur&#xD;&#xA;"/>
-    <codelines textContent="  [link in code](#)&#xD;&#xA;"/>
-    <codelines textContent="&#xD;&#xA;"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="A paragraphe with "/>
-    <contents xsi:type="usd:Code" textContent="inline code [link in code](#)"/>
-    <contents xsi:type="usd:Text" textContent=" and an end."/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="This is a paragraphe."/>
-    <contents xsi:type="usd:Text" textContent="It continue on this line"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="This is a 2nd paragraphe."/>
-  </elements>
-  <elements xsi:type="usd:Title" classes="title_level_2" level="2">
-    <contents xsi:type="usd:Text" textContent="Title level 2"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="Hello the world."/>
-  </elements>
-  <elements xsi:type="usd:Title" classes="title_level_2" level="2">
-    <contents xsi:type="usd:Text" textContent="2 Title level 2"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="A line with "/>
-    <contents xsi:type="usd:ImportantText" textContent="**strong**"/>
-    <contents xsi:type="usd:Text" textContent=" and an "/>
-    <contents xsi:type="usd:Text" textContent="italic"/>
-    <contents xsi:type="usd:Text" textContent="."/>
-    <contents xsi:type="usd:Text" textContent="Et aussi un "/>
-    <contents xsi:type="usd:Text" textContent="mix"/>
-    <contents xsi:type="usd:Text" textContent="."/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="A line with double space at the end"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="A normal line."/>
+    <contents xsi:type="usd:Link" classes="[navbar-brand]Navbar brand" textContent="#" src="#" title=""/>
+    <contents xsi:type="usd:Link" classes="Link 1" textContent="#" src="#" title=""/>
+    <contents xsi:type="usd:Link" classes="Link 2" textContent="#" src="#" title=""/>
+    <contents xsi:type="usd:Link" classes="Link 3" textContent="#" src="#" title=""/>
   </elements>
   <elements xsi:type="usd:Title" classes="title_level_1" level="1">
-    <contents xsi:type="usd:Text" textContent="Links"/>
+    <contents xsi:type="usd:Text" textContent="Section"/>
+  </elements>
+  <elements xsi:type="usd:Title" classes="title_level_3" level="3">
+    <contents xsi:type="usd:Text" textContent="Collapsible Navbar"/>
   </elements>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="A paragraph with a  "/>
-    <contents xsi:type="usd:Link" classes="link" textContent="" src="#"/>
-    <contents xsi:type="usd:Text" textContent=" not at the end."/>
+    <contents xsi:type="usd:Text" textContent="In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window)."/>
   </elements>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Link" classes="A link" textContent="" src="#"/>
-    <contents xsi:type="usd:Text" textContent="at beginning of text."/>
+    <contents xsi:type="usd:Text" textContent="Only when the button is clicked, the navigation bar will be displayed."/>
   </elements>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="Try "/>
-    <contents xsi:type="usd:Link" classes=" title" textContent="" src="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API"/>
-    <contents xsi:type="usd:Text" textContent="."/>
+    <contents xsi:type="usd:Text" textContent="Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button."/>
   </elements>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="Now, try "/>
-    <contents xsi:type="usd:Link" classes="image " textContent="" src="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API"/>
-    <contents xsi:type="usd:Text" textContent="."/>
+    <contents xsi:type="usd:Link" classes="[btn-info]Doc bootstrap" textContent="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" src="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title=""/>
   </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="And now an image : "/>
-    <contents xsi:type="usd:Image" imgSrc="https://www.eclipse.org/images/egg-incubation.png" alt="https://www.eclipse.org/images/egg-incubation.png"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="And finally a "/>
-    <contents xsi:type="usd:Link" classes="linkwith title" textContent="title" src="#"/>
-  </elements>
-  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
-    <contents xsi:type="usd:Text" textContent="Title level 1"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="List :"/>
-  </elements>
-  <elements xsi:type="usd:UnorderedList">
-    <listElement xsi:type="usd:Paragraph">
-      <contents xsi:type="usd:Text" textContent="start list. This is a paragraph"/>
-      <contents xsi:type="usd:Text" textContent="on multiple lines."/>
-    </listElement>
-    <listElement xsi:type="usd:Paragraph">
-      <contents xsi:type="usd:Text" textContent="And another paragraph"/>
-    </listElement>
-    <listElement xsi:type="usd:Paragraph">
-      <contents xsi:type="usd:Text" textContent="item 2."/>
-    </listElement>
-    <listElement xsi:type="usd:UnorderedList">
-      <listElement xsi:type="usd:Paragraph">
-        <contents xsi:type="usd:Text" textContent="level 2 item 1"/>
-      </listElement>
-      <listElement xsi:type="usd:Paragraph">
-        <contents xsi:type="usd:Text" textContent="level 2 item 2"/>
-      </listElement>
-    </listElement>
-    <listElement xsi:type="usd:UnorderedList">
-      <listElement xsi:type="usd:Paragraph">
-        <contents xsi:type="usd:Text" textContent="level 2 item 3"/>
-      </listElement>
-      <listElement xsi:type="usd:UnorderedList">
-        <listElement xsi:type="usd:Paragraph">
-          <contents xsi:type="usd:Text" textContent="level 3 item 1"/>
-        </listElement>
-        <listElement xsi:type="usd:Paragraph">
-          <contents xsi:type="usd:Text" textContent="level 3 item 2"/>
-        </listElement>
-        <listElement xsi:type="usd:Paragraph">
-          <contents xsi:type="usd:Text" textContent="level 3 item 3"/>
-        </listElement>
-        <listElement xsi:type="usd:Paragraph">
-          <contents xsi:type="usd:Text" textContent="level 4 item 1"/>
-        </listElement>
-        <listElement xsi:type="usd:UnorderedList">
-          <listElement xsi:type="usd:Paragraph">
-            <contents xsi:type="usd:Text" textContent="next level ??"/>
-          </listElement>
-        </listElement>
-      </listElement>
-      <listElement xsi:type="usd:Paragraph">
-        <contents xsi:type="usd:Text" textContent="level 2 item 4"/>
-      </listElement>
-      <listElement xsi:type="usd:Paragraph">
-        <contents xsi:type="usd:Text" textContent="level 2 item 5"/>
-      </listElement>
-    </listElement>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="un paragraphe"/>
-  </elements>
-  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
-    <contents xsi:type="usd:Text" textContent="Try Citation"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="Citation :"/>
-  </elements>
-  <elements xsi:type="usd:BlockQuote">
-    <quotes xsi:type="usd:Paragraph">
-      <contents xsi:type="usd:Text" textContent="Start citation"/>
-    </quotes>
-    <quotes xsi:type="usd:BlockQuote">
-      <quotes xsi:type="usd:Paragraph">
-        <contents xsi:type="usd:Text" textContent="double citation"/>
-      </quotes>
-      <quotes xsi:type="usd:UnorderedList">
-        <listElement xsi:type="usd:Paragraph">
-          <contents xsi:type="usd:Text" textContent="list in citation"/>
-        </listElement>
-        <listElement xsi:type="usd:Paragraph">
-          <contents xsi:type="usd:Text" textContent="item 2"/>
-        </listElement>
-        <listElement xsi:type="usd:Paragraph">
-          <contents xsi:type="usd:Text" textContent="item 3"/>
-          <contents xsi:type="usd:Text" textContent="fin de list"/>
-        </listElement>
-      </quotes>
-    </quotes>
-  </elements>
-  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
-    <contents xsi:type="usd:Text" textContent="Titre avec un "/>
-    <contents xsi:type="usd:Link" classes="lien" textContent="" src="#"/>
-    <contents xsi:type="usd:Text" textContent=" et un "/>
-    <contents xsi:type="usd:Text" textContent="italic"/>
-    <contents xsi:type="usd:Text" textContent="*"/>
-  </elements>
-  <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="Un dernier paragraphe."/>
-  </elements>
-  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
-    <contents xsi:type="usd:Text" textContent="Lines"/>
-  </elements>
-  <elements xsi:type="usd:Line"/>
-  <elements xsi:type="usd:Line"/>
-  <elements xsi:type="usd:Line"/>
-  <elements xsi:type="usd:Line"/>
 </usd:Page>

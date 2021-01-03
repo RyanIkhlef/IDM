@@ -113,18 +113,20 @@ mapping markdownMM::Emphasis::mdEmphasis2usdEmphasis() : usdMM::Emphasis {
 }
 
 mapping markdownMM::Link::mdLink2usdLink() : usdMM::Link {
-	classes := "";
+	classes := '';
 	self.textElements -> selectByType(Text) -> forEach(t) { 
 		classes := t.text.concat(classes);
 	};
-	
 	src := self.url;
-	textContent := self.title;
+	textContent := self.text;
+
+	title := self.title;
 }
 
 mapping markdownMM::Image::mdImage2usdImage() : usdMM::Image {
 	imgSrc := self.url;
 	alt := self.text;
+	title := self.title;
 }
 
 
