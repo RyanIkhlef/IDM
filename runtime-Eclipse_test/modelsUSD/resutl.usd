@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="\markdowns\navbar.simplemarkdown">
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="\markdowns\section.simplemarkdown">
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
+    <contents xsi:type="usd:Text" textContent="My First Bootstrap 4 Page"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="Resize this responsive page to see the effect!"/>
+  </elements>
   <elements xsi:type="usd:Title" classes="title_level_1" level="1"/>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Link" classes="[navbar-brand]Navbar brand" textContent="#" src="#" title=""/>
+    <contents xsi:type="usd:Link" classes="[]Navbar" textContent="#" src="#" title=""/>
     <contents xsi:type="usd:Link" classes="Link 1" textContent="#" src="#" title=""/>
     <contents xsi:type="usd:Link" classes="Link 2" textContent="#" src="#" title=""/>
     <contents xsi:type="usd:Link" classes="Link 3" textContent="#" src="#" title=""/>
   </elements>
-  <elements xsi:type="usd:Title" classes="title_level_1" level="1">
-    <contents xsi:type="usd:Text" textContent="Section"/>
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1"/>
+  <elements xsi:type="usd:Title" classes="title_level_2" level="2"/>
+  <elements xsi:type="usd:Title" classes="title_level_2" level="2">
+    <contents xsi:type="usd:Text" textContent="About Me"/>
+  </elements>
+  <elements xsi:type="usd:Title" classes="title_level_6" level="6">
+    <contents xsi:type="usd:Text" textContent="Photo of Me:"/>
+  </elements>
+  <elements xsi:type="usd:Paragraph">
+    <contents xsi:type="usd:Text" textContent="Some text about me in culpa qui officia deserunt mollit anim.."/>
   </elements>
   <elements xsi:type="usd:Title" classes="title_level_3" level="3">
-    <contents xsi:type="usd:Text" textContent="Collapsible Navbar"/>
+    <contents xsi:type="usd:Text" textContent="Some Links"/>
   </elements>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window)."/>
+    <contents xsi:type="usd:Text" textContent="Lorem ipsum dolor sit ame."/>
+  </elements>
+  <elements xsi:type="usd:Title" classes="title_level_2" level="2"/>
+  <elements xsi:type="usd:Title" classes="title_level_2" level="2">
+    <contents xsi:type="usd:Text" textContent="TITLE HEADING"/>
+  </elements>
+  <elements xsi:type="usd:Title" classes="title_level_5" level="5">
+    <contents xsi:type="usd:Text" textContent="Title description, Sep 2, 2017"/>
   </elements>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="Only when the button is clicked, the navigation bar will be displayed."/>
+    <contents xsi:type="usd:Text" textContent="Some text.."/>
   </elements>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Text" textContent="Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button."/>
+    <contents xsi:type="usd:Text" textContent="Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."/>
   </elements>
+  <elements xsi:type="usd:Title" classes="title_level_1" level="1"/>
   <elements xsi:type="usd:Paragraph">
-    <contents xsi:type="usd:Link" classes="[btn-info]Doc bootstrap" textContent="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" src="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title=""/>
+    <contents xsi:type="usd:Text" textContent="Footer"/>
   </elements>
 </usd:Page>

@@ -1,30 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bstrap:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bstrap="http://www.example.org/bstrap" name="\markdowns\navbar.simplemarkdown">
+<bstrap:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bstrap="http://www.example.org/bstrap" name="\markdowns\section.simplemarkdown">
+  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
+    <contents xsi:type="bstrap:Text" textContent="My First Bootstrap 4 Page"/>
+  </elements>
+  <elements xsi:type="bstrap:Paragraph">
+    <contents xsi:type="bstrap:Text" textContent="Resize this responsive page to see the effect!"/>
+  </elements>
   <elements xsi:type="bstrap:Title" classes="title_level_1" level="1"/>
   <elements xsi:type="bstrap:Paragraph">
     <contents xsi:type="bstrap:Navbar">
-      <links classes="[navbar-brand]Navbar brand" textContent="#" url="#" title=""/>
+      <links classes="[]Navbar" textContent="#" url="#" title=""/>
       <links classes="Link 1" textContent="#" url="#" title=""/>
       <links classes="Link 2" textContent="#" url="#" title=""/>
       <links classes="Link 3" textContent="#" url="#" title=""/>
     </contents>
   </elements>
-  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1">
-    <contents xsi:type="bstrap:Text" textContent="Section"/>
+  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1"/>
+  <elements xsi:type="bstrap:Title" classes="title_level_2" level="2"/>
+  <elements xsi:type="bstrap:Title" classes="title_level_2" level="2">
+    <contents xsi:type="bstrap:Text" textContent="About Me"/>
+  </elements>
+  <elements xsi:type="bstrap:Title" classes="title_level_6" level="6">
+    <contents xsi:type="bstrap:Text" textContent="Photo of Me:"/>
+  </elements>
+  <elements xsi:type="bstrap:Paragraph">
+    <contents xsi:type="bstrap:Text" textContent="Some text about me in culpa qui officia deserunt mollit anim.."/>
   </elements>
   <elements xsi:type="bstrap:Title" classes="title_level_3" level="3">
-    <contents xsi:type="bstrap:Text" textContent="Collapsible Navbar"/>
+    <contents xsi:type="bstrap:Text" textContent="Some Links"/>
   </elements>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window)."/>
+    <contents xsi:type="bstrap:Text" textContent="Lorem ipsum dolor sit ame."/>
+  </elements>
+  <elements xsi:type="bstrap:Title" classes="title_level_2" level="2"/>
+  <elements xsi:type="bstrap:Title" classes="title_level_2" level="2">
+    <contents xsi:type="bstrap:Text" textContent="TITLE HEADING"/>
+  </elements>
+  <elements xsi:type="bstrap:Title" classes="title_level_5" level="5">
+    <contents xsi:type="bstrap:Text" textContent="Title description, Sep 2, 2017"/>
   </elements>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="Only when the button is clicked, the navigation bar will be displayed."/>
+    <contents xsi:type="bstrap:Text" textContent="Some text.."/>
   </elements>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:Text" textContent="Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button."/>
+    <contents xsi:type="bstrap:Text" textContent="Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."/>
   </elements>
+  <elements xsi:type="bstrap:Title" classes="title_level_1" level="1"/>
   <elements xsi:type="bstrap:Paragraph">
-    <contents xsi:type="bstrap:InfoButton" classes="[btn-info]Doc bootstrap" textContent="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" size=""/>
+    <contents xsi:type="bstrap:Text" textContent="Footer"/>
   </elements>
 </bstrap:Page>
